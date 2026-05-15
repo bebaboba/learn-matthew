@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Two Rooms — with materiality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter+Tight:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    height: 100%; overflow: hidden;
+    font-family: 'Inter Tight', sans-serif; font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  .stage {
+    position: fixed; inset: 0; display: grid; grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 720px) {
+    .stage { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+  }
+  .room {
+    position: relative; overflow: hidden;
+    background: radial-gradient(ellipse 90% 70% at 50% 35%,
+      var(--room-light) 0%, var(--room-mid) 55%, var(--room-deep) 100%);
+  }
+  .stage > .room:first-child { border-right: 1px solid rgba(0,0,0,0.04); }
+  @media (max-width: 720px) {
+    .stage > .room:first-child { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.04); }
+  }
+  .room::after {
+    content: ''; position: absolute; inset: 0;
+    background: var(--sympathy-gradient);
+    opacity: calc(var(--state) * 0.55);
+    pointer-events: none;
+    mix-blend-mode: var(--sympathy-blend, multiply);
+    transition: opacity 4s cubic-bezier(0.22,0.61,0.36,1);
+  }
+  .room::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: var(--room-grain);
+    opacity: var(--grain-opacity); pointer-events: none;
+    mix-blend-mode: multiply; z-index: 1;
+  }
+  .label {
+    position: absolute; top: 28px; left: 50%; transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;
+    font-size: 14px; letter-spacing: 0.18em; text-transform: lowercase;
+    color: var(--text-faint); z-index: 3;
+  }
+  .concept {
+    position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);
+    width: calc(110px + var(--state) * 80px);
+    height: calc(110px + var(--state) * 80px);
+    border-radius: 50%; z-index: 2;
+    background: radial-gradient(circle at var(--highlight-x) var(--highlight-y),
+      hsla(calc(var(--hue-start) + (var(--hue-end) - var(--hue-start)) * var(--state)),
+           calc((var(--sat-start) + (var(--sat-end) - var(--sat-start)) * var(--state)) * 1%),
+           calc((var(--lum-start) + (var(--lum-end) - var(--lum-start)) * var(--state)) * 1%),
+           calc(0.30 + var(--state) * 0.55)),
+      hsla(calc(var(--hue-start) + (var(--hue-end) - var(--hue-start)) * var(--state)),
+           calc((var(--sat-start) + (var(--sat-end) - var(--sat-start)) * var(--state)) * 0.8%),
+           calc((var(--lum-start) + (var(--lum-end) - var(--lum-start)) * var(--state)) * 0.9%),
+           calc(0.20 + var(--state) * 0.55)) 70%,
+      hsla(0, 0%, 50%, 0) 100%);
+    filter: blur(calc(var(--edge-start) - (var(--edge-start) - var(--edge-end)) * var(--state)));
+    box-shadow: 0 calc(8px + var(--state) * 40px) calc(40px + var(--state) * 80px)
+      calc(-8px - var(--state) * 8px) rgba(var(--shadow-rgb), calc(0.04 + var(--state) * 0.14));
+    transition: width 4s cubic-bezier(0.22,0.61,0.36,1), height 4s cubic-bezier(0.22,0.61,0.36,1),
+      background 4s cubic-bezier(0.22,0.61,0.36,1), filter 4s cubic-bezier(0.22,0.61,0.36,1),
+      box-shadow 4s cubic-bezier(0.22,0.61,0.36,1);
+    animation: breathe var(--breath-duration) var(--breath-easing) infinite;
+  }
+  @keyframes breathe {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50%      { transform: translate(-50%, -50%) scale(var(--breath-scale)); }
+  }
+  .concept::before {
+    content: ''; position: absolute; inset: -40%; border-radius: 50%;
+    background: radial-gradient(circle,
+      hsla(calc(var(--hue-start) + (var(--hue-end) - var(--hue-start)) * var(--state)),
+           calc((var(--sat-end)) * var(--state) * 1%), 65%,
+           calc(0.08 + var(--state) * 0.14)) 0%, transparent 60%);
+    filter: blur(20px); z-index: -1;
+    transition: background 4s cubic-bezier(0.22,0.61,0.36,1);
+  }
+  .concept::after {
+    content: ''; position: absolute; inset: 0; border-radius: 50%;
+    background-image: var(--texture-image);
+    background-size: v
+
+cat > two-rooms-material.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Two Rooms — with materiality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter+Tight:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    height: 100%; overflow: hidden;
+    font-family: 'Inter Tight', sans-serif; font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  .stage {
+    position: fixed; inset: 0; display: grid; grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 720px) {
+    .stage { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+  }
+  .room {
+    position: relative; overflow: hidden;
+    background: radial-gradient(ellipse 90% 70% at 50% 35%,
+      var(--room-light) 0%, var(--room-mid) 55%, var(--room-deep) 100%);
+  }
+  .stage > .room:first-child { border-right: 1px solid rgba(0,0,0,0.04); }
+  @media (max-width: 720px) {
+    .stage > .room:first-child { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.04); }
+  }
+  .room::after {
+    content: ''; position: absolute; inset: 0;
+    background: var(--sympathy-gradient);
+    opacity: calc(var(--state) * 0.55);
+    pointer-events: none;
+    mix-blend-mode: var(--sympathy-blend, multiply);
+    transition: opacity 4s cubic-bezier(0.22,0.61,0.36,1);
+  }
+  .room::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: var(--room-grain);
+    opacity: var(--grain-opacity); pointer-events: none;
+    mix-blend-mode: multiply; z-index: 1;
+  }
+  .label {
+    position: absolute; top: 28px; left: 50%; transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;
+    font-size: 14px; letter-spacing: 0.18em; text-transform: lowercase;
+    color: var(--text-faint); z-index: 3;
+  }
+  .concept {
+    position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);
+    width: calc(110px + var(--state) * 80px);
+    height: calc(110px + var(--state) * 80px);
+    border-radius: 50%; z-index: 2;
+    background: radial-gradient(circle at var(--highlight-x) var(--highlight-y),
+      hsla(calc(var(--hue-start) + (var(--hue-end) - var(--hue-start)) * var(--state)),
+           calc((var(--sat-start) + (var(--sat-end) - var(--sat-start)) * var(--state)) * 1%),
+           calc((var(--lum-start) + (var(--lum-end) - var(--lum-start)) * var(--state)) * 1%),
+           calc(0.30 + var(--state) * 0.55)),
+      hsla(calc(var(--hue-start) + (var(--hue-end) - var(--hue-start)) * var(--state)),
+           calc((var(--sat-start) + (var(--sat-end) - var(--sat-start)) * var(--state)) * 0.8%),
+           calc((var(--lum-start) + (var(--lum-end) - var(--lum-start)) * var(--state)) * 0.9%),
+           calc(0.20 + var(--state) * 0.55)) 70%,
+      hsla(0, 0%, 50%, 0) 100%);
+    filter: blur(calc(var(--edge-start) - (var(--edge-start) - var(--edge-end)) * var(--state)));
+    box-shadow: 0 calc(8px + var(--state) * 40px) calc(40px + var(--state) * 80px)
+      calc(-8px - var(--state) * 8px) rgba(var(--shadow-rgb), calc(0.04 + var(--state) * 0.14));
+    transition: width 4s cubic-bezier(0.22,0.61,0.36,1), height 4s cubic-bezier(0.22,0.61,0.36,1),
+      background 4s cubic-bezier(0.22,0.61,0.36,1), filter 4s cubic-bezier(0.22,0.61,0.36,1),
+      box-shadow 4s cubic-bezier(0.22,0.61,0.36,1);
+    animation: breathe var(--breath-duration) var(--breath-easing) infinite;
+  }
+  @keyframes breathe {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50%      { transform: translate(-50%, -50%) scale(var(--breath-scale)); }
+  }
+  .concept::before {
+    content: ''; position: absolute; inset: -40%; border-radius: 50%;
+    background: radial-gradient(circle,
+      hsla(calc(var(--hue-start) + (var(--hue-end) - var(--hue-start)) * var(--state)),
+           calc((var(--sat-end)) * var(--state) * 1%), 65%,
+           calc(0.08 + var(--state) * 0.14)) 0%, transparent 60%);
+    filter: blur(20px); z-index: -1;
+    transition: background 4s cubic-bezier(0.22,0.61,0.36,1);
+  }
+  .concept::after {
+    content: ''; position: absolute; inset: 0; border-radius: 50%;
+    background-image: var(--texture-image);
+    background-size: var(--texture-size, cover);
+    background-position: center;
+    mix-blend-mode: var(--texture-blend, overlay);
+    opacity: calc(var(--state) * var(--texture-strength, 0.9));
+    pointer-events: none;
+    transition: opacity 4s cubic-bezier(0.22,0.61,0.36,1);
+  }
+  .room.seed {
+    --room-light: #fbf9f5; --room-mid: #f4f0e8; --room-deep: #e8e2d4;
+    --text-faint: #a59c8e;
+    --hue-start: 95; --hue-end: 75;
+    --sat-start: 8; --sat-end: 55;
+    --lum-start: 72; --lum-end: 52;
+    --highlight-x: 35%; --highlight-y: 35%;
+    --edge-start: 8px; --edge-end: 2px;
+    --shadow-rgb: 60, 50, 30;
+    --breath-duration: 8s; --breath-easing: ease-in-out; --breath-scale: 1.025;
+    --sympathy-gradient: radial-gradient(ellipse 70% 60% at 50% 40%,
+      hsla(45, 60%, 75%, 0.4) 0%, hsla(85, 35%, 70%, 0.15) 50%, transparent 100%);
+    --sympathy-blend: multiply;
+    --room-grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    --grain-opacity: 0.7;
+    --texture-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='m'><feTurbulence type='fractalNoise' baseFrequency='0.022' numOctaves='4' seed='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.3  0 0 0 0 0.25  0 0 0 0 0.05  0 0 0 0.85 0'/><feGaussianBlur stdDeviation='1.5'/></filter><rect width='100%25' height='100%25' filter='url(%23m)'/></svg>");
+    --texture-size: cover; --texture-blend: overlay; --texture-strength: 0.85;
+  }
+  .room.sparkplug {
+    --room-light: #f5f6f8; --room-mid: #e8eaee; --room-deep: #d4d8de;
+    --text-faint: #8a8e96;
+    --hue-start: 215; --hue-end: 208;
+    --sat-start: 6; --sat-end: 18;
+    --lum-start: 68; --lum-end: 46;
+    --highlight-x: 30%; --highlight-y: 22%;
+    --edge-start: 8px; --edge-end: 0.3px;
+    --shadow-rgb: 20, 25, 35;
+    --breath-duration: 5s; --breath-easing: cubic-bezier(0.4,0,0.6,1); --breath-scale: 1.015;
+    --sympathy-gradient: radial-gradient(ellipse 80% 70% at 30% 25%,
+      hsla(210, 30%, 85%, 0.35) 0%, hsla(220, 20%, 75%, 0.15) 40%, transparent 80%);
+    --sympathy-blend: multiply;
+    --room-grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    --grain-opacity: 0.5;
+    --texture-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><defs><filter id='brush' x='0' y='0' width='100%25' height='100%25'><feTurbulence type='turbulence' baseFrequency='0.02 1.2' numOctaves='2' seed='7'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.5 0'/></filter><radialGradient id='rings' cx='30%25' cy='22%25'><stop offset='0%25' stop-color='white' stop-opacity='0.55'/><stop offset='12%25' stop-color='white' stop-opacity='0.0'/><stop offset='20%25' stop-color='white' stop-opacity='0.32'/><stop offset='28%25' stop-color='white' stop-opacity='0.0'/><stop offset='38%25' stop-color='white' stop-opacity='0.18'/><stop offset='48%25' stop-color='white' stop-opacity='0.0'/><stop offset='62%25' stop-color='black' stop-opacity='0.12'/><stop offset='75%25' stop-color='white' stop-opacity='0.0'/><stop offset='90%25' stop-color='black' stop-opacity='0.22'/><stop offset='100%25' stop-color='black' stop-opacity='0.35'/></radialGradient></defs><rect width='100%25' height='100%25' fill='url(%23rings)'/><rect width='100%25' height='100%25' filter='url(%23brush)' opacity='0.35'/></svg>");
+    --texture-size: cover; --texture-blend: overlay; --texture-strength: 1.0;
+  }
+  .controls {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 18px;
+    padding: 12px 20px; background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0,0,0,0.04); border-radius: 100px;
+    box-shadow: 0 8px 32px rgba(30,25,20,0.06); z-index: 10;
+  }
+  .controls label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: #6b6256; letter-spacing: 0.02em; white-space: nowrap;
+  }
+  .controls input[type="range"] {
+    -webkit-appearance: none; appearance: none;
+    width: 200px; height: 2px; background: #d4d0c8;
+    outline: none; border-radius: 1px;
+  }
+  .controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 18px; height: 18px; background: #6b6256;
+    border-radius: 50%; cursor: pointer;
+  }
+  .controls .value {
+    font-family: 'Inter Tight', sans-serif; font-size: 12px;
+    color: #a59c8e; width: 32px; text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (max-width: 480px) {
+    .controls input[type="range"] { width: 140px; }
+    .controls input[type="range"]::-webkit-slider-thumb { width: 22px; height: 22px; }
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="room seed">
+      <div class="label">planting a seed</div>
+      <div class="concept"></div>
+    </div>
+    <div class="room sparkplug">
+      <div class="label">replacing a spark plug</div>
+      <div class="concept"></div>
+    </div>
+  </div>
+  <div class="controls">
+    <label>learning state</label>
+    <input type="range" id="slider" min="0" max="1" step="0.001" value="0" />
+    <span class="value" id="value">0.00</span>
+  </div>
+<script>
+  const rooms = document.querySelectorAll('.room');
+  const slider = document.getElementById('slider');
+  const valueEl = document.getElementById('value');
+  function setState(v) {
+    rooms.forEach(r => r.style.setProperty('--state', v));
+    valueEl.textContent = v.toFixed(2);
+  }
+  setState(0);
+  slider.addEventListener('input',  e => setState(parseFloat(e.target.value)));
+  slider.addEventListener('change', e => setState(parseFloat(e.target.value)));
+  document.addEventListener('touchmove', (e) => {
+    const t = e.target;
+    const inside = t && t.closest && t.closest('.controls');
+    const isSlider = t && t.id === 'slider';
+    if (!isSlider && !inside) e.preventDefault();
+  }, { passive: false });
+</script>
+</body>
+</html>

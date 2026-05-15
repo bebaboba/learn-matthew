@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter+Tight:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --room-light: #fbf9f5;
+    --room-mid:   #f4f0e8;
+    --room-deep:  #e8e2d4;
+    --shadow-color: 38, 32, 24;
+    --text:       #6b6256;
+    --text-faint: #a59c8e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    height: 100%; overflow: hidden;
+    font-family: 'Inter Tight', sans-serif; font-weight: 300;
+    color: var(--text); -webkit-font-smoothing: antialiased;
+  }
+  .room {
+    position: fixed; inset: 0;
+    background: radial-gradient(ellipse 90% 70% at 50% 35%,
+      var(--room-light) 0%, var(--room-mid) 55%, var(--room-deep) 100%);
+  }
+  .room::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity: 0.6; pointer-events: none; mix-blend-mode: multiply;
+  }
+  .concept {
+    position: absolute; top: 38%; left: 50%; transform: translate(-50%, -50%);
+    width: calc(120px + var(--state) * 100px);
+    height: calc(120px + var(--state) * 100px);
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%,
+      hsla(calc(220 - var(--state) * 130), calc(8% + var(--state) * 42%),
+           calc(72% - var(--state) * 12%), calc(0.25 + var(--state) * 0.55)),
+      hsla(calc(210 - var(--state) * 110), calc(6% + var(--state) * 32%),
+           calc(64% - var(--state) * 8%), calc(0.18 + var(--state) * 0.55)) 70%,
+      hsla(0, 0%, 50%, 0) 100%);
+    filter: blur(calc(8px - var(--state) * 7px));
+    box-shadow: 0 calc(8px + var(--state) * 40px) calc(40px + var(--state) * 80px)
+      calc(-8px - var(--state) * 8px) rgba(var(--shadow-color), calc(0.04 + var(--state) * 0.14));
+    transition: width 4s cubic-bezier(0.22,0.61,0.36,1), height 4s cubic-bezier(0.22,0.61,0.36,1),
+      background 4s cubic-bezier(0.22,0.61,0.36,1), filter 4s cubic-bezier(0.22,0.61,0.36,1),
+      box-shadow 4s cubic-bezier(0.22,0.61,0.36,1);
+    animation: breathe 8s ease-in-out infinite;
+  }
+  .concept::before {
+    content: ''; position: absolute; inset: -40%; border-radius: 50%;
+    background: radial-gradient(circle,
+      hsla(calc(220 - var(--state) * 130), calc(20% * var(--state)), 70%,
+           calc(0.08 + var(--state) * 0.12)) 0%, transparent 60%);
+    filter: blur(20px); z-index: -1;
+    transition: background 4s cubic-bezier(0.22,0.61,0.36,1);
+  }
+  @keyframes breathe {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50%      { transform: translate(-50%, -50%) scale(1.025); }
+  }
+  .controls {
+    position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 20px;
+    padding: 14px 22px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0,0,0,0.04); border-radius: 100px;
+    box-shadow: 0 8px 32px rgba(var(--shadow-color), 0.06);
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.6s ease; z-index: 10;
+  }
+  .controls.visible { opacity: 1; pointer-events: auto; }
+  .controls label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 15px; color: var(--text-faint); letter-spacing: 0.02em;
+  }
+  .controls input[type="range"] {
+    -webkit-appearance: none; appearance: none;
+    width: 260px; height: 2px; background: var(--room-deep);
+    outline: none; border-radius: 1px;
+  }
+  .controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 14px; height: 14px; background: var(--text);
+    border-radius: 50%; cursor: pointer;
+  }
+  .controls .value {
+    font-family: 'Inter Tight', sans-serif; font-size: 12px;
+    color: var(--text-faint); width: 36px; text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .hint {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 13px; color: var(--text-faint); letter-spacing: 0.03em;
+    opacity: 0; animation: hint-fade 6s ease-in-out 2s forwards;
+    pointer-events: none;
+  }
+  @keyframes hint-fade {
+    0% { opacity: 0; } 20% { opacity: 0.55; }
+    80% { opacity: 0.55; } 100% { opacity: 0; }
+  }
+  @media (max-width: 480px) {
+    .controls input[type="range"] { width: 160px; }
+    .controls input[type="range"]::-webkit-slider-thumb { width: 22px; height: 22px; }
+  }
+</style>
+</head>
+<body>
+  <div class="room"><div class="concept" id="concept"></div></div>
+  <div class="hint">press d <span>or triple-tap</span> for dev controls</div>
+  <div class="controls" id="controls">
+    <label>learning state</label>
+    <input type="range" id="slider" min="0" max="1" step="0.001" value="0" />
+    <span class="value" id="value">0.00</span>
+  </div>
+<script>
+  document.documentElement.style.setProperty('--state', '0');
+  const slider = document.getElementById('slider');
+  const valueEl = document.getElementById('value');
+  const controls = document.getElementById('controls');
+  function setState(v) {
+    document.documentElement.style.setProperty('--state', v);
+    valueEl.textContent = v.toFixed(2);
+  }
+  slider.addEventListener('input',  e => setState(parseFloat(e.target.value)));
+  slider.addEventListener('change', e => setState(parseFloat(e.target.value)));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'd' || e.key === 'D') controls.classList.toggle('visible');
+  });
+  let tapTimes = [];
+  document.addEventListener('touchend', () => {
+    const now = Date.now();
+    tapTimes = tapTimes.filter(t => now - t < 600);
+    tapTimes.push(now);
+    if (tapTimes.length >= 3) { controls.classList.toggle('visible'); tapTimes = []; }
+  });
+  document.addEventListener('touchmove', (e) => {
+    const t = e.target;
+    const inside = t && t.closest && t.closest('#controls');
+    const isSlider = t && t.id === 'slider';
+    if (!isSlider && !inside) e.preventDefault();
+  }, { passive: false });
+</script>
+</body>
+</html>
