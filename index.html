@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — L&D Producer & Product Thinker</title>
+  <meta name="description" content="Portfolio of [Your Name] — learning designer, product strategist, and creative producer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrapper">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#" class="nav-logo">Your Name</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">Learning Designer · Product Thinker · Creative Producer</p>
+        <h1 id="hero-heading" class="hero-heading">
+          I help people<br />
+          <em>learn, grow,</em> and<br />
+          make things that matter.
+        </h1>
+        <p class="hero-sub">
+          I build programs at the intersection of learning science, product strategy,
+          and storytelling — from onboarding systems to arts initiatives to prototypes
+          nobody asked for but everyone needed.
+        </p>
+        <a href="#work" class="btn">See my work</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-label">About</div>
+        <div class="about-grid">
+          <div class="about-bio">
+            <h2 id="about-heading" class="section-heading">The short version</h2>
+            <p>
+              I'm an L&D producer with roots in product management and arts &amp; culture.
+              That unusual combination means I approach learning experiences the way a PM
+              approaches a product: with user empathy, a bias for iteration, and a deep
+              respect for what makes something genuinely engaging.
+            </p>
+            <p>
+              I've built curriculum for fast-moving teams, managed cross-functional launches,
+              and produced cultural programming — often at the same time. I'm at my best when
+              the problem is ambiguous and the stakes are real.
+            </p>
+          </div>
+          <div class="about-skills">
+            <div class="skill-card">
+              <div class="skill-icon" aria-hidden="true">◈</div>
+              <h3>Learning Design</h3>
+              <p>Curriculum architecture, eLearning, facilitation design, instructional strategy</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon" aria-hidden="true">◇</div>
+              <h3>Product Strategy</h3>
+              <p>Roadmapping, user research, stakeholder alignment, cross-functional delivery</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon" aria-hidden="true">◆</div>
+              <h3>Creative Production</h3>
+              <p>Events, content creation, arts programming, cultural initiatives</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="work" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-label">Work</div>
+        <h2 id="work-heading" class="section-heading">Selected projects</h2>
+
+        <div class="work-filters" role="tablist" aria-label="Filter projects by category">
+          <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="ld">L&amp;D</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="product">Product</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="experiments">Experiments</button>
+        </div>
+
+        <div class="work-grid" id="work-grid">
+
+          <article class="project-card" data-category="ld">
+            <div class="project-thumb project-thumb--1" aria-hidden="true"></div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag--ld">L&amp;D</span>
+              </div>
+              <h3 class="project-title">Manager Onboarding Program</h3>
+              <p class="project-desc">End-to-end curriculum for new people managers — from role clarity to difficult conversations — built with a blended learning approach.</p>
+              <a href="#" class="project-link" aria-label="View Manager Onboarding Program case study">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="product">
+            <div class="project-thumb project-thumb--2" aria-hidden="true"></div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag--product">Product</span>
+              </div>
+              <h3 class="project-title">Internal Tools Roadmap</h3>
+              <p class="project-desc">Drove the 12-month roadmap for a suite of internal productivity tools, leading research, prioritization, and cross-team alignment.</p>
+              <a href="#" class="project-link" aria-label="View Internal Tools Roadmap case study">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="ld">
+            <div class="project-thumb project-thumb--3" aria-hidden="true"></div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag--ld">L&amp;D</span>
+              </div>
+              <h3 class="project-title">Feedback Culture Workshop Series</h3>
+              <p class="project-desc">A 4-session facilitated workshop series that shifted how teams give and receive feedback — piloted across 3 departments.</p>
+              <a href="#" class="project-link" aria-label="View Feedback Culture Workshop Series">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="experiments">
+            <div class="project-thumb project-thumb--4" aria-hidden="true"></div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag--experiments">Experiment</span>
+              </div>
+              <h3 class="project-title">Onboarding Simulator</h3>
+              <p class="project-desc">A branching-scenario prototype that simulates the first week at a fictional company — built to explore narrative-driven L&D.</p>
+              <a href="#" class="project-link" aria-label="Try the Onboarding Simulator prototype">Try the prototype →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="product">
+            <div class="project-thumb project-thumb--5" aria-hidden="true"></div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag--product">Product</span>
+              </div>
+              <h3 class="project-title">Learning Platform Migration</h3>
+              <p class="project-desc">Led the stakeholder strategy and change management for migrating 4,000 employees to a new LMS — on time, under budget.</p>
+              <a href="#" class="project-link" aria-label="View Learning Platform Migration case study">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="experiments">
+            <div class="project-thumb project-thumb--6" aria-hidden="true"></div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag--experiments">Experiment</span>
+              </div>
+              <h3 class="project-title">Skill Decay Tracker</h3>
+              <p class="project-desc">A quick-and-dirty tool exploring the forgetting curve in practice — visualizes skill retention across spaced repetition intervals.</p>
+              <a href="#" class="project-link" aria-label="View Skill Decay Tracker experiment">See the experiment →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <div class="container contact-inner">
+        <div class="section-label">Contact</div>
+        <h2 id="contact-heading" class="section-heading">Let's talk</h2>
+        <p class="contact-sub">
+          Open to interesting conversations about learning, product, and creative work.
+          Whether you have a project in mind or just want to connect — my inbox is open.
+        </p>
+        <a href="mailto:you@example.com" class="btn">Say hello</a>
+        <div class="contact-links">
+          <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/yourhandle" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Name. Built with HTML, CSS, and stubbornness.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
