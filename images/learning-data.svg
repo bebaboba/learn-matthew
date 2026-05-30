@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f6f2"/>
+
+  <!-- Input sources — left side, learning data streams -->
+  <circle cx="80" cy="110" r="6" fill="#e5e2db" stroke="#6b6b68" stroke-width="1.2"/>
+  <circle cx="80" cy="190" r="6" fill="#e5e2db" stroke="#6b6b68" stroke-width="1.2"/>
+  <circle cx="80" cy="250" r="6" fill="#e5e2db" stroke="#6b6b68" stroke-width="1.2"/>
+  <circle cx="80" cy="310" r="6" fill="#e5e2db" stroke="#6b6b68" stroke-width="1.2"/>
+  <circle cx="80" cy="390" r="6" fill="#e5e2db" stroke="#6b6b68" stroke-width="1.2"/>
+
+  <!-- Lines from sources to warehouse -->
+  <line x1="86"  y1="110" x2="328" y2="248" stroke="#e5e2db" stroke-width="1.2"/>
+  <line x1="86"  y1="190" x2="328" y2="250" stroke="#e5e2db" stroke-width="1.2"/>
+  <line x1="86"  y1="250" x2="328" y2="250" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="86"  y1="310" x2="328" y2="252" stroke="#e5e2db" stroke-width="1.2"/>
+  <line x1="86"  y1="390" x2="328" y2="254" stroke="#e5e2db" stroke-width="1.2"/>
+
+  <!-- Central warehouse node — Snowflake, larger, dark -->
+  <circle cx="340" cy="250" r="26" fill="#1a1a18"/>
+  <circle cx="340" cy="250" r="14" fill="#f8f6f2"/>
+  <circle cx="340" cy="250" r="6"  fill="#1a1a18"/>
+
+  <!-- Row-level security band — subtle horizontal stripes across warehouse -->
+  <line x1="316" y1="238" x2="364" y2="238" stroke="#f8f6f2" stroke-width="1.5" opacity="0.4"/>
+  <line x1="316" y1="250" x2="364" y2="250" stroke="#f8f6f2" stroke-width="1.5" opacity="0.4"/>
+  <line x1="316" y1="262" x2="364" y2="262" stroke="#f8f6f2" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Lines from warehouse to outputs -->
+  <line x1="366" y1="235" x2="548" y2="155" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="366" y1="250" x2="548" y2="250" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="366" y1="265" x2="548" y2="345" stroke="#e5e2db" stroke-width="1.5"/>
+
+  <!-- Output 1 — Tableau dashboards: grid of small squares -->
+  <circle cx="562" cy="155" r="22" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <rect x="552" y="145" width="6" height="6" fill="#C8956C" opacity="0.6"/>
+  <rect x="560" y="145" width="6" height="6" fill="#C8956C" opacity="0.9"/>
+  <rect x="552" y="153" width="6" height="6" fill="#C8956C" opacity="0.4"/>
+  <rect x="560" y="153" width="6" height="6" fill="#C8956C" opacity="0.7"/>
+
+  <!-- Output 2 — Direct / pipeline: clean circle -->
+  <circle cx="562" cy="250" r="22" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <line x1="548" y1="250" x2="576" y2="250" stroke="#C8956C" stroke-width="2"/>
+  <line x1="562" y1="236" x2="562" y2="264" stroke="#C8956C" stroke-width="2"/>
+
+  <!-- Output 3 — LLM access: arc suggesting language/model -->
+  <circle cx="562" cy="345" r="22" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <path d="M 549,339 Q 562,330 575,339" fill="none" stroke="#C8956C" stroke-width="1.8"/>
+  <path d="M 549,349 Q 562,358 575,349" fill="none" stroke="#C8956C" stroke-width="1.8"/>
+
+  <!-- Secondary connections from outputs — downstream consumers -->
+  <line x1="584" y1="148" x2="700" y2="115" stroke="#e5e2db" stroke-width="1"/>
+  <line x1="584" y1="162" x2="700" y2="185" stroke="#e5e2db" stroke-width="1"/>
+  <line x1="584" y1="250" x2="700" y2="250" stroke="#e5e2db" stroke-width="1"/>
+  <line x1="584" y1="338" x2="700" y2="310" stroke="#e5e2db" stroke-width="1"/>
+  <line x1="584" y1="352" x2="700" y2="380" stroke="#e5e2db" stroke-width="1"/>
+
+  <circle cx="708" cy="115" r="4.5" fill="#f5ead8" stroke="#6b6b68" stroke-width="1"/>
+  <circle cx="708" cy="185" r="4.5" fill="#f5ead8" stroke="#6b6b68" stroke-width="1"/>
+  <circle cx="708" cy="250" r="4.5" fill="#f5ead8" stroke="#6b6b68" stroke-width="1"/>
+  <circle cx="708" cy="310" r="4.5" fill="#f5ead8" stroke="#6b6b68" stroke-width="1"/>
+  <circle cx="708" cy="380" r="4.5" fill="#f5ead8" stroke="#6b6b68" stroke-width="1"/>
+</svg>

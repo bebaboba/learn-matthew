@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f6f2"/>
+
+  <!-- 7 streams converging from different y-start positions to one unified point -->
+  <!-- M startX,startY C 280,startY 520,250 770,250 -->
+  <!-- Opacity increases as streams converge — fragmented to unified -->
+
+  <path d="M 30,55  C 280,55  520,250 770,250" fill="none" stroke="#6b6b68" stroke-width="1.2" opacity="0.30"/>
+  <path d="M 30,120 C 280,120 520,250 770,250" fill="none" stroke="#6b6b68" stroke-width="1.2" opacity="0.38"/>
+  <path d="M 30,178 C 280,178 520,250 770,250" fill="none" stroke="#6b6b68" stroke-width="1.2" opacity="0.46"/>
+  <path d="M 30,250 C 280,250 520,250 770,250" fill="none" stroke="#6b6b68" stroke-width="1.4" opacity="0.55"/>
+  <path d="M 30,322 C 280,322 520,250 770,250" fill="none" stroke="#6b6b68" stroke-width="1.2" opacity="0.46"/>
+  <path d="M 30,380 C 280,380 520,250 770,250" fill="none" stroke="#6b6b68" stroke-width="1.2" opacity="0.38"/>
+  <path d="M 30,445 C 280,445 520,250 770,250" fill="none" stroke="#6b6b68" stroke-width="1.2" opacity="0.30"/>
+
+  <!-- Small origin marks on the left — the fragmented sources -->
+  <circle cx="30" cy="55"  r="4" fill="#e5e2db" stroke="#6b6b68" stroke-width="1"/>
+  <circle cx="30" cy="120" r="4" fill="#e5e2db" stroke="#6b6b68" stroke-width="1"/>
+  <circle cx="30" cy="178" r="4" fill="#e5e2db" stroke="#6b6b68" stroke-width="1"/>
+  <circle cx="30" cy="250" r="5" fill="#e5e2db" stroke="#6b6b68" stroke-width="1"/>
+  <circle cx="30" cy="322" r="4" fill="#e5e2db" stroke="#6b6b68" stroke-width="1"/>
+  <circle cx="30" cy="380" r="4" fill="#e5e2db" stroke="#6b6b68" stroke-width="1"/>
+  <circle cx="30" cy="445" r="4" fill="#e5e2db" stroke="#6b6b68" stroke-width="1"/>
+
+  <!-- Unified endpoint — one source of truth -->
+  <circle cx="770" cy="250" r="16" fill="#1a1a18"/>
+  <circle cx="770" cy="250" r="8"  fill="#C8956C"/>
+</svg>

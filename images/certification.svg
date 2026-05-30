@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f6f2"/>
+
+  <!-- Three ascending credential tiers, bottom-aligned -->
+  <!-- Bottom edge: y=410 -->
+
+  <!-- Tier 1 — Foundation: widest, shortest, lightest -->
+  <rect x="72" y="278" width="200" height="132" rx="4" fill="#ede8df" stroke="#e5e2db" stroke-width="1"/>
+  <!-- Badge mark -->
+  <circle cx="172" cy="344" r="14" fill="#f8f6f2" stroke="#6b6b68" stroke-width="1.5"/>
+  <circle cx="172" cy="344" r="7"  fill="#e5e2db"/>
+
+  <!-- Tier 2 — Practitioner: medium -->
+  <rect x="300" y="175" width="200" height="235" rx="4" fill="#ddd9d1" stroke="#e5e2db" stroke-width="1"/>
+  <!-- Badge mark -->
+  <circle cx="400" cy="292" r="16" fill="#f8f6f2" stroke="#C8956C" stroke-width="1.5"/>
+  <circle cx="400" cy="292" r="8"  fill="#C8956C" opacity="0.5"/>
+
+  <!-- Tier 3 — Expert: narrowest, tallest, accent -->
+  <rect x="528" y="70" width="200" height="340" rx="4" fill="#C8956C"/>
+  <!-- Badge mark — white on dark -->
+  <circle cx="628" cy="240" r="18" fill="#f8f6f2" opacity="0.25"/>
+  <circle cx="628" cy="240" r="10" fill="#f8f6f2" opacity="0.6"/>
+
+  <!-- Subtle ascending step baseline -->
+  <line x1="72" y1="415" x2="728" y2="415" stroke="#e5e2db" stroke-width="1"/>
+</svg>

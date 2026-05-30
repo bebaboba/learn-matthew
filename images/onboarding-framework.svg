@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f6f2"/>
+
+  <!-- Upward-curving journey path — entry to productivity -->
+  <path d="M 80,370 Q 400,60 720,120" fill="none" stroke="#e5e2db" stroke-width="2"/>
+
+  <!-- Stage 1 — entry state, dim, small -->
+  <circle cx="80" cy="370" r="9" fill="#e5e2db" stroke="#6b6b68" stroke-width="1.5"/>
+
+  <!-- Stage 2 — gaining traction -->
+  <circle cx="240" cy="245" r="12" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+
+  <!-- Stage 3 — midpoint, copper -->
+  <circle cx="400" cy="165" r="15" fill="#C8956C"/>
+
+  <!-- Stage 4 — approaching fluency -->
+  <circle cx="560" cy="133" r="18" fill="#6b6b68"/>
+
+  <!-- Stage 5 — full productivity, anchor node -->
+  <circle cx="720" cy="120" r="22" fill="#1a1a18"/>
+
+  <!-- Small tick marks below each stage suggesting phase boundaries -->
+  <line x1="80" y1="395" x2="80" y2="408" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="240" y1="268" x2="240" y2="281" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="400" y1="190" x2="400" y2="203" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="560" y1="160" x2="560" y2="173" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="720" y1="151" x2="720" y2="164" stroke="#e5e2db" stroke-width="1.5"/>
+</svg>

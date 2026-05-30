@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f6f2"/>
+
+  <!-- 7 × 5 grid of team nodes — 35 total, evenly distributed -->
+  <!-- Cols at x: 95, 195, 295, 400, 505, 605, 705 -->
+  <!-- Rows at y: 80, 170, 250, 330, 420 -->
+
+  <!-- All base dots (small, light) -->
+  <circle cx="95"  cy="80"  r="5" fill="#e5e2db"/>
+  <circle cx="195" cy="80"  r="5" fill="#e5e2db"/>
+  <circle cx="295" cy="80"  r="5" fill="#e5e2db"/>
+  <circle cx="400" cy="80"  r="5" fill="#e5e2db"/>
+  <circle cx="505" cy="80"  r="5" fill="#e5e2db"/>
+  <circle cx="605" cy="80"  r="5" fill="#e5e2db"/>
+  <circle cx="705" cy="80"  r="5" fill="#e5e2db"/>
+
+  <circle cx="95"  cy="170" r="5" fill="#e5e2db"/>
+  <circle cx="195" cy="170" r="5" fill="#e5e2db"/>
+  <circle cx="295" cy="170" r="5" fill="#e5e2db"/>
+  <circle cx="400" cy="170" r="5" fill="#e5e2db"/>
+  <circle cx="505" cy="170" r="5" fill="#e5e2db"/>
+  <circle cx="605" cy="170" r="5" fill="#e5e2db"/>
+  <circle cx="705" cy="170" r="5" fill="#e5e2db"/>
+
+  <circle cx="95"  cy="250" r="5" fill="#e5e2db"/>
+  <circle cx="195" cy="250" r="5" fill="#e5e2db"/>
+  <circle cx="295" cy="250" r="5" fill="#e5e2db"/>
+  <circle cx="400" cy="250" r="5" fill="#e5e2db"/>
+  <circle cx="505" cy="250" r="5" fill="#e5e2db"/>
+  <circle cx="605" cy="250" r="5" fill="#e5e2db"/>
+  <circle cx="705" cy="250" r="5" fill="#e5e2db"/>
+
+  <circle cx="95"  cy="330" r="5" fill="#e5e2db"/>
+  <circle cx="195" cy="330" r="5" fill="#e5e2db"/>
+  <circle cx="295" cy="330" r="5" fill="#e5e2db"/>
+  <circle cx="400" cy="330" r="5" fill="#e5e2db"/>
+  <circle cx="505" cy="330" r="5" fill="#e5e2db"/>
+  <circle cx="605" cy="330" r="5" fill="#e5e2db"/>
+  <circle cx="705" cy="330" r="5" fill="#e5e2db"/>
+
+  <circle cx="95"  cy="420" r="5" fill="#e5e2db"/>
+  <circle cx="195" cy="420" r="5" fill="#e5e2db"/>
+  <circle cx="295" cy="420" r="5" fill="#e5e2db"/>
+  <circle cx="400" cy="420" r="5" fill="#e5e2db"/>
+  <circle cx="505" cy="420" r="5" fill="#e5e2db"/>
+  <circle cx="605" cy="420" r="5" fill="#e5e2db"/>
+  <circle cx="705" cy="420" r="5" fill="#e5e2db"/>
+
+  <!-- Governance framework — horizontal standard line through middle row -->
+  <line x1="60" y1="250" x2="740" y2="250" stroke="#e5e2db" stroke-width="1" stroke-dasharray="4 6"/>
+
+  <!-- Thin connecting lines — active teams connected across the framework -->
+  <line x1="195" y1="80"  x2="400" y2="250" stroke="#C8956C" stroke-width="0.8" opacity="0.4"/>
+  <line x1="505" y1="80"  x2="400" y2="250" stroke="#C8956C" stroke-width="0.8" opacity="0.4"/>
+  <line x1="95"  y1="170" x2="400" y2="250" stroke="#C8956C" stroke-width="0.8" opacity="0.4"/>
+  <line x1="705" y1="170" x2="400" y2="250" stroke="#C8956C" stroke-width="0.8" opacity="0.4"/>
+  <line x1="295" y1="330" x2="400" y2="250" stroke="#C8956C" stroke-width="0.8" opacity="0.4"/>
+  <line x1="605" y1="330" x2="400" y2="250" stroke="#C8956C" stroke-width="0.8" opacity="0.4"/>
+  <line x1="195" y1="420" x2="400" y2="250" stroke="#C8956C" stroke-width="0.8" opacity="0.4"/>
+  <line x1="605" y1="420" x2="400" y2="250" stroke="#C8956C" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Highlighted active team dots — copper, slightly larger -->
+  <circle cx="195" cy="80"  r="7" fill="#C8956C"/>
+  <circle cx="505" cy="80"  r="7" fill="#C8956C"/>
+  <circle cx="95"  cy="170" r="7" fill="#C8956C"/>
+  <circle cx="705" cy="170" r="7" fill="#C8956C"/>
+  <circle cx="295" cy="330" r="7" fill="#C8956C"/>
+  <circle cx="605" cy="330" r="7" fill="#C8956C"/>
+  <circle cx="195" cy="420" r="7" fill="#C8956C"/>
+  <circle cx="605" cy="420" r="7" fill="#C8956C"/>
+
+  <!-- Central governance hub -->
+  <circle cx="400" cy="250" r="11" fill="#1a1a18"/>
+</svg>

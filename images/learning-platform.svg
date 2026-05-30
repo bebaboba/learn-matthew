@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f6f2"/>
+
+  <!-- Entry point -->
+  <circle cx="70" cy="250" r="6" fill="#6b6b68" opacity="0.5"/>
+
+  <!-- Entry to foundation -->
+  <line x1="76" y1="250" x2="193" y2="175" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="76" y1="250" x2="193" y2="325" stroke="#e5e2db" stroke-width="1.5"/>
+
+  <!-- Foundation nodes — two pillars, the curriculum bedrock -->
+  <circle cx="203" cy="175" r="14" fill="#1a1a18"/>
+  <circle cx="203" cy="325" r="14" fill="#1a1a18"/>
+
+  <!-- Foundation to skills -->
+  <line x1="217" y1="175" x2="400" y2="115" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="217" y1="175" x2="400" y2="210" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="217" y1="325" x2="400" y2="290" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="217" y1="325" x2="400" y2="385" stroke="#e5e2db" stroke-width="1.5"/>
+
+  <!-- Skill nodes — applied practice, copper -->
+  <circle cx="410" cy="115" r="10" fill="#C8956C"/>
+  <circle cx="410" cy="210" r="10" fill="#C8956C"/>
+  <circle cx="410" cy="290" r="10" fill="#C8956C"/>
+  <circle cx="410" cy="385" r="10" fill="#C8956C"/>
+
+  <!-- Skills to applications -->
+  <line x1="420" y1="115" x2="626" y2="72" stroke="#e5e2db" stroke-width="1"/>
+  <line x1="420" y1="115" x2="626" y2="148" stroke="#e5e2db" stroke-width="1"/>
+  <line x1="420" y1="210" x2="626" y2="198" stroke="#e5e2db" stroke-width="1"/>
+  <line x1="420" y1="210" x2="626" y2="255" stroke="#e5e2db" stroke-width="1"/>
+  <line x1="420" y1="290" x2="626" y2="300" stroke="#e5e2db" stroke-width="1"/>
+  <line x1="420" y1="290" x2="626" y2="352" stroke="#e5e2db" stroke-width="1"/>
+  <line x1="420" y1="385" x2="626" y2="400" stroke="#e5e2db" stroke-width="1"/>
+  <line x1="420" y1="385" x2="626" y2="438" stroke="#e5e2db" stroke-width="1"/>
+
+  <!-- Application nodes — outcomes, light outlined circles -->
+  <circle cx="634" cy="72" r="6" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <circle cx="634" cy="148" r="6" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <circle cx="634" cy="198" r="6" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <circle cx="634" cy="255" r="6" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <circle cx="634" cy="300" r="6" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <circle cx="634" cy="352" r="6" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <circle cx="634" cy="400" r="6" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <circle cx="634" cy="438" r="6" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+</svg>
