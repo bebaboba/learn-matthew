@@ -450,3 +450,109 @@ ul { list-style: none; }
     gap: var(--space-sm);
   }
 }
+
+/* ─── Live insights (xAPI) ───────────────────────────────────── */
+.insights-section {
+  padding: var(--space-lg) 0;
+  display: none;
+}
+
+.insights-section.is-ready {
+  display: block;
+}
+
+.insights-intro {
+  max-width: 60ch;
+  color: var(--color-muted);
+  margin-bottom: var(--space-md);
+}
+
+.insights {
+  display: none;
+}
+
+.insights.insights--ready {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.insights-counters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.insight-stat {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-sm);
+  text-align: center;
+}
+
+.insight-num {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.insight-cap {
+  display: block;
+  margin-top: var(--space-xs);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.insights-topics {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.insights-sublabel {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.insights-topics ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.insights-topics li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.insights-topics li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.insights-topics li em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .insights-counters {
+    grid-template-columns: 1fr;
+  }
+}

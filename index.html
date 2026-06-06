@@ -213,6 +213,20 @@
       </div>
     </section>
 
+    <!-- INSIGHTS -->
+    <section id="insights-section" class="insights-section" aria-labelledby="insights-heading">
+      <div class="container">
+        <div class="section-label">Live insights</div>
+        <h2 id="insights-heading" class="section-heading">This page runs on xAPI</h2>
+        <p class="insights-intro">
+          Every interaction here is recorded as anonymous xAPI statements to a Learning Record Store,
+          then read back and shown below — a working demonstration of the learning-analytics loop I build.
+          No personal data is collected; just anonymous, aggregate signals.
+        </p>
+        <div id="insights" class="insights" aria-live="polite"></div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="contact" aria-labelledby="contact-heading">
       <div class="container contact-inner">
@@ -239,5 +253,7 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/track.js"></script>
+  <script src="js/insights.js"></script>
 </body>
 </html>
