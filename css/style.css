@@ -305,6 +305,17 @@ ul { list-style: none; }
   display: none;
 }
 
+.project-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card-link .project-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+
 .project-thumb {
   height: 180px;
   background: var(--color-accent-light);
