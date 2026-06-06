@@ -551,6 +551,15 @@ ul { list-style: none; }
   color: var(--color-accent);
 }
 
+.insights-caption {
+  margin-top: var(--space-sm);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  opacity: 0.8;
+}
+
 @media (max-width: 600px) {
   .insights-counters {
     grid-template-columns: 1fr;
