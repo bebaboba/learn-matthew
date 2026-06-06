@@ -22,9 +22,19 @@
     }
   }
 
-  function track(event, label) {
+  function referrerHost() {
     try {
-      var body = JSON.stringify({ event: event, label: label || '', sessionId: sessionId() });
+      if (!document.referrer) return 'direct';
+      var h = new URL(document.referrer).hostname.replace(/^www\./, '');
+      return (h === 'learnmatthew.com') ? 'direct' : h;
+    } catch (e) { return 'direct'; }
+  }
+
+  function track(event, label, extra) {
+    try {
+      var payload = { event: event, label: label || '', sessionId: sessionId() };
+      if (extra && extra.ref) payload.ref = extra.ref;
+      var body = JSON.stringify(payload);
       if (navigator.sendBeacon) {
         navigator.sendBeacon(API, new Blob([body], { type: 'application/json' }));
       } else {
@@ -40,7 +50,7 @@
   window.lmTrack = track;
 
   document.addEventListener('DOMContentLoaded', function () {
-    track('session_start', 'Portfolio session');
+    track('session_start', 'Portfolio session', { ref: referrerHost() });
 
     var seen = {};
     function once(key) { if (seen[key]) return false; seen[key] = 1; return true; }
