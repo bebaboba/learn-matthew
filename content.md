@@ -20,9 +20,7 @@ contact: Contact
 
 ## hero
 eyebrow: Learning Platforms · Community · Analytics · Product Leadership
-heading: I build the *platforms*,
-*communities*, and *data*
-behind how people learn.
+heading: I build the *platforms*, *communities*, and *data analytics* behind how people learn.
 sub: At Apple, I grew an internal learning platform to serve teams across the organization, fostered the community that made it thrive, and built the analytics that proved its impact. I work where design, product, and learning meet — part designer, part builder, part leader — with a conviction that the best infrastructure disappears into the flow of work.
 cta: See my work
 
