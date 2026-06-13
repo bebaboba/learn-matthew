@@ -55,6 +55,14 @@ link: https://learn-matthew-ai.vercel.app
 cta: Launch the experience →
 desc: An AI-powered interactive portfolio that personalizes the experience based on who you are. Visitors pick a persona and an AI guide walks them through my work — revealing content modules through conversation.
 stat: React · Vite · LLM API
+### Adaptive Tutor (research prototype)
+category: experiments
+tags: Experiment
+image: adaptive-tutor.svg
+link: https://adaptive-tutor-ruddy.vercel.app
+cta: Try the prototype →
+desc: A research prototype of a privacy-preserving, behavior-based adaptive tutor. A learner works a lesson with an AI tutor while a live inspector shows the whole pipeline — behavior → xAPI → inferred state → adaptation — with every inference shown honestly, including its confidence and what drove it. The learner can see, contest, and override what the system infers, and choose their own intent. Anonymous xAPI flows to a Learning Record Store for comprehension reporting.
+stat: React · Claude · xAPI → LRS · behavior-based inference
 ### Apple Internal Learning Platform
 category: product
 tags: Product, L&D

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f6f2"/>
+
+  <!-- behavior: small interaction inputs feeding the first node -->
+  <circle cx="95" cy="195" r="5.5" fill="#f5ead8" stroke="#6b6b68" stroke-width="1.5"/>
+  <circle cx="95" cy="250" r="5.5" fill="#f5ead8" stroke="#6b6b68" stroke-width="1.5"/>
+  <circle cx="95" cy="305" r="5.5" fill="#f5ead8" stroke="#6b6b68" stroke-width="1.5"/>
+  <line x1="101" y1="195" x2="172" y2="250" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="101" y1="250" x2="172" y2="250" stroke="#e5e2db" stroke-width="1.5"/>
+  <line x1="101" y1="305" x2="172" y2="250" stroke="#e5e2db" stroke-width="1.5"/>
+
+  <!-- stage 1: behavior -->
+  <circle cx="180" cy="250" r="10" fill="#6b6b68"/>
+  <line x1="190" y1="250" x2="330" y2="250" stroke="#e5e2db" stroke-width="1.5"/>
+
+  <!-- stage 2: xAPI -->
+  <circle cx="340" cy="250" r="10" fill="#1a1a18"/>
+  <line x1="350" y1="250" x2="478" y2="250" stroke="#e5e2db" stroke-width="1.5"/>
+
+  <!-- stage 3: inference — the centerpiece (copper), with a confidence ring + driver dots -->
+  <circle cx="500" cy="250" r="21" fill="none" stroke="#C8956C" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="500" cy="250" r="13" fill="#C8956C"/>
+  <circle cx="476" cy="206" r="4.5" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <circle cx="462" cy="250" r="4.5" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+  <circle cx="476" cy="294" r="4.5" fill="#f5ead8" stroke="#C8956C" stroke-width="1.5"/>
+
+  <line x1="521" y1="250" x2="650" y2="250" stroke="#e5e2db" stroke-width="1.5"/>
+
+  <!-- stage 4: adaptation -->
+  <circle cx="660" cy="250" r="10" fill="#1a1a18"/>
+
+  <!-- feedback loop: adaptation changes the next behavior -->
+  <path d="M660 261 C 660 425, 180 425, 180 263" fill="none" stroke="#C8956C" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6"/>
+  <path d="M180 264 l -5 9 l 10 0 z" fill="#C8956C" opacity="0.6" transform="rotate(180 180 268)"/>
+</svg>
