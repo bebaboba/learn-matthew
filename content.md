@@ -87,18 +87,6 @@ tags: L&D
 image: market-training.svg
 desc: As Store Leader and Market Training Lead, designed and rolled out training programs across multiple locations — building an early foundation for large-scale learning enablement and cross-location consistency.
 stat: Multi-location · Store Leader + Training Lead
-### Enterprise LMS Evaluation
-category: product
-tags: Product
-image: consolidation.svg
-desc: Represented corporate business teams through the RFP process for selecting an external headless LMS — translating operational requirements into vendor criteria, evaluating platform capabilities against real team needs, and advocating for business priorities throughout the selection process.
-stat: RFP stakeholder representation · Headless LMS selection
-### Enterprise AI Adoption Certification
-category: ld
-tags: L&D
-image: certification.svg
-desc: A full certification blueprint for enterprise ChatGPT adoption — skills map, learning pathway, module sequencing from foundational to applied, assessment instruments, pass/fail criteria, and a credentialing progression designed to be defensible against gaming. Built as a standalone artifact to demonstrate certification design craft.
-stat: Skills map · Assessments · Credentialing progression
 
 ## insights
 label: Live insights

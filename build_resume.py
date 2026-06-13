@@ -25,7 +25,7 @@ SUMMARY = (
 
 EXPERIENCE = [
     {
-        "title": "L&D Producer, Learning Platform",
+        "title": "L&D Producer, Learning Platform Product Owner",
         "org": "Apple University — San Francisco, CA",
         "dates": "2021 – Present",
         "bullets": [
@@ -68,6 +68,7 @@ SKILLS = [
     ("Platform & Product", "0-to-1 platform building, roadmap & adoption strategy, multi-surface (iOS · macOS · web), product discovery"),
     ("Learning & Enablement", "Instructional design, community management, onboarding frameworks, enablement curriculum, SCORM / xAPI, Kirkpatrick model"),
     ("Data & Analytics", "SQL, Tableau, Snowflake, dashboards & curated data sources, AI-accessible data pipelines"),
+    ("AI & Engineering", "AI-assisted product development — designed and shipped this portfolio and an LLM-powered web app (React, Vercel, xAPI analytics); HTML / CSS / JavaScript, Git, prompt engineering, LLM API integration"),
     ("Design & Tools", "Adobe Creative Suite, Figma, Miro"),
 ]
 
@@ -97,14 +98,14 @@ pdf.add_page()
 CW = pdf.w - pdf.l_margin - pdf.r_margin
 
 def section(label):
-    pdf.ln(6)
+    pdf.ln(5)
     pdf.set_font("Helvetica", "B", 10.5)
     pdf.set_text_color(*ACCENT)
     pdf.cell(0, 13, t(label.upper()), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
     y = pdf.get_y() + 1
     pdf.set_draw_color(*BORDER)
     pdf.line(pdf.l_margin, y, pdf.w - pdf.r_margin, y)
-    pdf.ln(4)
+    pdf.ln(3)
 
 # Header
 pdf.set_font("Helvetica", "B", 23)
@@ -121,7 +122,7 @@ pdf.cell(0, 14, t(CONTACT), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 section("Summary")
 pdf.set_font("Helvetica", "", 10)
 pdf.set_text_color(*DARK)
-pdf.multi_cell(CW, 13.5, t(SUMMARY))
+pdf.multi_cell(CW, 12.5, t(SUMMARY))
 
 # Experience
 section("Experience")
@@ -143,18 +144,18 @@ for role in EXPERIENCE:
         pdf.ellipse(pdf.l_margin + 2, y0 + 4.5, 3, 3, style="F")
         pdf.set_xy(pdf.l_margin + 12, y0)
         pdf.set_text_color(*DARK)
-        pdf.multi_cell(CW - 12, 12, t(b), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-    pdf.ln(3)
+        pdf.multi_cell(CW - 12, 11.5, t(b), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+    pdf.ln(2)
 
 # Skills
 section("Skills")
 for cat, items in SKILLS:
     pdf.set_font("Helvetica", "B", 9.7)
     pdf.set_text_color(*DARK)
-    pdf.cell(120, 13, t(cat), new_x=XPos.RIGHT, new_y=YPos.TOP)
+    pdf.cell(120, 11.8, t(cat), new_x=XPos.RIGHT, new_y=YPos.TOP)
     pdf.set_font("Helvetica", "", 9.7)
     pdf.set_text_color(*MUTED)
-    pdf.multi_cell(CW - 120, 13, t(items), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+    pdf.multi_cell(CW - 120, 11.8, t(items), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
 # Education
 section("Education")
