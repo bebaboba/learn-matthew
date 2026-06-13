@@ -19,22 +19,22 @@ work: Work
 contact: Contact
 
 ## hero
-eyebrow: L&D Platform Producer · Learning Enablement · Product Management
-heading: I build the platforms
-where *learning*
-gets made.
-sub: At Apple, I scaled an internal learning platform across the organization — without growing the support team — by building the automation, documentation, community systems, and enablement curriculum that let teams publish effectively on their own. I work at the intersection of learning operations, product management, and the belief that the best infrastructure disappears into the flow of work.
+eyebrow: Learning Platforms · Community · Analytics · Product Leadership
+heading: I build the *platforms*,
+*communities*, and *data*
+behind how people learn.
+sub: At Apple, I grew an internal learning platform to serve teams across the organization, fostered the community that made it thrive, and built the analytics that proved its impact. I work where design, product, and learning meet — part designer, part builder, part leader — with a conviction that the best infrastructure disappears into the flow of work.
 cta: See my work
 
 ## about
 label: About
 heading: The short version
 photo_alt: Matthew Anderson
-bio: I'm an L&D platform producer with roots in product management and arts & culture. That combination means I approach learning operations the way a PM approaches a product: with user empathy, a bias for iteration, and a deep respect for what makes something genuinely useful to the people doing the work.
+bio: I'm an L&D platform producer at Apple University, with roots in product management, customer experience, and arts & culture. That mix means I approach organizational learning the way a PM approaches a product: with user empathy, a bias for iteration, and a deep respect for what makes something genuinely useful to the people doing the work.
 
-I've scaled learning platforms for global teams, built the enablement systems and community infrastructure that let content authors do their best work, curated international art exhibitions, and partnered with museums on community programming — often at the same time. I'm at my best when the problem is ambiguous and the stakes are real.
+Over the past decade I've grown learning platforms for global teams, built the community and enablement systems that let content authors thrive, and stood up the analytics that turn learning activity into insight. Alongside that, I've curated international art exhibitions and partnered with museums on programming at the intersection of art and technology. I'm at my best when the problem is ambiguous, the stakes are real, and the outcome helps people grow.
 
-Based in San Francisco. B.A. Integrated Social Sciences from the University of Washington, with a minor in Art History and coursework in Mixed Media Studio.
+Based in San Francisco. B.A. Integrated Social Sciences from the University of Washington, with a minor in Art History and coursework in Mixed Media Studio Arts.
 
 ## skills
 ### Learning Enablement
@@ -44,7 +44,7 @@ desc: Data platform migration (Snowflake), privacy-conscious access governance, 
 ### Platform & Product
 desc: Multi-surface strategy (iOS · macOS · web), roadmapping, product discovery, tenant models, self-service authoring, adoption metrics
 ### Leadership
-desc: Direct people management, matrixed team leadership, executive communication, cross-functional delivery, OKRs
+desc: Direct people management, matrixed team leadership, executive communication, cross-functional delivery
 
 ## work
 label: Work
@@ -61,7 +61,7 @@ stat: React · Vite · LLM API
 category: product
 tags: Product, L&D
 image: learning-platform.svg
-desc: Scaled Apple's internal learning platform to serve the majority of the organization — without growing the support team — by building automation, documentation, support channels, office hours, and the enablement curriculum that let teams publish independently. As PM, drove features including skills tracking, learning paths, a full app redesign, and workflow integrations with other internal systems. Also led an analytics modernization that connected learning activity to real-time insight and AI tooling.
+desc: Scaled Apple's internal learning platform to serve the majority of the organization by building automation, documentation, support channels, office hours, and the enablement curriculum that let teams publish independently. As PM, drove features including skills tracking, learning paths, a full app redesign, and workflow integrations with other internal systems. Also led an analytics modernization that connected learning activity to real-time insight and AI tooling.
 stat: Org-wide scale · Flat support footprint · PM + operations lead
 ### Learning Data Infrastructure
 category: product
