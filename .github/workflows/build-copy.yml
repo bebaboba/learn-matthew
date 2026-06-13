@@ -1,0 +1,40 @@
+name: Build copy
+
+# Rebuilds index.html from content.md whenever the copy (or template/build script)
+# changes on main, then commits the result back. The path filter means the bot's
+# index.html commit does NOT re-trigger this workflow, so there's no loop.
+on:
+  push:
+    branches: [main]
+    paths:
+      - content.md
+      - index.template.html
+      - build.js
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Render index.html from content.md
+        run: node build.js
+
+      - name: Commit regenerated index.html
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- index.html; then
+            echo "index.html already up to date — nothing to commit."
+          else
+            git add index.html
+            git commit -m "Rebuild index.html from content.md [skip ci]"
+            git push
+          fi

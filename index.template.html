@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- GENERATED FILE — do not edit index.html directly. Edit content.md and the build regenerates this. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{meta.title}}</title>
+  <meta name="description" content="{{meta.description}}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrapper">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#" class="nav-logo">{{nav.logo}}</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">{{nav.about}}</a></li>
+        <li><a href="#work">{{nav.work}}</a></li>
+        <li><a href="#contact">{{nav.contact}}</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">{{hero.eyebrow}}</p>
+        <h1 id="hero-heading" class="hero-heading">
+          {{hero.heading}}
+        </h1>
+        <p class="hero-sub">
+          {{hero.sub}}
+        </p>
+        <a href="#work" class="btn">{{hero.cta}}</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-label">{{about.label}}</div>
+        <div class="about-grid">
+          <div class="about-bio">
+            <div class="about-photo-wrap">
+              <img src="images/headshot.jpg" alt="{{about.photo_alt}}" class="about-photo" />
+            </div>
+            <h2 id="about-heading" class="section-heading">{{about.heading}}</h2>
+            {{about.bio}}
+          </div>
+          <div class="about-skills">
+{{SKILL_CARDS}}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="work" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-label">{{work.label}}</div>
+        <h2 id="work-heading" class="section-heading">{{work.heading}}</h2>
+
+        <div class="work-filters" role="tablist" aria-label="Filter projects by category">
+          <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="ld">L&amp;D</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="product">Product</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="experiments">Experiments</button>
+        </div>
+
+        <div class="work-grid" id="work-grid">
+
+{{WORK_CARDS}}
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section id="insights-section" class="insights-section" aria-labelledby="insights-heading">
+      <div class="container">
+        <div class="section-label">{{insights.label}}</div>
+        <h2 id="insights-heading" class="section-heading">{{insights.heading}}</h2>
+        <p class="insights-intro">
+          {{insights.intro}}
+        </p>
+        <div id="insights" class="insights" aria-live="polite"></div>
+        <p class="insights-caption">{{insights.caption}}</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <div class="container contact-inner">
+        <div class="section-label">{{contact.label}}</div>
+        <h2 id="contact-heading" class="section-heading">{{contact.heading}}</h2>
+        <p class="contact-sub">
+          {{contact.sub}}
+        </p>
+        <a href="mailto:{{contact.email}}" class="btn">{{contact.button}}</a>
+        <div class="contact-links">
+          <a href="{{contact.linkedin}}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> {{footer.text}}</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/track.js"></script>
+  <script src="js/insights.js"></script>
+</body>
+</html>
