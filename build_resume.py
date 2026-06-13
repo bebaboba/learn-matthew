@@ -27,7 +27,7 @@ EXPERIENCE = [
     {
         "title": "L&D Producer, Learning Platform",
         "org": "Apple University — San Francisco, CA",
-        "dates": "2019 – Present",
+        "dates": "2021 – Present",
         "bullets": [
             "Product manager for Apple's internal global learning platform across iOS, macOS, and web — owning roadmap, cross-functional delivery, and adoption for a worldwide workforce.",
             "Grew the platform to serve teams across the organization without expanding the support team, through automation, documentation, and a self-service enablement curriculum.",
@@ -37,9 +37,9 @@ EXPERIENCE = [
         ],
     },
     {
-        "title": "Creative Pro / Senior Retail Specialist",
+        "title": "Creative Pro / Lead Creative",
         "org": "Apple — Retail",
-        "dates": "2009 – 2019",
+        "dates": "2012 – 2021",
         "bullets": [
             "Lead customer educator and product expert at flagship locations, delivering technical and creative training to thousands of customers.",
             "Made complex technical concepts accessible and actionable; contributed to regional training initiatives and mentored junior team members.",
@@ -48,7 +48,7 @@ EXPERIENCE = [
     {
         "title": "Store Leader & Market Training Lead",
         "org": "Starbucks — Seattle, WA",
-        "dates": "2004 – 2009",
+        "dates": "2004 – 2012",
         "bullets": [
             "Designed and delivered multi-unit training programs across a regional portfolio; built curriculum and measured outcomes against operational KPIs.",
             "As Store Leader, owned full P&L and led a team of 25+.",
@@ -72,7 +72,7 @@ SKILLS = [
 ]
 
 EDUCATION = [
-    ("B.A., Integrated Social Sciences — University of Washington", "2017",
+    ("B.A., Integrated Social Sciences — University of Washington", "2017 – 2018",
      "Art History minor; coursework in Communications, Computer Science, and Mixed Media Studio Arts."),
     ("Fine Art & Design studies — Western Washington University", "1999 – 2004", ""),
 ]
