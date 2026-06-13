@@ -168,6 +168,8 @@ const replacements = {
   'contact.button': esc(collapse(field('contact', 'button'))),
   'contact.email': esc(collapse(field('contact', 'email'))),
   'contact.linkedin': esc(collapse(field('contact', 'linkedin'))),
+  'contact.resume_label': esc(collapse(field('contact', 'resume_label'))),
+  'contact.resume_file': esc(collapse(field('contact', 'resume_file'))),
   'footer.text': esc(collapse(field('footer', 'text'))),
 };
 

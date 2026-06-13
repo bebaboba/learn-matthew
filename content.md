@@ -113,6 +113,8 @@ sub: Open to conversations about learning platform strategy, L&D operations lead
 button: Say hello
 email: matthewsfo@gmail.com
 linkedin: https://linkedin.com/in/picocat
+resume_label: Download résumé (PDF)
+resume_file: Matthew_Anderson_Resume.pdf
 
 ## footer
 text: Matthew Anderson · San Francisco
