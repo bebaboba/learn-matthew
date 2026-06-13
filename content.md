@@ -87,12 +87,6 @@ tags: Product
 image: authoring-model.svg
 desc: Designed a distributed authoring system that empowered internal teams across the organization to own their learning programs — establishing content standards, quality governance, and instructional guardrails so self-service scale didn't come at the cost of learning integrity.
 stat: Org-wide · Quality-governed self-serve authoring
-### Market Training Program — Starbucks
-category: ld
-tags: L&D
-image: market-training.svg
-desc: As Store Leader and Market Training Lead, designed and rolled out training programs across multiple locations — building an early foundation for large-scale learning enablement and cross-location consistency.
-stat: Multi-location · Store Leader + Training Lead
 
 ## insights
 label: Live insights
