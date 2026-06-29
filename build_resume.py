@@ -32,7 +32,7 @@ EXPERIENCE = [
             "Product manager for Apple's internal global learning platform across iOS, macOS, and web — owning roadmap, cross-functional delivery, and adoption for a worldwide workforce.",
             "Grew the platform to serve teams across the organization without expanding the support team, through automation, documentation, and a self-service enablement curriculum.",
             "Built the community and enablement systems — workshops, office hours, best-practice guides — that let content teams publish independently.",
-            "Led an analytics modernization connecting learning activity to real-time insight and AI tooling.",
+            "Led analytics modernization: migrated learning data to Snowflake, built Tableau dashboards and AI-accessible pipelines, and implemented privacy-conscious access governance with security and data engineering teams.",
             "Architected the function from the ground up in a high-ambiguity environment with no existing playbook.",
         ],
     },
@@ -70,6 +70,21 @@ SKILLS = [
     ("Data & Analytics", "SQL, Tableau, Snowflake, dashboards & curated data sources, AI-accessible data pipelines"),
     ("AI & Engineering", "AI-assisted product development — designed and shipped this portfolio and an LLM-powered web app (React, Vercel, xAPI analytics); HTML / CSS / JavaScript, Git, prompt engineering, LLM API integration"),
     ("Design & Tools", "Adobe Creative Suite, Figma, Miro"),
+]
+
+PROJECTS = [
+    {
+        "title": "Adaptive Tutor",
+        "url": "adaptive-tutor-ruddy.vercel.app",
+        "year": "2026",
+        "desc": "Working demonstration of a privacy-preserving, behavior-based adaptive tutor. Behavior to xAPI to heuristic inference (engagement, frustration, confusion, intent -- each with confidence and driving features) to tutor adaptation, shown live in an inspector the learner can read, contest, and override. Stack: React, Vite, Tailwind, Anthropic API, serverless proxy (Vercel).",
+    },
+    {
+        "title": "Learn Matthew AI",
+        "url": "learn-matthew-ai.vercel.app",
+        "year": "2026",
+        "desc": "AI-powered interactive portfolio with streaming Claude responses, persona-based UX (recruiter / hiring manager / curious stranger), and anonymous xAPI analytics. Stack: React, Vite, Anthropic API.",
+    },
 ]
 
 EDUCATION = [
@@ -145,6 +160,24 @@ for role in EXPERIENCE:
         pdf.set_xy(pdf.l_margin + 12, y0)
         pdf.set_text_color(*DARK)
         pdf.multi_cell(CW - 12, 11.5, t(b), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+    pdf.ln(2)
+
+# Projects
+section("Projects")
+for proj in PROJECTS:
+    pdf.set_font("Helvetica", "B", 10.5)
+    pdf.set_text_color(*DARK)
+    pdf.cell(CW * 0.72, 14, t(proj["title"]), new_x=XPos.LMARGIN, new_y=YPos.TOP)
+    pdf.set_font("Helvetica", "", 9.5)
+    pdf.set_text_color(*MUTED)
+    pdf.cell(0, 14, t(proj["year"]), align="R", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+    pdf.set_font("Helvetica", "I", 9.5)
+    pdf.set_text_color(*MUTED)
+    pdf.cell(0, 13, t(proj["url"]), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+    pdf.ln(2)
+    pdf.set_font("Helvetica", "", 9.7)
+    pdf.set_text_color(*DARK)
+    pdf.multi_cell(CW, 11.5, t(proj["desc"]), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
     pdf.ln(2)
 
 # Skills
