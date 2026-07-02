@@ -92,6 +92,7 @@
           <button class="filter-btn" role="tab" aria-selected="false" data-filter="ld">L&amp;D</button>
           <button class="filter-btn" role="tab" aria-selected="false" data-filter="product">Product</button>
           <button class="filter-btn" role="tab" aria-selected="false" data-filter="experiments">Experiments</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="personal">Personal</button>
         </div>
 
         <div class="work-grid" id="work-grid">
@@ -105,11 +106,11 @@
               <h3 class="project-title">Learn Matthew</h3>
               <p class="project-desc">An AI-powered interactive portfolio that personalizes the experience based on who you are. Visitors pick a persona and an AI guide walks them through my work — revealing content modules through conversation, not a fixed page layout.</p>
               <span class="project-stat">React · Vite · Claude API</span>
-              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="work-more-0">
+              <button class="project-toggle" type="button" aria-haspopup="dialog">
                 <span class="project-toggle-label">Read more</span>
                 <span class="project-toggle-icon" aria-hidden="true"></span>
               </button>
-              <div class="project-more" id="work-more-0">
+              <div class="project-more" hidden>
                 <p>Built as an argument, not just a demo: that personalization doesn't require harvesting personal data. Visitors choose a persona and a Claude-powered guide adapts tone and depth accordingly, while every interaction is logged as anonymous xAPI statements — the same measurement discipline I bring to L&amp;D, pointed at my own portfolio this time. React front end, a serverless API streaming Claude responses, Claude as production partner throughout.</p>
                 <a class="project-link" href="https://learn-matthew-ai.vercel.app" target="_blank" rel="noopener noreferrer">Launch the experience →</a>
               </div>
@@ -125,11 +126,11 @@
               <h3 class="project-title">Adaptive Tutor (research prototype)</h3>
               <p class="project-desc">A working argument for what an adaptive AI tutor should be. A learner works a lesson with an AI tutor while a live inspector shows the whole pipeline — behavior → xAPI → inferred state → adaptation — with every inference shown honestly, including its confidence (capped below 100% on purpose) and what drove it. The learner can see, contest, and override what the system infers.</p>
               <span class="project-stat">React · Claude · xAPI → LRS · behavior-based inference</span>
-              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="work-more-1">
+              <button class="project-toggle" type="button" aria-haspopup="dialog">
                 <span class="project-toggle-label">Read more</span>
                 <span class="project-toggle-icon" aria-hidden="true"></span>
               </button>
-              <div class="project-more" id="work-more-1">
+              <div class="project-more" hidden>
                 <p>The core design bet: an adaptive system should never assert more confidence than its evidence supports, and the learner should always be able to see and challenge its reasoning. The live inspector shows the exact behavioral signals — pacing, hesitation, review patterns — that produced each inferred state, before any adaptation happens. Built solo with Claude as production partner across the full stack: React front end, an xAPI event pipeline into a Learning Record Store, and an inference layer translating raw behavior into pedagogical decisions.</p>
                 <p>Building the prototype opened onto a bigger thesis: most "adaptive" tutors reset with every session. The interesting problem, especially for corporate L&amp;D, is a <strong>persistent adaptive tutor</strong> — a learner-tutor relationship that builds a profile over time instead of starting cold each time someone opens it. That thesis split into three research threads I've kept developing past the prototype itself.</p>
                 <p><strong>Thread A — Persistent Adaptive Tutor.</strong> Cognitive load is the easier half to infer: pacing, error rates, time-to-completion, how often someone asks for clarification. The harder half is behavioral and contextual — when a person learns best, whether they need a concrete example before an abstraction or the reverse, whether they thrive on productive struggle or get frustrated by it. That's the same territory Josh Bersin's Dynamic Enablement model points at, and it's where a persistent profile actually earns its keep.</p>
@@ -151,11 +152,11 @@
               <h3 class="project-title">Content Standards for a 145+ Team Platform</h3>
               <p class="project-desc">Set and defended the quality bar for Apple's internal learning platform — 145+ distinct teams producing their own learning. Defined what "great" meant precisely enough that teams could hit it without me in the room, and coached instructional designers away from click-through, compliance-style courseware toward learning grounded in adult learning theory.</p>
               <span class="project-stat">145+ teams · Quality bar defined, not just enforced</span>
-              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="work-more-2">
+              <button class="project-toggle" type="button" aria-haspopup="dialog">
                 <span class="project-toggle-label">Read more</span>
                 <span class="project-toggle-icon" aria-hidden="true"></span>
               </button>
-              <div class="project-more" id="work-more-2">
+              <div class="project-more" hidden>
                 <p>The standard wasn't a style guide — it was a small set of testable questions any team could ask before publishing, like whether the content respects the learner's time and whether anyone could actually measure if it worked. Teams that could answer those honestly got out of my way; teams that couldn't got coaching, not a rejection. That's the difference between governing quality and just gatekeeping it.</p>
               </div>
             </div>
@@ -170,11 +171,11 @@
               <h3 class="project-title">Distributed Authoring &amp; Quality Governance</h3>
               <p class="project-desc">Designed a distributed authoring system that let teams across the organization own their learning programs — establishing content standards, editorial review, and instructional guardrails so self-service scale didn't come at the cost of learning integrity. Speed without quality isn't adoption; it's clutter.</p>
               <span class="project-stat">Org-wide · Quality-governed self-serve authoring</span>
-              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="work-more-3">
+              <button class="project-toggle" type="button" aria-haspopup="dialog">
                 <span class="project-toggle-label">Read more</span>
                 <span class="project-toggle-icon" aria-hidden="true"></span>
               </button>
-              <div class="project-more" id="work-more-3">
+              <div class="project-more" hidden>
                 <p>Self-serve only works if "good enough to publish" means the same thing to everyone doing the publishing. The system paired lightweight editorial review with clear authoring guardrails so teams could move at their own pace without the platform turning into a pile of unreviewed content. The goal was never to slow teams down — it was to make the fast path and the good path the same path.</p>
               </div>
             </div>
@@ -190,11 +191,11 @@
               <h3 class="project-title">Learning Measurement System</h3>
               <p class="project-desc">Built the instrumentation to know whether content was actually teaching — post-engagement feedback on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by feeding results back into what got made next. Measurement that changed the content, not decoration on top of it.</p>
               <span class="project-stat">Feedback cadence · Dashboards · Closed-loop into production</span>
-              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="work-more-4">
+              <button class="project-toggle" type="button" aria-haspopup="dialog">
                 <span class="project-toggle-label">Read more</span>
                 <span class="project-toggle-icon" aria-hidden="true"></span>
               </button>
-              <div class="project-more" id="work-more-4">
+              <div class="project-more" hidden>
                 <p>The dashboard itself was never the point — the loop was. Feedback rolled up alongside adoption and support signals on a regular cadence, then went back to the teams that made the content and into what the platform built next. Content that scored well on completion but poorly on "did this actually help" was a signal to redesign, not a metric to celebrate.</p>
               </div>
             </div>
@@ -209,11 +210,11 @@
               <h3 class="project-title">New Team Onboarding Framework</h3>
               <p class="project-desc">Replaced fragmented manual training workflows with a unified, self-serve onboarding experience — driving a 50%+ reduction in time-to-productivity for newly onboarded teams across the platform.</p>
               <span class="project-stat">50%+ reduction in time-to-productivity</span>
-              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="work-more-5">
+              <button class="project-toggle" type="button" aria-haspopup="dialog">
                 <span class="project-toggle-label">Read more</span>
                 <span class="project-toggle-icon" aria-hidden="true"></span>
               </button>
-              <div class="project-more" id="work-more-5">
+              <div class="project-more" hidden>
                 <p>The old process was tribal knowledge, one-off threads, and whatever the last team happened to write down. Replacing it meant one self-serve path that worked whether a new team's first project shipped in two weeks or two quarters — front-loading the standards and platform mechanics so teams spent their early weeks building content, not discovering the system by trial and error.</p>
               </div>
             </div>
@@ -229,51 +230,51 @@
               <h3 class="project-title">Bellevue Arts Museum Partnership</h3>
               <p class="project-desc">Built and owned an external cultural partnership from scratch — a two-year monthly Art Walk series (2018–2020) with the Bellevue Arts Museum. Planned each session and led public groups who drew, sketched, and photographed the collection using Apple technology, translating technical skills into creative practice for a general audience. New audiences for the museum, hands-on creative learning for participants, ended only by COVID.</p>
               <span class="project-stat">2-year external partnership · Public audience · Cross-format teaching</span>
-              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="work-more-6">
+              <button class="project-toggle" type="button" aria-haspopup="dialog">
                 <span class="project-toggle-label">Read more</span>
                 <span class="project-toggle-icon" aria-hidden="true"></span>
               </button>
-              <div class="project-more" id="work-more-6">
+              <div class="project-more" hidden>
                 <p>What started as a one-off session turned into two years of monthly programming because the format worked — give people real tools and real art, get out of the way, and let looking closely turn into making something. It's the same instinct behind everything else on this page — the best teaching moments are the ones where the "teacher" mostly sets up the conditions and steps back.</p>
               </div>
             </div>
           </article>
 
-          <article class="project-card" data-category="ld">
+          <article class="project-card" data-category="personal">
             <div class="project-thumb" aria-hidden="true"><img src="images/consolidation.svg" alt="" /></div>
             <div class="project-info">
               <div class="project-tags">
                 <span class="tag tag--ld">L&amp;D</span>
-                <span class="tag tag--product">Personal</span>
+                <span class="tag tag--personal">Personal</span>
               </div>
               <h3 class="project-title">A Philosophy Reading Practice</h3>
               <p class="project-desc">A decade-plus habit of reading philosophy — epistemology, ethics, philosophy of education — not for credential but because it's the actual root of how I think about teaching. Freire's line between education as the practice of freedom and the "banking model" that deposits information into passive recipients isn't classroom theory I picked up for a job; it's the same thinking I bring to an evening with a book. The distance between "what does it mean to understand something" and "what makes a lesson worth a learner's time" is shorter than people think.</p>
               <span class="project-stat">Ongoing practice · Epistemology, ethics, philosophy of education</span>
-              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="work-more-7">
+              <button class="project-toggle" type="button" aria-haspopup="dialog">
                 <span class="project-toggle-label">Read more</span>
                 <span class="project-toggle-icon" aria-hidden="true"></span>
               </button>
-              <div class="project-more" id="work-more-7">
+              <div class="project-more" hidden>
                 <p>Epistemology in particular — the question of how we actually know something, versus how we merely feel confident about it — turns out to be the same question underneath most of my measurement work. A completion rate tells you someone finished; it doesn't tell you they understood. Reading philosophy for its own sake, with no professional agenda, is what keeps that distinction sharp instead of theoretical.</p>
               </div>
             </div>
           </article>
 
-          <article class="project-card" data-category="ld">
+          <article class="project-card" data-category="personal">
             <div class="project-thumb" aria-hidden="true"><img src="images/certification.svg" alt="" /></div>
             <div class="project-info">
               <div class="project-tags">
                 <span class="tag tag--ld">L&amp;D</span>
-                <span class="tag tag--product">Personal</span>
+                <span class="tag tag--personal">Personal</span>
               </div>
               <h3 class="project-title">Teaching Myself Quantum Mechanics</h3>
               <p class="project-desc">Picked up quantum mechanics during the pandemic — partly to point my attention at something larger than the news, partly because there's no steeper test case for explaining a hard idea well. What kept me in it was watching great science communicators solve the exact problem I solve for a living: making genuinely complex ideas stick. My favorites — <a href="https://www.youtube.com/c/pbsspacetime" target="_blank" rel="noopener noreferrer">Space Time</a>, <a href="https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q" target="_blank" rel="noopener noreferrer">Kurzgesagt</a>, and <a href="https://www.youtube.com/@ScienceClicEN" target="_blank" rel="noopener noreferrer">ScienceClic</a> — all lean on the same trick: ground the physics in the history of how the thinking evolved, and keep the confusion and awe in instead of editing it out.</p>
               <span class="project-stat">Self-directed since 2020 · Science communication as a design problem</span>
-              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="work-more-8">
+              <button class="project-toggle" type="button" aria-haspopup="dialog">
                 <span class="project-toggle-label">Read more</span>
                 <span class="project-toggle-icon" aria-hidden="true"></span>
               </button>
-              <div class="project-more" id="work-more-8">
+              <div class="project-more" hidden>
                 <p>The pattern I keep noticing across the channels I return to: they don't sand the confusion out of the story. They show you the specific historical moment where physicists were genuinely stuck, let you feel the size of the problem, and only then hand you the resolution. Understanding sticks better when you've felt the weight of the question it's answering — which is the same argument I'd make for teaching almost anything else, not just physics.</p>
               </div>
             </div>
@@ -319,6 +320,17 @@
       <p>© <span id="year"></span> Matthew Anderson · San Francisco</p>
     </div>
   </footer>
+
+  <!-- Work card detail overlay -->
+  <div class="project-overlay" id="project-overlay" hidden>
+    <div class="project-overlay-backdrop" data-overlay-close></div>
+    <div class="project-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+      <button class="project-overlay-close" type="button" aria-label="Close" data-overlay-close>&times;</button>
+      <div class="project-overlay-tags" id="overlay-tags"></div>
+      <h3 class="project-overlay-title" id="overlay-title"></h3>
+      <div class="project-overlay-body" id="overlay-body"></div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
   <script src="js/track.js"></script>
