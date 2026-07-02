@@ -21,7 +21,7 @@ contact: Contact
 ## hero
 eyebrow: Content & Curriculum · Learning Science · AI-Native Production
 heading: I build the *content standards*, *quality systems*, and *AI-native workflows* behind learning that actually teaches.
-sub: At Apple, I set the quality bar for a learning platform used by 145+ teams, coached the craft that kept it substantive instead of hollow, and built the measurement to prove whether people got better — not whether they came back. Now I'm building AI-native learning products with Claude that encode that craft into systems instead of guarding it.
+sub: At Apple, I set the quality bar for a learning platform used by 145+ teams — none of which report to me — coached the craft that kept it substantive instead of hollow, and built the measurement to prove whether people got better, not whether they came back. Now I'm building AI-native learning products with Claude that encode that craft into systems instead of guarding it.
 cta: See my work
 
 ## about
@@ -30,7 +30,7 @@ heading: The short version
 photo_alt: Matthew Anderson
 bio: I'm a content & curriculum leader with a decade turning technical and creative subject matter into experiences that actually teach. My roots are in product management, arts & culture, and direct instruction — which means I approach content the way a craftsperson approaches production: with real editorial taste, a bias for measurement, and a refusal to accept engagement as a proxy for learning.
 
-Over the past decade I've set the content standards and quality bar for a 145+ team learning platform, coached instructional designers away from click-through courseware and toward learning grounded in adult learning theory, and built the feedback systems that prove whether it worked. Alongside that, I've curated international art exhibitions and run a two-year museum partnership teaching creative technology to the public. Now I'm building AI-native learning products with Claude — an adaptive tutor and an interactive portfolio — that put those same standards into systems that scale past what any team could produce by hand.
+Over the past decade I've set the content standards and quality bar for a 145+ team learning platform — none of which report to me. Apple has a phrase for that kind of leadership: accountability without control. I coached instructional designers away from click-through courseware and toward learning grounded in adult learning theory, and built the feedback systems that prove whether it worked. Alongside that, I've curated international art exhibitions and run a two-year museum partnership teaching creative technology to the public. Now I'm building AI-native learning products with Claude — an adaptive tutor and an interactive portfolio — that put those same standards into systems that scale past what any team could produce by hand.
 
 Based in San Francisco. B.A. Integrated Social Sciences from the University of Washington, with a minor in Art History and coursework in Mixed Media Studio Arts.
 
