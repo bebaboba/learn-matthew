@@ -70,6 +70,15 @@ function bioParagraphs(text) {
 
 const TAG_CLASS = { Product: 'product', 'L&D': 'ld', Experiment: 'experiments' };
 
+// Converts markdown-style [label](url) into real links, applied after escaping
+// so plain "&" etc. in prose stays safe while intentional links still render.
+function linkify(text) {
+  return text.replace(
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+  );
+}
+
 function skillCards() {
   return data.skills.items
     .map(
@@ -96,7 +105,7 @@ function workCards() {
     .map((it) => {
       const cat = (it.category || '').trim();
       const img = (it.image || '').trim();
-      const desc = esc(collapse(it.desc || ''));
+      const desc = linkify(esc(collapse(it.desc || '')));
       const stat = esc(collapse(it.stat || ''));
       const link = (it.link || '').trim();
       const thumb = `<div class="project-thumb" aria-hidden="true"><img src="images/${img}" alt="" /></div>`;
