@@ -102,33 +102,21 @@ function tagSpans(tagsField, indent) {
 
 function workCards() {
   return data.work.items
-    .map((it) => {
+    .map((it, i) => {
       const cat = (it.category || '').trim();
       const img = (it.image || '').trim();
       const desc = linkify(esc(collapse(it.desc || '')));
       const stat = esc(collapse(it.stat || ''));
       const link = (it.link || '').trim();
+      const more = linkify(esc(collapse(it.more || '')));
+      const moreId = `work-more-${i}`;
       const thumb = `<div class="project-thumb" aria-hidden="true"><img src="images/${img}" alt="" /></div>`;
 
-      if (link) {
-        const cta = esc(collapse(it.cta || 'Launch the experience →'));
-        return (
-          `          <article class="project-card" data-category="${cat}">\n` +
-          `            <a class="project-card-link" href="${link}" target="_blank" rel="noopener noreferrer" aria-label="Launch ${esc(it.title)}, an AI-powered interactive portfolio (opens in a new tab)">\n` +
-          `              ${thumb}\n` +
-          `              <div class="project-info">\n` +
-          `                <div class="project-tags">\n` +
-          `${tagSpans(it.tags, '                  ')}\n` +
-          `                </div>\n` +
-          `                <h3 class="project-title">${esc(it.title)}</h3>\n` +
-          `                <p class="project-desc">${desc}</p>\n` +
-          `                <span class="project-stat">${stat}</span>\n` +
-          `                <span class="project-link">${cta}</span>\n` +
-          `              </div>\n` +
-          `            </a>\n` +
-          `          </article>`
-        );
-      }
+      const ctaLink = link
+        ? `\n                <a class="project-link" href="${link}" target="_blank" rel="noopener noreferrer">${esc(
+            collapse(it.cta || 'Launch the experience →')
+          )}</a>`
+        : '';
 
       return (
         `          <article class="project-card" data-category="${cat}">\n` +
@@ -140,6 +128,13 @@ function workCards() {
         `              <h3 class="project-title">${esc(it.title)}</h3>\n` +
         `              <p class="project-desc">${desc}</p>\n` +
         `              <span class="project-stat">${stat}</span>\n` +
+        `              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="${moreId}">\n` +
+        `                <span class="project-toggle-label">Read more</span>\n` +
+        `                <span class="project-toggle-icon" aria-hidden="true"></span>\n` +
+        `              </button>\n` +
+        `              <div class="project-more" id="${moreId}">\n` +
+        `                <p>${more}</p>${ctaLink}\n` +
+        `              </div>\n` +
         `            </div>\n` +
         `          </article>`
       );

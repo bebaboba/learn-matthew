@@ -20,6 +20,22 @@ filterBtns.forEach(btn => {
   });
 });
 
+// ── Work card expand / collapse ──────────────────────────────────
+projectCards.forEach(card => {
+  const toggle = card.querySelector('.project-toggle');
+  if (!toggle) return;
+
+  const setExpanded = (expanded) => {
+    toggle.setAttribute('aria-expanded', String(expanded));
+    toggle.querySelector('.project-toggle-label').textContent = expanded ? 'Show less' : 'Read more';
+  };
+
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('a')) return; // let real links navigate normally
+    setExpanded(toggle.getAttribute('aria-expanded') !== 'true');
+  });
+});
+
 // ── Active nav link on scroll ───────────────────────────────────
 const sections = document.querySelectorAll('main section[id]');
 const navLinks  = document.querySelectorAll('.nav-links a');
