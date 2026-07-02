@@ -13,14 +13,18 @@ from fpdf.enums import XPos, YPos
 
 # ── Content (edit here) ───────────────────────────────────────────────────────
 NAME = "Matthew Anderson"
-TAGLINE = "L&D Platform Producer  ·  Platforms · Community · Analytics"
+TAGLINE = "Content & Curriculum Leadership  ·  Learning Science · AI-Native Production"
 CONTACT = "San Francisco, CA  ·  matthewsfo@gmail.com  ·  linkedin.com/in/picocat  ·  learnmatthew.com"
 
 SUMMARY = (
-    "Learning and enablement leader who builds the platforms, communities, and data behind how "
-    "people learn. At Apple, grew an internal learning platform to serve teams across the "
-    "organization, fostered the community that made it thrive, and built the analytics that proved "
-    "its impact. Part designer, part builder, part leader, with roots in product management and the arts."
+    "Learning leader who builds content systems, not just content. A decade turning technical and "
+    "creative subject matter into experiences that actually teach -- and a refusal to accept engagement "
+    "metrics as a proxy for whether anyone got better. At Apple, owned the learning platform behind "
+    "145+ internal teams, set the quality bar that let those teams author independently without it "
+    "turning to noise, and coached instructional designers away from click-through courseware toward "
+    "learning that respects the learner's time and intelligence. Now building AI-native learning "
+    "products with Claude -- an adaptive tutor and an interactive portfolio -- that encode that craft "
+    "into systems rather than guarding it."
 )
 
 EXPERIENCE = [
@@ -29,11 +33,12 @@ EXPERIENCE = [
         "org": "Apple University — San Francisco, CA",
         "dates": "2021 – Present",
         "bullets": [
-            "Product manager for Apple's internal global learning platform across iOS, macOS, and web — owning roadmap, cross-functional delivery, and adoption for a worldwide workforce.",
-            "Grew the platform to serve teams across the organization without expanding the support team, through automation, documentation, and a self-service enablement curriculum.",
-            "Built the community and enablement systems — workshops, office hours, best-practice guides — that let content teams publish independently.",
-            "Led analytics modernization: migrated learning data to Snowflake, built Tableau dashboards and AI-accessible pipelines, and implemented privacy-conscious access governance with security and data engineering teams.",
-            "Architected the function from the ground up in a high-ambiguity environment with no existing playbook.",
+            "Set and defended the quality bar for a distributed authoring model that let 145+ teams produce their own learning -- precise enough that self-serve scale didn't become noise.",
+            "Coached instructional designers away from click-through, compliance-style courseware toward experiences grounded in adult learning theory that meet learners where they are.",
+            "Built a learning measurement system -- a structured feedback cadence aggregated into a dashboard alongside adoption and support signals -- and closed the loop by feeding results back into the roadmap.",
+            "Cut time-to-productivity 50%+ for newly onboarded teams by replacing fragmented manual workflows with a unified self-serve onboarding experience.",
+            "Navigated the tension between stakeholder demand for broader access to learner data and privacy-conscious governance, implementing access controls with security and data engineering teams.",
+            "Architected the content and platform function from nothing -- no precedent, no template -- in a high-ambiguity environment.",
         ],
     },
     {
@@ -41,8 +46,9 @@ EXPERIENCE = [
         "org": "Apple — Retail",
         "dates": "2012 – 2021",
         "bullets": [
-            "Lead customer educator and product expert at flagship locations, delivering technical and creative training to thousands of customers.",
-            "Made complex technical concepts accessible and actionable; contributed to regional training initiatives and mentored junior team members.",
+            "Taught technical and creative subjects -- coding, video, audio, photography -- to thousands of learners from first-timers to working professionals, adapting the same material across radically different levels.",
+            "Built and owned an external cultural partnership: a two-year monthly Art Walk series (2018-2020) with the Bellevue Arts Museum, planning sessions and leading public groups who used Apple technology for creative practice.",
+            "Ran coding sessions for K-12 school groups across multiple districts; mentored junior team members and contributed to regional training initiatives.",
         ],
     },
     {
@@ -50,8 +56,9 @@ EXPERIENCE = [
         "org": "Starbucks — Seattle, WA",
         "dates": "2004 – 2012",
         "bullets": [
-            "Designed and delivered multi-unit training programs across a regional portfolio; built curriculum and measured outcomes against operational KPIs.",
+            "Designed and delivered multi-unit training curriculum across a regional market -- building materials adopted market-wide and measuring outcomes against operational KPIs.",
             "As Store Leader, owned full P&L and led a team of 25+.",
+            "Drove Lean Thinking adoption across the Portland and Seattle markets, and learned firsthand the tension between scaling a system and preserving what made it worth scaling.",
         ],
     },
     {
@@ -59,17 +66,17 @@ EXPERIENCE = [
         "org": "Viking Union Gallery, Western Washington University — Bellingham, WA",
         "dates": "2002 – 2004",
         "bullets": [
-            "Curated and produced international exhibitions; managed public programming and stakeholder relationships — an early foundation in audience-centered experience design.",
+            "Curated and produced international exhibitions; managed public programming and stakeholder relationships at a mission-driven arts institution -- early training in audience-centered design.",
         ],
     },
 ]
 
 SKILLS = [
-    ("Platform & Product", "0-to-1 platform building, roadmap & adoption strategy, multi-surface (iOS · macOS · web), product discovery"),
-    ("Learning & Enablement", "Instructional design, community management, onboarding frameworks, enablement curriculum, SCORM / xAPI, Kirkpatrick model"),
-    ("Data & Analytics", "SQL, Tableau, Snowflake, dashboards & curated data sources, AI-accessible data pipelines"),
-    ("AI & Engineering", "AI-assisted product development — designed and shipped this portfolio and an LLM-powered web app (React, Vercel, xAPI analytics); HTML / CSS / JavaScript, Git, prompt engineering, LLM API integration"),
-    ("Design & Tools", "Adobe Creative Suite, Figma, Miro"),
+    ("Content & Curriculum", "Instructional design, curriculum architecture, quality standards, multi-format production (written, interactive), editorial judgment"),
+    ("Learning Science", "Adult learning theory, ADDIE, Kirkpatrick evaluation, learning measurement & instrumentation, SCORM / xAPI"),
+    ("AI-Native Production", "Building content with Claude, Anthropic API, prompt engineering, human-vs-AI line-drawing, adaptive/tutoring system design"),
+    ("Systems & Scale", "Distributed authoring, 0-to-1 platform building, production workflow design, self-serve enablement at scale"),
+    ("Measurement", "Dashboards, adoption analytics, feedback cadence design, SQL, Tableau, Snowflake, privacy-conscious data governance"),
 ]
 
 PROJECTS = [
@@ -77,13 +84,13 @@ PROJECTS = [
         "title": "Adaptive Tutor",
         "url": "adaptive-tutor-ruddy.vercel.app",
         "year": "2026",
-        "desc": "Working demonstration of a privacy-preserving, behavior-based adaptive tutor. Behavior to xAPI to heuristic inference (engagement, frustration, confusion, intent -- each with confidence and driving features) to tutor adaptation, shown live in an inspector the learner can read, contest, and override. Stack: React, Vite, Tailwind, Anthropic API, serverless proxy (Vercel).",
+        "desc": "A working argument for what an adaptive AI tutor should be. Every inference the system makes -- engagement, frustration, confusion, intent -- is shown to the learner in real time with its confidence capped below 100% on purpose, and the signals behind it. The learner can read, contest, and override any conclusion. Stack: React, Vite, Tailwind, Anthropic API, xAPI -> LRS.",
     },
     {
         "title": "Learn Matthew AI",
         "url": "learn-matthew-ai.vercel.app",
         "year": "2026",
-        "desc": "AI-powered interactive portfolio with streaming Claude responses, persona-based UX (recruiter / hiring manager / curious stranger), and anonymous xAPI analytics. Stack: React, Vite, Anthropic API.",
+        "desc": "Interactive AI-guided portfolio with streaming Claude responses, persona-based adaptive UX, and anonymous xAPI analytics -- demonstrating that personalization doesn't require harvesting personal data.",
     },
 ]
 
