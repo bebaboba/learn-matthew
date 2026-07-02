@@ -79,6 +79,22 @@ function linkify(text) {
   );
 }
 
+function boldify(text) {
+  return text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+}
+
+// Splits a work card's "more" field on blank lines into <p> tags (like
+// bioParagraphs), so longer deeper-dive copy can carry real paragraph breaks
+// and **bold** labels instead of collapsing into one run-on paragraph.
+function moreParagraphs(text) {
+  return text
+    .split(/\n\s*\n/)
+    .map((p) => collapse(p))
+    .filter(Boolean)
+    .map((p) => `<p>${boldify(linkify(esc(p)))}</p>`)
+    .join('\n                ');
+}
+
 function skillCards() {
   return data.skills.items
     .map(
@@ -108,7 +124,7 @@ function workCards() {
       const desc = linkify(esc(collapse(it.desc || '')));
       const stat = esc(collapse(it.stat || ''));
       const link = (it.link || '').trim();
-      const more = linkify(esc(collapse(it.more || '')));
+      const more = moreParagraphs(it.more || '');
       const moreId = `work-more-${i}`;
       const thumb = `<div class="project-thumb" aria-hidden="true"><img src="images/${img}" alt="" /></div>`;
 
@@ -133,7 +149,7 @@ function workCards() {
         `                <span class="project-toggle-icon" aria-hidden="true"></span>\n` +
         `              </button>\n` +
         `              <div class="project-more" id="${moreId}">\n` +
-        `                <p>${more}</p>${ctaLink}\n` +
+        `                ${more}${ctaLink}\n` +
         `              </div>\n` +
         `            </div>\n` +
         `          </article>`
