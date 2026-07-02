@@ -71,6 +71,7 @@
           <button class="filter-btn" role="tab" aria-selected="false" data-filter="ld">L&amp;D</button>
           <button class="filter-btn" role="tab" aria-selected="false" data-filter="product">Product</button>
           <button class="filter-btn" role="tab" aria-selected="false" data-filter="experiments">Experiments</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="personal">Personal</button>
         </div>
 
         <div class="work-grid" id="work-grid">
@@ -117,6 +118,17 @@
       <p>© <span id="year"></span> {{footer.text}}</p>
     </div>
   </footer>
+
+  <!-- Work card detail overlay -->
+  <div class="project-overlay" id="project-overlay" hidden>
+    <div class="project-overlay-backdrop" data-overlay-close></div>
+    <div class="project-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+      <button class="project-overlay-close" type="button" aria-label="Close" data-overlay-close>&times;</button>
+      <div class="project-overlay-tags" id="overlay-tags"></div>
+      <h3 class="project-overlay-title" id="overlay-title"></h3>
+      <div class="project-overlay-body" id="overlay-body"></div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
   <script src="js/track.js"></script>

@@ -68,7 +68,7 @@ function bioParagraphs(text) {
     .join('\n            ');
 }
 
-const TAG_CLASS = { Product: 'product', 'L&D': 'ld', Experiment: 'experiments' };
+const TAG_CLASS = { Product: 'product', 'L&D': 'ld', Experiment: 'experiments', Personal: 'personal' };
 
 // Converts markdown-style [label](url) into real links, applied after escaping
 // so plain "&" etc. in prose stays safe while intentional links still render.
@@ -118,14 +118,13 @@ function tagSpans(tagsField, indent) {
 
 function workCards() {
   return data.work.items
-    .map((it, i) => {
+    .map((it) => {
       const cat = (it.category || '').trim();
       const img = (it.image || '').trim();
       const desc = linkify(esc(collapse(it.desc || '')));
       const stat = esc(collapse(it.stat || ''));
       const link = (it.link || '').trim();
       const more = moreParagraphs(it.more || '');
-      const moreId = `work-more-${i}`;
       const thumb = `<div class="project-thumb" aria-hidden="true"><img src="images/${img}" alt="" /></div>`;
 
       const ctaLink = link
@@ -144,11 +143,11 @@ function workCards() {
         `              <h3 class="project-title">${esc(it.title)}</h3>\n` +
         `              <p class="project-desc">${desc}</p>\n` +
         `              <span class="project-stat">${stat}</span>\n` +
-        `              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="${moreId}">\n` +
+        `              <button class="project-toggle" type="button" aria-haspopup="dialog">\n` +
         `                <span class="project-toggle-label">Read more</span>\n` +
         `                <span class="project-toggle-icon" aria-hidden="true"></span>\n` +
         `              </button>\n` +
-        `              <div class="project-more" id="${moreId}">\n` +
+        `              <div class="project-more" hidden>\n` +
         `                ${more}${ctaLink}\n` +
         `              </div>\n` +
         `            </div>\n` +

@@ -113,14 +113,14 @@ desc: Built and owned an external cultural partnership from scratch — a two-ye
 more: What started as a one-off session turned into two years of monthly programming because the format worked — give people real tools and real art, get out of the way, and let looking closely turn into making something. It's the same instinct behind everything else on this page — the best teaching moments are the ones where the "teacher" mostly sets up the conditions and steps back.
 stat: 2-year external partnership · Public audience · Cross-format teaching
 ### A Philosophy Reading Practice
-category: ld
+category: personal
 tags: L&D, Personal
 image: consolidation.svg
 desc: A decade-plus habit of reading philosophy — epistemology, ethics, philosophy of education — not for credential but because it's the actual root of how I think about teaching. Freire's line between education as the practice of freedom and the "banking model" that deposits information into passive recipients isn't classroom theory I picked up for a job; it's the same thinking I bring to an evening with a book. The distance between "what does it mean to understand something" and "what makes a lesson worth a learner's time" is shorter than people think.
 more: Epistemology in particular — the question of how we actually know something, versus how we merely feel confident about it — turns out to be the same question underneath most of my measurement work. A completion rate tells you someone finished; it doesn't tell you they understood. Reading philosophy for its own sake, with no professional agenda, is what keeps that distinction sharp instead of theoretical.
 stat: Ongoing practice · Epistemology, ethics, philosophy of education
 ### Teaching Myself Quantum Mechanics
-category: ld
+category: personal
 tags: L&D, Personal
 image: certification.svg
 desc: Picked up quantum mechanics during the pandemic — partly to point my attention at something larger than the news, partly because there's no steeper test case for explaining a hard idea well. What kept me in it was watching great science communicators solve the exact problem I solve for a living: making genuinely complex ideas stick. My favorites — [Space Time](https://www.youtube.com/c/pbsspacetime), [Kurzgesagt](https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q), and [ScienceClic](https://www.youtube.com/@ScienceClicEN) — all lean on the same trick: ground the physics in the history of how the thinking evolved, and keep the confusion and awe in instead of editing it out.
