@@ -142,7 +142,7 @@ function workCards() {
         `              </div>\n` +
         `              <h3 class="project-title">${esc(it.title)}</h3>\n` +
         `              <p class="project-desc">${desc}</p>\n` +
-        `              <span class="project-stat">${stat}</span>\n` +
+        `              <span class="project-stat">${stat}</span>${ctaLink}\n` +
         `              <button class="project-toggle" type="button" aria-haspopup="dialog">\n` +
         `                <span class="project-toggle-label">Read more</span>\n` +
         `                <span class="project-toggle-icon" aria-hidden="true"></span>\n` +
