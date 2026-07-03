@@ -20,7 +20,7 @@ contact: Contact
 
 ## hero
 eyebrow: Content & Curriculum · Learning Science · AI-Native Production
-heading: Matthew builds the *content standards*, *quality systems*, and *AI-native workflows* behind learning that actually teaches.
+heading: Twenty years teaching people to *think for themselves* — first in person, now at *platform scale*.
 sub: At Apple, Matthew set the quality bar for a learning platform used by 145+ teams — none of which report to him — coached the craft that kept it substantive instead of hollow, and built the measurement to prove whether people got better, not whether they came back. Now he's building AI-native learning products with Claude that encode that craft into systems instead of guarding it.
 cta: See his work
 
