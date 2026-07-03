@@ -36,7 +36,6 @@
     var html = '<div class="insights-counters">' +
       stat(c.sessions, 'visitors') +
       stat(c.projectsExplored, 'projects explored') +
-      stat(c.deepDives, 'deep dives opened') +
       stat(c.conversations, 'AI conversations') +
       '</div>';
 
