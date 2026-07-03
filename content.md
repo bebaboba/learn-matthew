@@ -106,16 +106,20 @@ stat: Org-wide · Quality-governed self-serve authoring
 category: product
 tags: Product, Measurement
 image: learning-data.svg
-desc: Built the instrumentation to know whether content was actually teaching — post-engagement feedback on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by feeding results back into what got made next. Measurement that changed the content, not decoration on top of it.
+desc: Built the instrumentation to know whether content was actually teaching — post-engagement feedback on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by feeding results back into what got made next. Measurement that changed the content, not decoration on top of it — an instinct he's now scaling by bringing xAPI to the entire company as the shared standard for learning data.
 more: The dashboard itself was never the point — the loop was. Feedback rolled up alongside adoption and support signals on a regular cadence, then went back to the teams that made the content and into what the platform built next. Content that scored well on completion but poorly on "did this actually help" was a signal to redesign, not a metric to celebrate.
-stat: Feedback cadence · Dashboards · Closed-loop into production
+
+The current chapter of that work is standardizing on xAPI across the company as part of modernizing the learning platform — replacing completion counts and one-off feedback forms with a shared record of what learners actually did, so every content team can run the same loop he built once: see how their work lands, and change it. This site is the working demonstration. Every visitor interaction here is logged as anonymous xAPI statements to a live Learning Record Store and read back onto the page in the Live insights section below — the same loop, small enough to watch run.
+stat: Closed-loop into production · xAPI as company-wide standard · Live demo on this page
 ### New Team Onboarding Framework
 category: ld
 tags: L&D
 image: onboarding-framework.svg
-desc: Replaced fragmented manual training workflows with a unified, self-serve onboarding experience — driving a 50%+ reduction in time-to-productivity for newly onboarded teams across the platform.
-more: The old process was tribal knowledge, one-off threads, and whatever the last team happened to write down. Replacing it meant one self-serve path that worked whether a new team's first project shipped in two weeks or two quarters — front-loading the standards and platform mechanics so teams spent their early weeks building content, not discovering the system by trial and error.
-stat: 50%+ reduction in time-to-productivity
+desc: Replaced an onboarding process that took hours of live training per team plus a week or more of backend setup with a unified, self-serve experience — driving a 50%+ reduction in time-to-productivity for newly onboarded teams across the platform.
+more: The old process was white-glove by brute force: several hours of live, one-on-one training walking each new provider through the system, while the backend onboarding ran at least a week in parallel. The replacement made the entire path self-service, anchored to weekly office hours, with a single 30-minute one-to-one preserved for each new team — the white-glove touch kept where it earns its keep, not spread across the whole process.
+
+The other deliberate move: from day one, new teams are pointed at each other and at the more experienced members of the community, so the platform team stopped being the only place answers lived. Front-loading the standards and platform mechanics meant teams spent their early weeks building content, not discovering the system by trial and error.
+stat: 50%+ reduction in time-to-productivity · Hours of live training → 30 minutes
 ### Bellevue Arts Museum Partnership
 category: ld
 tags: L&D, Partnership
@@ -127,9 +131,9 @@ stat: 2-year external partnership · Public audience · Cross-format teaching
 category: personal
 tags: L&D, Personal
 image: consolidation.svg
-desc: A decade-plus habit of reading philosophy — epistemology, ethics, philosophy of education — not for credential but because it's the actual root of how he thinks about teaching. Freire's line between education as the practice of freedom and the "banking model" that deposits information into passive recipients isn't classroom theory he picked up for a job; it's the same thinking he brings to an evening with a book. The distance between "what does it mean to understand something" and "what makes a lesson worth a learner's time" is shorter than people think.
-more: Epistemology in particular — the question of how we actually know something, versus how we merely feel confident about it — turns out to be the same question underneath most of his measurement work. A completion rate tells you someone finished; it doesn't tell you they understood. Reading philosophy for its own sake, with no professional agenda, is what keeps that distinction sharp instead of theoretical.
-stat: Ongoing practice · Epistemology, ethics, philosophy of education
+desc: A lifelong habit of reading philosophy — the kind of lifelong where he spent a marathon training block with Plato's Republic in his ears. Epistemology, ethics, philosophy of education: not for credential, but because it's the actual root of how he thinks about teaching. Freire's line between education as the practice of freedom and the "banking model" that deposits information into passive recipients isn't classroom theory he picked up for a job; it's what he reaches for on his own time, unassigned.
+more: Epistemology in particular — the question of how we actually know something, versus how we merely feel confident about it — turns out to be the same question underneath most of his measurement work. A completion rate tells you someone finished; it doesn't tell you they understood. The marathon detail is the tell here: nobody assigns the Republic to a training plan. Reading philosophy for its own sake, with no professional agenda, is what keeps that distinction sharp instead of theoretical.
+stat: Lifelong habit · Epistemology, ethics, philosophy of education
 ### From Carburetors to Quarks
 category: personal
 tags: L&D, Personal
