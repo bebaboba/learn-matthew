@@ -84,8 +84,10 @@
       var a = ev.target.closest && ev.target.closest('a');
       if (!a) return;
       var href = a.getAttribute('href') || '';
-      if (a.classList.contains('project-card-link') || /learn-matthew-ai\.vercel\.app/.test(href)) {
+      if (/learn-matthew-ai\.vercel\.app/.test(href)) {
         track('ai_launch', 'Learn Matthew');
+      } else if (/adaptive-tutor-ruddy\.vercel\.app/.test(href)) {
+        track('ai_launch', 'Adaptive Tutor');
       } else if (/^mailto:/.test(href)) {
         track('outbound_click', 'Email');
       } else if (/linkedin\.com/.test(href)) {
