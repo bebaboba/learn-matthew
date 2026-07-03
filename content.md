@@ -77,6 +77,17 @@ Building the prototype opened onto a bigger thesis: most "adaptive" tutors reset
 
 Supporting research runs alongside all three threads: NSF-funded work out of AI-ALOE at Georgia Tech, RCT evidence that AI tutoring can outperform traditional instruction in some studies, and federated learning as the concrete technical path for the privacy-preserving angle.
 stat: React · Claude · xAPI → LRS · behavior-based inference
+### How This Site Ships Itself
+category: experiments
+tags: Experiment
+image: site-pipeline.svg
+link: https://github.com/bebaboba/learn-matthew/blob/main/build.js
+cta: Read the build script →
+desc: This page is itself a content pipeline with a quality gate. Every word lives in one markdown file; a small dependency-free Node script builds it into the page and refuses to ship if anything's broken — it lists the exact unfilled tokens and exits, instead of failing silently.
+more: All of the copy here lives in a single file, content.md, in a tiny key:value format anyone could edit. A build script — plain Node, built-in modules only, zero npm packages — parses it and fills a template to produce the page, and the generated HTML is never touched by hand. A GitHub Action rebuilds it on every push that changes the content, template, or script, so the source and the live site can't drift apart. Editing the site is editing markdown.
+
+The design decision that matters most is the failure mode. After the build fills the template, it scans the output for any token it failed to replace — the fingerprint of a typo in the content or the template — and if it finds one, it prints the exact list and refuses to build. That was the deliberate middle path: not a heavyweight CMS, not a "just don't typo it" honor system, but a lightweight pipeline with a loud quality gate. It's the same instinct as the content standards and measurement systems elsewhere on this page, scaled down to a personal site — if content is going to be edited safely, by other people or by future Matthew, the system has to catch mistakes before readers do.
+stat: One markdown file · Zero build dependencies · Fails loud by design
 ### Content Standards for a 145+ Team Platform
 category: product
 tags: Product, Content

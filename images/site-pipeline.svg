@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f6f2"/>
+
+  <!-- Three-stage pipeline: content.md -> build.js -> index.html -->
+
+  <!-- Connecting line -->
+  <line x1="160" y1="250" x2="640" y2="250" stroke="#e5e2db" stroke-width="2" stroke-dasharray="4 8"/>
+
+  <!-- Arrowheads along the line -->
+  <path d="M320 242 L336 250 L320 258 Z" fill="#C8956C"/>
+  <path d="M560 242 L576 250 L560 258 Z" fill="#C8956C"/>
+
+  <!-- Stage 1: content.md -->
+  <rect x="80" y="205" width="160" height="90" rx="10" fill="#ffffff" stroke="#e5e2db" stroke-width="2"/>
+  <text x="160" y="245" text-anchor="middle" font-family="monospace" font-size="20" fill="#1a1a18">content.md</text>
+  <text x="160" y="270" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6b6b68">copy</text>
+
+  <!-- Stage 2: build.js (highlighted — the active mechanism) -->
+  <rect x="320" y="195" width="160" height="110" rx="10" fill="#1a1a18"/>
+  <text x="400" y="245" text-anchor="middle" font-family="monospace" font-size="20" fill="#ffffff">build.js</text>
+  <text x="400" y="270" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#C8956C">fails loud on</text>
+  <text x="400" y="288" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#C8956C">unfilled tokens</text>
+
+  <!-- Stage 3: index.html -->
+  <rect x="560" y="205" width="160" height="90" rx="10" fill="#ffffff" stroke="#e5e2db" stroke-width="2"/>
+  <text x="640" y="245" text-anchor="middle" font-family="monospace" font-size="20" fill="#1a1a18">index.html</text>
+  <text x="640" y="270" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6b6b68">generated</text>
+
+  <!-- Small "never hand-edited" marker on index.html -->
+  <circle cx="700" cy="215" r="9" fill="#C8956C"/>
+  <text x="700" y="220" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">×</text>
+</svg>
