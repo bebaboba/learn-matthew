@@ -20,17 +20,17 @@ contact: Contact
 
 ## hero
 eyebrow: Content & Curriculum · Learning Science · AI-Native Production
-heading: I build the *content standards*, *quality systems*, and *AI-native workflows* behind learning that actually teaches.
-sub: At Apple, I set the quality bar for a learning platform used by 145+ teams — none of which report to me — coached the craft that kept it substantive instead of hollow, and built the measurement to prove whether people got better, not whether they came back. Now I'm building AI-native learning products with Claude that encode that craft into systems instead of guarding it.
-cta: See my work
+heading: Matthew builds the *content standards*, *quality systems*, and *AI-native workflows* behind learning that actually teaches.
+sub: At Apple, Matthew set the quality bar for a learning platform used by 145+ teams — none of which report to him — coached the craft that kept it substantive instead of hollow, and built the measurement to prove whether people got better, not whether they came back. Now he's building AI-native learning products with Claude that encode that craft into systems instead of guarding it.
+cta: See his work
 
 ## about
 label: About
 heading: The short version
 photo_alt: Matthew Anderson
-bio: I'm a content & curriculum leader with a decade turning technical and creative subject matter into experiences that actually teach. My roots are in product management, arts & culture, and direct instruction — which means I approach content the way a craftsperson approaches production: with real editorial taste, a bias for measurement, and a refusal to accept engagement as a proxy for learning.
+bio: Matthew is a content & curriculum leader with a decade turning technical and creative subject matter into experiences that actually teach. His roots are in product management, arts & culture, and direct instruction — which means he approaches content the way a craftsperson approaches production: with real editorial taste, a bias for measurement, and a refusal to accept engagement as a proxy for learning.
 
-Over the past decade I've set the content standards and quality bar for a 145+ team learning platform — none of which report to me. Apple has a phrase for that kind of leadership: accountability without control. I coached instructional designers away from click-through courseware and toward learning grounded in adult learning theory, and built the feedback systems that prove whether it worked. Alongside that, I've curated international art exhibitions and run a two-year museum partnership teaching creative technology to the public. Now I'm building AI-native learning products with Claude — an adaptive tutor and an interactive portfolio — that put those same standards into systems that scale past what any team could produce by hand.
+Over the past decade he's set the content standards and quality bar for a 145+ team learning platform — none of which report to him. Apple has a phrase for that kind of leadership: accountability without control. He coached instructional designers away from click-through courseware and toward learning grounded in adult learning theory, and built the feedback systems that prove whether it worked. Alongside that, he's curated international art exhibitions and run a two-year museum partnership teaching creative technology to the public. Now he's building AI-native learning products with Claude — an adaptive tutor and an interactive portfolio — that put those same standards into systems that scale past what any team could produce by hand.
 
 Based in San Francisco. B.A. Integrated Social Sciences from the University of Washington, with a minor in Art History and coursework in Mixed Media Studio Arts.
 
@@ -55,8 +55,8 @@ tags: Experiment
 image: learn-matthew.svg
 link: https://learn-matthew-ai.vercel.app
 cta: Launch the experience →
-desc: An AI-powered interactive portfolio that personalizes the experience based on who you are. Visitors pick a persona and an AI guide walks them through my work — revealing content modules through conversation, not a fixed page layout.
-more: Built as an argument, not just a demo: that personalization doesn't require harvesting personal data. Visitors choose a persona and a Claude-powered guide adapts tone and depth accordingly, while every interaction is logged as anonymous xAPI statements — the same measurement discipline I bring to L&D, pointed at my own portfolio this time. React front end, a serverless API streaming Claude responses, Claude as production partner throughout.
+desc: An AI-powered interactive portfolio that personalizes the experience based on who you are. Visitors pick a persona and an AI guide walks them through his work — revealing content modules through conversation, not a fixed page layout.
+more: Built as an argument, not just a demo: that personalization doesn't require harvesting personal data. Visitors choose a persona and a Claude-powered guide adapts tone and depth accordingly, while every interaction is logged as anonymous xAPI statements — the same measurement discipline he brings to L&D, pointed at his own portfolio this time. React front end, a serverless API streaming Claude responses, Claude as production partner throughout.
 stat: React · Vite · Claude API
 ### Adaptive Tutor (research prototype)
 category: experiments
@@ -67,11 +67,11 @@ cta: Try the prototype →
 desc: A working argument for what an adaptive AI tutor should be. A learner works a lesson with an AI tutor while a live inspector shows the whole pipeline — behavior → xAPI → inferred state → adaptation — with every inference shown honestly, including its confidence (capped below 100% on purpose) and what drove it. The learner can see, contest, and override what the system infers.
 more: The core design bet: an adaptive system should never assert more confidence than its evidence supports, and the learner should always be able to see and challenge its reasoning. The live inspector shows the exact behavioral signals — pacing, hesitation, review patterns — that produced each inferred state, before any adaptation happens. Built solo with Claude as production partner across the full stack: React front end, an xAPI event pipeline into a Learning Record Store, and an inference layer translating raw behavior into pedagogical decisions.
 
-Building the prototype opened onto a bigger thesis: most "adaptive" tutors reset with every session. The interesting problem, especially for corporate L&D, is a **persistent adaptive tutor** — a learner-tutor relationship that builds a profile over time instead of starting cold each time someone opens it. That thesis split into three research threads I've kept developing past the prototype itself.
+Building the prototype opened onto a bigger thesis: most "adaptive" tutors reset with every session. The interesting problem, especially for corporate L&D, is a **persistent adaptive tutor** — a learner-tutor relationship that builds a profile over time instead of starting cold each time someone opens it. That thesis split into three research threads he's kept developing past the prototype itself.
 
 **Thread A — Persistent Adaptive Tutor.** Cognitive load is the easier half to infer: pacing, error rates, time-to-completion, how often someone asks for clarification. The harder half is behavioral and contextual — when a person learns best, whether they need a concrete example before an abstraction or the reverse, whether they thrive on productive struggle or get frustrated by it. That's the same territory Josh Bersin's Dynamic Enablement model points at, and it's where a persistent profile actually earns its keep.
 
-**Thread B — Privacy-Preserving Adaptive Tutoring.** Enterprise data-minimization policy is a real design constraint, not a footnote: a tutor built for a corporate context has to infer learning style and cognitive load from implicit behavioral signals, with minimal explicit data collection. Most of the literature treats privacy and personalization as a trade-off to be balanced — I'd argue that's a genuine research gap, not a settled question. The technical path runs through federated learning (FedProx has shown gains over FedAvg specifically on heterogeneous student data), differential privacy, on-device data locality, and explainability techniques that keep the inference auditable instead of opaque.
+**Thread B — Privacy-Preserving Adaptive Tutoring.** Enterprise data-minimization policy is a real design constraint, not a footnote: a tutor built for a corporate context has to infer learning style and cognitive load from implicit behavioral signals, with minimal explicit data collection. Most of the literature treats privacy and personalization as a trade-off to be balanced — he'd argue that's a genuine research gap, not a settled question. The technical path runs through federated learning (FedProx has shown gains over FedAvg specifically on heterogeneous student data), differential privacy, on-device data locality, and explainability techniques that keep the inference auditable instead of opaque.
 
 **Thread C — Intent-Aware Learning Design.** Not every question deserves the same kind of answer. Sometimes a learner needs a fast, direct answer to finish a task under deadline pressure; sometimes what they actually need is for the knowledge to stick. The system distinguishes a direct-answer mode from a retrieval-practice mode, and flags when a pattern of repeated quick-answer requests might itself be the signal that deeper learning — not just task completion — is what's needed.
 
@@ -81,8 +81,8 @@ stat: React · Claude · xAPI → LRS · behavior-based inference
 category: product
 tags: Product, Content
 image: learning-platform.svg
-desc: Set and defended the quality bar for Apple's internal learning platform — 145+ distinct teams producing their own learning. Defined what "great" meant precisely enough that teams could hit it without me in the room, and coached instructional designers away from click-through, compliance-style courseware toward learning grounded in adult learning theory.
-more: The standard wasn't a style guide — it was a small set of testable questions any team could ask before publishing, like whether the content respects the learner's time and whether anyone could actually measure if it worked. Teams that could answer those honestly got out of my way; teams that couldn't got coaching, not a rejection. That's the difference between governing quality and just gatekeeping it.
+desc: Set and defended the quality bar for Apple's internal learning platform — 145+ distinct teams producing their own learning. Defined what "great" meant precisely enough that teams could hit it without him in the room, and coached instructional designers away from click-through, compliance-style courseware toward learning grounded in adult learning theory.
+more: The standard wasn't a style guide — it was a small set of testable questions any team could ask before publishing, like whether the content respects the learner's time and whether anyone could actually measure if it worked. Teams that could answer those honestly got out of his way; teams that couldn't got coaching, not a rejection. That's the difference between governing quality and just gatekeeping it.
 stat: 145+ teams · Quality bar defined, not just enforced
 ### Distributed Authoring & Quality Governance
 category: product
@@ -116,27 +116,27 @@ stat: 2-year external partnership · Public audience · Cross-format teaching
 category: personal
 tags: L&D, Personal
 image: consolidation.svg
-desc: A decade-plus habit of reading philosophy — epistemology, ethics, philosophy of education — not for credential but because it's the actual root of how I think about teaching. Freire's line between education as the practice of freedom and the "banking model" that deposits information into passive recipients isn't classroom theory I picked up for a job; it's the same thinking I bring to an evening with a book. The distance between "what does it mean to understand something" and "what makes a lesson worth a learner's time" is shorter than people think.
-more: Epistemology in particular — the question of how we actually know something, versus how we merely feel confident about it — turns out to be the same question underneath most of my measurement work. A completion rate tells you someone finished; it doesn't tell you they understood. Reading philosophy for its own sake, with no professional agenda, is what keeps that distinction sharp instead of theoretical.
+desc: A decade-plus habit of reading philosophy — epistemology, ethics, philosophy of education — not for credential but because it's the actual root of how he thinks about teaching. Freire's line between education as the practice of freedom and the "banking model" that deposits information into passive recipients isn't classroom theory he picked up for a job; it's the same thinking he brings to an evening with a book. The distance between "what does it mean to understand something" and "what makes a lesson worth a learner's time" is shorter than people think.
+more: Epistemology in particular — the question of how we actually know something, versus how we merely feel confident about it — turns out to be the same question underneath most of his measurement work. A completion rate tells you someone finished; it doesn't tell you they understood. Reading philosophy for its own sake, with no professional agenda, is what keeps that distinction sharp instead of theoretical.
 stat: Ongoing practice · Epistemology, ethics, philosophy of education
-### Teaching Myself Quantum Mechanics
+### Teaching Himself Quantum Mechanics
 category: personal
 tags: L&D, Personal
 image: certification.svg
-desc: Picked up quantum mechanics during the pandemic — partly to point my attention at something larger than the news, partly because there's no steeper test case for explaining a hard idea well. What kept me in it was watching great science communicators solve the exact problem I solve for a living: making genuinely complex ideas stick. My favorites — [Space Time](https://www.youtube.com/c/pbsspacetime), [Kurzgesagt](https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q), and [ScienceClic](https://www.youtube.com/@ScienceClicEN) — all lean on the same trick: ground the physics in the history of how the thinking evolved, and keep the confusion and awe in instead of editing it out.
-more: The pattern I keep noticing across the channels I return to: they don't sand the confusion out of the story. They show you the specific historical moment where physicists were genuinely stuck, let you feel the size of the problem, and only then hand you the resolution. Understanding sticks better when you've felt the weight of the question it's answering — which is the same argument I'd make for teaching almost anything else, not just physics.
+desc: Picked up quantum mechanics during the pandemic — partly to point his attention at something larger than the news, partly because there's no steeper test case for explaining a hard idea well. What kept him in it was watching great science communicators solve the exact problem he solves for a living: making genuinely complex ideas stick. His favorites — [Space Time](https://www.youtube.com/c/pbsspacetime), [Kurzgesagt](https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q), and [ScienceClic](https://www.youtube.com/@ScienceClicEN) — all lean on the same trick: ground the physics in the history of how the thinking evolved, and keep the confusion and awe in instead of editing it out.
+more: The pattern he keeps noticing across the channels he returns to: they don't sand the confusion out of the story. They show you the specific historical moment where physicists were genuinely stuck, let you feel the size of the problem, and only then hand you the resolution. Understanding sticks better when you've felt the weight of the question it's answering — which is the same argument he'd make for teaching almost anything else, not just physics.
 stat: Self-directed since 2020 · Science communication as a design problem
 
 ## insights
 label: Live insights
 heading: This page runs on xAPI
-intro: Every interaction here is recorded as anonymous xAPI statements to a Learning Record Store, then read back and shown below — a working demonstration of the measurement discipline I bring to content: instrument it, and let the data change what you build next. No personal data is collected; just anonymous, aggregate signals.
+intro: Every interaction here is recorded as anonymous xAPI statements to a Learning Record Store, then read back and shown below — a working demonstration of the measurement discipline he brings to content: instrument it, and let the data change what you build next. No personal data is collected; just anonymous, aggregate signals.
 caption: Powered by xAPI · anonymous, aggregate data only · refreshes live
 
 ## contact
 label: Contact
 heading: Let's talk
-sub: Open to conversations about content & curriculum leadership, learning science, and AI-native education — especially roles at the intersection of teaching craft and AI production systems. Whether you have a role in mind or just want to connect — my inbox is open.
+sub: Matthew is open to conversations about content & curriculum leadership, learning science, and AI-native education — especially roles at the intersection of teaching craft and AI production systems. Whether you have a role in mind or just want to connect — his inbox is open.
 button: Say hello
 email: matthewsfo@gmail.com
 linkedin: https://linkedin.com/in/picocat
