@@ -37,6 +37,7 @@
       stat(c.sessions, 'visitors') +
       stat(c.projectsExplored, 'projects explored') +
       stat(c.conversations, 'AI conversations') +
+      (c.unanswered ? stat(c.unanswered, 'questions the AI couldn\'t answer') : '') +
       '</div>';
 
     if (d.topTopics && d.topTopics.length) {
