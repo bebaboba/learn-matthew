@@ -119,13 +119,17 @@ image: consolidation.svg
 desc: A decade-plus habit of reading philosophy — epistemology, ethics, philosophy of education — not for credential but because it's the actual root of how he thinks about teaching. Freire's line between education as the practice of freedom and the "banking model" that deposits information into passive recipients isn't classroom theory he picked up for a job; it's the same thinking he brings to an evening with a book. The distance between "what does it mean to understand something" and "what makes a lesson worth a learner's time" is shorter than people think.
 more: Epistemology in particular — the question of how we actually know something, versus how we merely feel confident about it — turns out to be the same question underneath most of his measurement work. A completion rate tells you someone finished; it doesn't tell you they understood. Reading philosophy for its own sake, with no professional agenda, is what keeps that distinction sharp instead of theoretical.
 stat: Ongoing practice · Epistemology, ethics, philosophy of education
-### Teaching Himself Quantum Mechanics
+### From Carburetors to Quarks
 category: personal
 tags: L&D, Personal
 image: certification.svg
-desc: Picked up quantum mechanics during the pandemic — partly to point his attention at something larger than the news, partly because there's no steeper test case for explaining a hard idea well. What kept him in it was watching great science communicators solve the exact problem he solves for a living: making genuinely complex ideas stick. His favorites — [Space Time](https://www.youtube.com/c/pbsspacetime), [Kurzgesagt](https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q), and [ScienceClic](https://www.youtube.com/@ScienceClicEN) — all lean on the same trick: ground the physics in the history of how the thinking evolved, and keep the confusion and awe in instead of editing it out.
-more: The pattern he keeps noticing across the channels he returns to: they don't sand the confusion out of the story. They show you the specific historical moment where physicists were genuinely stuck, let you feel the size of the problem, and only then hand you the resolution. Understanding sticks better when you've felt the weight of the question it's answering — which is the same argument he'd make for teaching almost anything else, not just physics.
-stat: Self-directed since 2020 · Science communication as a design problem
+desc: A standing habit of taking things apart to see how they actually work — car engines, mechanical clocks, a 3D printer he's mid-project on — that found its steepest test yet in quantum mechanics during the pandemic. Same itch, different scale.
+more: The pull was never really about physics specifically — it's wanting to know how the thing in front of him works, whether that's a combustion engine, a watch movement, or a print that keeps warping until you figure out why. Quantum mechanics was just the hardest version of that same question, and the best test case yet for explaining something genuinely hard well.
+
+What kept him in it was watching great science communicators solve the exact problem he solves for a living: making complex ideas stick. His favorites — [Space Time](https://www.youtube.com/c/pbsspacetime), [Kurzgesagt](https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q), and [ScienceClic](https://www.youtube.com/@ScienceClicEN) — all lean on the same trick: ground the physics in the history of how the thinking evolved, and keep the confusion and awe in instead of editing it out.
+
+The pattern he keeps noticing across the channels he returns to: they don't sand the confusion out of the story. They show you the specific historical moment where people were genuinely stuck, let you feel the size of the problem, and only then hand you the resolution. Understanding sticks better once you've felt the weight of the question it's answering — the same argument he'd make for teaching almost anything else, not just physics.
+stat: Self-directed curiosity · Cars, clocks, 3D printing, quantum mechanics
 
 ## insights
 label: Live insights
