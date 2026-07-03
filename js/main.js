@@ -41,6 +41,9 @@ function openOverlay(card) {
   requestAnimationFrame(() => overlay.querySelector('.project-overlay-close').focus());
 
   if (window.lmTrack) window.lmTrack('project_expand', title);
+  // Give the write a moment to land in the LRS, then pull the dashboard
+  // forward so your own click shows up without waiting for the next poll.
+  if (window.lmRefreshInsights) setTimeout(window.lmRefreshInsights, 2000);
 }
 
 function closeOverlay() {
