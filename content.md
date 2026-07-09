@@ -9,8 +9,8 @@
 # Lines starting with "#" are comments and are ignored.
 
 ## meta
-title: Matthew Anderson — Content & Curriculum Leader
-description: Portfolio of Matthew Anderson — content & curriculum leader who sets the quality bar for learning at scale, builds AI-native production systems with Claude, and measures whether people actually got better.
+title: Matthew Anderson — Learning Platforms & Content Leader
+description: Portfolio of Matthew Anderson — a learning leader who builds the platforms, content standards, and AI-native systems that make organizational learning actually work, and measures whether people actually got better.
 
 ## nav
 logo: Matthew Anderson
@@ -19,32 +19,32 @@ work: Work
 contact: Contact
 
 ## hero
-eyebrow: Content & Curriculum · Learning Science · AI-Native Production
+eyebrow: Learning Platforms · Content & Curriculum · AI-Native Production
 heading: Twenty years teaching people to *think for themselves* — first in person, now at *platform scale*.
-sub: At Apple, Matthew set the quality bar for a learning platform used by 145+ teams — none of which report to him — coached the craft that kept it substantive instead of hollow, and built the measurement to prove whether people got better, not whether they came back. Now he's building AI-native learning products with Claude that encode that craft into systems instead of guarding it.
+sub: At Apple, Matthew grew an internal learning platform to serve 145+ teams — none of which report to him — set the quality bar that kept it substantive instead of hollow, and built the measurement to prove whether people got better, not whether they came back. Now he's experimenting at the intersection of AI and learning with Claude, encoding that craft into systems instead of guarding it.
 cta: See his work
 
 ## about
 label: About
 heading: The short version
 photo_alt: Matthew Anderson
-bio: Matthew is a content & curriculum leader with a decade turning technical and creative subject matter into experiences that actually teach. His roots are in product management, arts & culture, and direct instruction — which means he approaches content the way a craftsperson approaches production: with real editorial taste, a bias for measurement, and a refusal to accept engagement as a proxy for learning.
+bio: Matthew is a learning leader with a decade turning technical and creative subject matter into platforms and content systems that actually teach. His roots are in product management, arts & culture, and direct instruction — which means he approaches the work the way a craftsperson approaches production: with real editorial taste, a bias for measurement, and a refusal to accept engagement as a proxy for learning.
 
-He learned to lead the direct way first: running a Starbucks store with a team that reported to him, then a market-level role teaching Lean Thinking to store leaders who didn't. Over the past decade he's set the content standards and quality bar for a 145+ team learning platform — none of which report to him. Apple has a phrase for that kind of leadership: accountability without control. He coached instructional designers away from click-through courseware and toward learning grounded in adult learning theory, and built the feedback systems that prove whether it worked. Alongside that, he's curated international art exhibitions and run a two-year museum partnership teaching creative technology to the public. Now he's building AI-native learning products with Claude — an adaptive tutor and an interactive portfolio — that put those same standards into systems that scale past what any team could produce by hand.
+He learned to lead the direct way first: running a Starbucks store with a team that reported to him, then a market-level role teaching Lean Thinking to store leaders who didn't. Over the past decade he's grown and set the content standards for a 145+ team learning platform — none of which report to him, leadership by influence rather than authority. He coached instructional designers away from click-through courseware and toward learning grounded in adult learning theory, and built the feedback systems that prove whether it worked. Alongside that, he's curated international art exhibitions and run a two-year museum partnership teaching creative technology to the public. Now he's experimenting at the intersection of AI and learning with Claude — an adaptive tutor and an interactive portfolio — putting those same standards into systems that scale past what any team could produce by hand.
 
 Based in San Francisco. B.A. Integrated Social Sciences from the University of Washington, with a minor in Art History and coursework in Mixed Media Studio Arts.
 
 ## skills
+### Learning Platforms & Product
+desc: Multi-surface platform strategy (iOS · macOS · web), roadmapping, product discovery, distributed authoring models, self-serve enablement across 145+ teams, adoption metrics
 ### Content & Curriculum
 desc: Instructional design, curriculum architecture, quality standards, multi-format production (written, video, interactive), editorial judgment, coaching teams toward substance over engagement
 ### Learning Science
 desc: Adult learning theory (Freire, ADDIE), Kirkpatrick evaluation, learning measurement & instrumentation, SCORM · xAPI
 ### AI-Native Production
 desc: Building content with Claude, Anthropic API, prompt engineering, human-vs-AI line-drawing, adaptive/tutoring system design
-### Systems & Scale
-desc: Distributed authoring, 0-to-1 platform building, production workflow design, self-serve enablement across 145+ teams
 ### Leadership & Measurement
-desc: Coaching content teams and instructional designers, direct people management, feedback dashboards, adoption analytics, executive communication
+desc: Leading through influence across non-reporting teams, coaching content creators and instructional designers, direct people management, feedback dashboards, adoption analytics, executive communication
 
 ## work
 label: Work
@@ -106,11 +106,11 @@ stat: Org-wide · Quality-governed self-serve authoring
 category: product
 tags: Product, Measurement
 image: learning-data.svg
-desc: Built the instrumentation to know whether content was actually teaching — post-engagement feedback on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by feeding results back into what got made next. Measurement that changed the content, not decoration on top of it — an instinct he's now scaling by bringing xAPI to the entire company as the shared standard for learning data.
-more: The dashboard itself was never the point — the loop was. Feedback rolled up alongside adoption and support signals on a regular cadence, then went back to the teams that made the content and into what the platform built next. Content that scored well on completion but poorly on "did this actually help" was a signal to redesign, not a metric to celebrate.
+desc: Built the instrumentation to know whether content was actually teaching — post-engagement feedback on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by feeding results back into what got made next. Measurement that changed the content, not decoration on top of it.
+more: The dashboard itself was never the point — the loop was. Feedback rolled up alongside adoption and support signals on a regular cadence, then went back to the teams that made the content and into what got built next. Content that scored well on completion but poorly on "did this actually help" was a signal to redesign, not a metric to celebrate.
 
-The current chapter of that work is standardizing on xAPI across the company as part of modernizing the learning platform — replacing completion counts and one-off feedback forms with a shared record of what learners actually did, so every content team can run the same loop he built once: see how their work lands, and change it. This site is the working demonstration. Every visitor interaction here is logged as anonymous xAPI statements to a live Learning Record Store and read back onto the page in the Live insights section below — the same loop, small enough to watch run.
-stat: Closed-loop into production · xAPI as company-wide standard · Live demo on this page
+That same measurement discipline is what this site demonstrates in miniature. Every visitor interaction here is logged as anonymous xAPI statements to a live Learning Record Store and read back onto the page in the Live insights section below — the same feedback loop, small enough to watch run in real time.
+stat: Closed-loop into production · xAPI-based measurement · Live demo on this page
 ### New Team Onboarding Framework
 category: ld
 tags: L&D
@@ -157,7 +157,7 @@ caption: Powered by xAPI · anonymous, aggregate data only · refreshes live
 ## contact
 label: Contact
 heading: Let's talk
-sub: Matthew is open to conversations about content & curriculum leadership, learning science, and AI-native education — especially roles at the intersection of teaching craft and AI production systems. Whether you have a role in mind or just want to connect — his inbox is open.
+sub: Matthew is open to conversations about learning platform strategy, content & curriculum leadership, and AI-native production — especially roles at the intersection of teaching craft and AI production systems. Whether you have a role in mind or just want to connect — his inbox is open.
 button: Say hello
 email: matthewsfo@gmail.com
 linkedin: https://linkedin.com/in/picocat

@@ -19,7 +19,7 @@ FONT_DIR = os.path.expanduser(
 
 # ── Content (mirrors job-search/files/resume-content-curriculum.md) ───────────
 NAME = "Matthew Anderson"
-TAGLINE = "Content & Curriculum Leadership · Learning Science · AI-Native Production"
+TAGLINE = "Learning Platforms & Content Leadership · Learning Science · AI-Native Production"
 CONTACT = "San Francisco, CA · matthewsfo@gmail.com · linkedin.com/in/picocat · learnmatthew.com"
 
 SUMMARY = (
@@ -29,7 +29,7 @@ SUMMARY = (
     "145+ internal teams — none of which report to me — set the quality bar that let those teams "
     "author independently without it turning to noise, and coached instructional designers away "
     "from click-through courseware toward learning that respects the learner's time and "
-    "intelligence. Now I am experimenting with building AI-native learning products using Claude — "
+    "intelligence. Now I am experimenting at the intersection of AI and learning with Claude — "
     "an adaptive tutor and an interactive portfolio are my first forays. Check them out on "
     "learnmatthew.com."
 )
@@ -58,14 +58,14 @@ EXPERIENCE = [
         "intro": (
             "Owned the content standards, production model, and platform behind Apple's internal "
             "learning ecosystem — 145+ distinct teams, each a world unto itself with its own "
-            "mission, subject matter, and learners, and none of them reporting to me. Apple has a "
-            "phrase for that kind of leadership: accountability without control."
+            "mission, subject matter, and learners, and none of them reporting to me. Leadership "
+            "by influence rather than authority."
         ),
         "bullets": [
             ("Set and defended the quality bar at scale.", "Built a distributed authoring model that let 145+ teams produce their own learning — but defined content standards and quality governance precise enough that self-serve scale didn't become noise."),
             ("Coached the craft.", "Pushed instructional designers away from click-through, compliance-style courseware toward experiences grounded in adult learning theory that meet learners where they are. The recurring fight: functional enablement that stays substantive instead of going hollow."),
             ("Owned learning measurement.", "Built a feedback system — post-engagement surveys on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by reporting back to teams and leadership and feeding it into the product roadmap."),
-            ("Held the line on data privacy.", "As analytics modernization created pressure for broader access to learner data, navigated the tension between what provider teams wanted to see and Apple's minimal-collection values, and implemented privacy-conscious governance instead of just opening up access."),
+            ("Held the line on privacy.", "As demand grew for broader access to learner data, built governance that balanced stakeholder needs against data-minimization principles, instead of defaulting to open access."),
             ("Built the function from nothing.", "No precedent, no template — architected the content and platform operation as the work demanded it, in a high-ambiguity environment."),
         ],
     },
@@ -135,12 +135,12 @@ PROJECTS = [
 ]
 
 CRAFT = [
-    ("Leadership", "Leading through influence across 145+ non-reporting teams, accountability without control, cross-functional coaching, org design input"),
+    ("Leadership", "Leading through influence across 145+ non-reporting teams, cross-functional coaching, org design input"),
+    ("Learning Platforms & Product", "Multi-surface platform strategy (iOS, macOS, web), roadmapping, product discovery, distributed authoring models, self-serve enablement at scale"),
     ("Content & Curriculum", "Instructional design, curriculum architecture, quality standards, multi-format production (written, interactive), editorial judgment"),
     ("Learning Science", "Adult learning theory, ADDIE, Kirkpatrick evaluation, learning measurement & instrumentation, SCORM/xAPI"),
     ("AI-Native Production", "Building content with Claude, Anthropic API, prompt engineering, human-vs-AI line-drawing, adaptive/tutoring system design"),
-    ("Systems & Scale", "Distributed authoring, 0-to-1 platform building, production workflow design, self-serve enablement at scale"),
-    ("Measurement", "Dashboards, adoption analytics, feedback cadence design, SQL, Tableau, Snowflake, privacy-conscious data governance"),
+    ("Measurement", "Dashboards, adoption analytics, feedback cadence design, SQL, Tableau, privacy-conscious data governance"),
 ]
 
 EDUCATION = [
