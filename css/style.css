@@ -1,18 +1,28 @@
 /* ─── Custom properties ────────────────────────────────────── */
+/* Confidence Interval: dark is the default (matches the Adaptive Tutor's own
+   visual language — inference shown honestly, confidence never overstated).
+   Both modes are WCAG AA-verified, not eyeballed — see design-explorer notes. */
 :root {
-  --color-bg:           #f6f2ea;
-  --color-surface:      #fffdf9;
-  --color-surface-alt:  #efe8da;
-  --color-text:         #211f1b;
-  --color-muted:        #6f6a60;
-  --color-accent:       #bf6a48;
-  --color-accent-hover: #a85a3c;
-  --color-accent-light: #f1ded0;
-  --color-border:       #e2dbcc;
+  --color-bg:           #000000;
+  --color-surface:      #1E1C19;
+  --color-surface-alt:  #29261F;
+  --color-text:         #F2EFE9;
+  --color-muted:        #A39C8E;
+  --color-accent:       #6fa896;
+  --color-accent-hover: #5c9483;
+  --color-accent-light: rgba(111,168,150,0.14);
+  --color-accent2:      #C8956C;
+  --color-accent2-hover:#B37E56;
+  --color-border:       rgba(111,168,150,0.24);
 
-  --font-serif: 'DM Serif Display', Georgia, serif;
-  --font-sans:  'DM Sans', system-ui, sans-serif;
-  --font-mono:  'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  --tag-ld-bg: #3D3228;          --tag-ld-text: #E6B78F;
+  --tag-product-bg: #2D3530;     --tag-product-text: #9BC9BA;
+  --tag-experiments-bg: #353237; --tag-experiments-text: #C2BEE0;
+  --tag-personal-bg: #3A3630;    --tag-personal-text: #D6CDB8;
+
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-sans:    'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace;
 
   --space-xs:  0.5rem;
   --space-sm:  1rem;
@@ -28,6 +38,26 @@
   --max-width: 1080px;
 }
 
+/* Light mode — same hues as dark, recalibrated for a white ground, not a filter. */
+[data-theme="light"] {
+  --color-bg:           #FFFFFF;
+  --color-surface:      #F7F5F0;
+  --color-surface-alt:  #EFEBE1;
+  --color-text:         #1C1A16;
+  --color-muted:        #6B6558;
+  --color-accent:       #49796A;
+  --color-accent-hover: #3D6B5D;
+  --color-accent-light: rgba(73,121,106,0.12);
+  --color-accent2:      #8D5C35;
+  --color-accent2-hover:#7A4E2B;
+  --color-border:       #E5E1D5;
+
+  --tag-ld-bg: #E6DED4;          --tag-ld-text: #7A4E2B;
+  --tag-product-bg: #DDE1DB;     --tag-product-text: #3D6659;
+  --tag-experiments-bg: #E1DFE0; --tag-experiments-text: #5A5580;
+  --tag-personal-bg: #E3E0D9;    --tag-personal-text: #6B6249;
+}
+
 /* ─── Reset ─────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -40,6 +70,11 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
+  transition: background var(--transition), color var(--transition);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body, .nav-wrapper, .skill-card, .project-card, .btn, .filter-btn { transition: none; }
 }
 
 img { display: block; max-width: 100%; }
@@ -70,7 +105,7 @@ ul { list-style: none; }
 }
 
 .section-heading {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 400;
   line-height: 1.15;
@@ -82,7 +117,7 @@ ul { list-style: none; }
   display: inline-block;
   padding: 0.75rem 1.75rem;
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-bg);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 500;
@@ -113,7 +148,7 @@ ul { list-style: none; }
 }
 
 .nav-logo {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.1rem;
   color: var(--color-text);
   transition: color var(--transition);
@@ -123,6 +158,7 @@ ul { list-style: none; }
 
 .nav-links {
   display: flex;
+  align-items: center;
   gap: var(--space-md);
 }
 
@@ -135,6 +171,25 @@ ul { list-style: none; }
 
 .nav-links a:hover,
 .nav-links a.active { color: var(--color-text); }
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.theme-toggle:hover { color: var(--color-accent); border-color: var(--color-accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 
 /* ─── Hero ───────────────────────────────────────────────────── */
 .hero {
@@ -155,7 +210,7 @@ ul { list-style: none; }
 }
 
 .hero-heading {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(2.5rem, 5.5vw, 4.5rem);
   font-weight: 400;
   line-height: 1.1;
@@ -238,7 +293,7 @@ ul { list-style: none; }
 }
 
 .skill-card h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 0.25rem;
@@ -283,7 +338,7 @@ ul { list-style: none; }
 .filter-btn.active {
   background: var(--color-text);
   border-color: var(--color-text);
-  color: #fff;
+  color: var(--color-bg);
 }
 
 .work-grid {
@@ -304,7 +359,7 @@ ul { list-style: none; }
 
 .project-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--color-accent) 18%, transparent);
 }
 
 .project-card:hover .project-thumb img {
@@ -353,13 +408,13 @@ ul { list-style: none; }
   border-radius: 999px;
 }
 
-.tag--ld          { background: #f1ded0; color: #7a4326; }
-.tag--product     { background: #dde3d1; color: #3f4a2c; }
-.tag--experiments { background: #e6dfe8; color: #4a3870; }
-.tag--personal    { background: #e3dcc8; color: #5c4a1f; }
+.tag--ld          { background: var(--tag-ld-bg);          color: var(--tag-ld-text); }
+.tag--product     { background: var(--tag-product-bg);     color: var(--tag-product-text); }
+.tag--experiments { background: var(--tag-experiments-bg); color: var(--tag-experiments-text); }
+.tag--personal    { background: var(--tag-personal-bg);    color: var(--tag-personal-text); }
 
 .project-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 400;
   line-height: 1.3;
@@ -470,7 +525,7 @@ ul { list-style: none; }
 .project-overlay-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(33, 31, 27, 0.55);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(2px);
 }
 
@@ -518,7 +573,7 @@ ul { list-style: none; }
 }
 
 .project-overlay-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -653,7 +708,7 @@ body.overlay-open { overflow: hidden; }
 
 .insight-num {
   display: block;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 2.6rem;
   line-height: 1;
   color: var(--color-accent);

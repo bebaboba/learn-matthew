@@ -89,3 +89,27 @@ sections.forEach(s => observer.observe(s));
 
 // ── Footer year ─────────────────────────────────────────────────
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ── Theme toggle (dark default; light saved to localStorage) ────
+const themeToggle = document.getElementById('theme-toggle');
+
+function syncThemeToggle() {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  themeToggle.textContent = isLight ? '☾' : '☀';
+  themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+}
+
+if (themeToggle) {
+  syncThemeToggle();
+  themeToggle.addEventListener('click', () => {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+    syncThemeToggle();
+  });
+}
