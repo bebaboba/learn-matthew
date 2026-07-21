@@ -44,7 +44,7 @@
           Twenty years teaching people to <em>think for themselves</em> — first in person, now at <em>platform scale</em>.
         </h1>
         <p class="hero-sub">
-          At Apple, Matthew grew an internal learning platform to serve 145+ teams — none of which report to him — set the quality bar that kept it substantive instead of hollow, and built the measurement to prove whether people got better, not whether they came back. Now he's experimenting at the intersection of AI and learning with Claude, encoding that craft into systems instead of guarding it.
+          At Apple, Matthew grew an internal learning platform across dozens of teams, holding the line on real substance and measuring whether people actually got better. Now he's exploring the intersection of AI and learning with Claude.
         </p>
         <a href="#work" class="btn">See his work</a>
       </div>
@@ -149,6 +149,27 @@
                 <p><strong>Thread C — Intent-Aware Learning Design.</strong> Not every question deserves the same kind of answer. Sometimes a learner needs a fast, direct answer to finish a task under deadline pressure; sometimes what they actually need is for the knowledge to stick. The system distinguishes a direct-answer mode from a retrieval-practice mode, and flags when a pattern of repeated quick-answer requests might itself be the signal that deeper learning — not just task completion — is what's needed.</p>
                 <p>Supporting research runs alongside all three threads: NSF-funded work out of AI-ALOE at Georgia Tech, RCT evidence that AI tutoring can outperform traditional instruction in some studies, and federated learning as the concrete technical path for the privacy-preserving angle.</p>
                 <a class="project-link" href="https://adaptive-tutor-ruddy.vercel.app" target="_blank" rel="noopener noreferrer">Try the prototype →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="experiments">
+            <div class="project-thumb" aria-hidden="true"><img src="images/plato-cave-tutor.jpg" alt="" /></div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag--experiments">Experiment</span>
+              </div>
+              <h3 class="project-title">Plato's Cave</h3>
+              <p class="project-desc">An illustrated retelling of Plato's Allegory of the Cave with a page-aware Claude tutor woven through it — the same behavior → xAPI → inference → adaptation loop as the Adaptive Tutor prototype, applied to an actual philosophy lesson instead of a research demo.</p>
+              <span class="project-stat">React · Claude · xAPI-shaped events · server-side prompt construction</span>
+                <a class="project-link" href="https://plato-cave-tutor.vercel.app" target="_blank" rel="noopener noreferrer">Read the story →</a>
+              <button class="project-toggle" type="button" aria-haspopup="dialog">
+                <span class="project-toggle-label">Read more</span>
+                <span class="project-toggle-icon" aria-hidden="true"></span>
+              </button>
+              <div class="project-more" hidden>
+                <p>Where the Adaptive Tutor prototype proved the architecture, this is the architecture put to real content: ten illustrated pages, in-story prompts, and a discussion phase that evaluates the learner's own reading against a rubric — not a quiz, a Socratic companion. The system prompt is built server-side from the learner's page, mode, and intent rather than trusting the client with free-form prompt text, so the tutor endpoint can only ever produce this lesson, nothing else.</p>
+                <a class="project-link" href="https://plato-cave-tutor.vercel.app" target="_blank" rel="noopener noreferrer">Read the story →</a>
               </div>
             </div>
           </article>

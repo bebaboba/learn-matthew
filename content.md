@@ -21,7 +21,7 @@ contact: Contact
 ## hero
 eyebrow: Learning Platforms · Content & Curriculum · AI-Native Production
 heading: Twenty years teaching people to *think for themselves* — first in person, now at *platform scale*.
-sub: At Apple, Matthew grew an internal learning platform to serve 145+ teams — none of which report to him — set the quality bar that kept it substantive instead of hollow, and built the measurement to prove whether people got better, not whether they came back. Now he's experimenting at the intersection of AI and learning with Claude, encoding that craft into systems instead of guarding it.
+sub: At Apple, Matthew grew an internal learning platform across dozens of teams, holding the line on real substance and measuring whether people actually got better. Now he's exploring the intersection of AI and learning with Claude.
 cta: See his work
 
 ## about
@@ -77,6 +77,15 @@ Building the prototype opened onto a bigger thesis: most "adaptive" tutors reset
 
 Supporting research runs alongside all three threads: NSF-funded work out of AI-ALOE at Georgia Tech, RCT evidence that AI tutoring can outperform traditional instruction in some studies, and federated learning as the concrete technical path for the privacy-preserving angle.
 stat: React · Claude · xAPI → LRS · behavior-based inference
+### Plato's Cave
+category: experiments
+tags: Experiment
+image: plato-cave-tutor.jpg
+link: https://plato-cave-tutor.vercel.app
+cta: Read the story →
+desc: An illustrated retelling of Plato's Allegory of the Cave with a page-aware Claude tutor woven through it — the same behavior → xAPI → inference → adaptation loop as the Adaptive Tutor prototype, applied to an actual philosophy lesson instead of a research demo.
+more: Where the Adaptive Tutor prototype proved the architecture, this is the architecture put to real content: ten illustrated pages, in-story prompts, and a discussion phase that evaluates the learner's own reading against a rubric — not a quiz, a Socratic companion. The system prompt is built server-side from the learner's page, mode, and intent rather than trusting the client with free-form prompt text, so the tutor endpoint can only ever produce this lesson, nothing else.
+stat: React · Claude · xAPI-shaped events · server-side prompt construction
 ### How This Site Ships Itself
 category: experiments
 tags: Experiment
