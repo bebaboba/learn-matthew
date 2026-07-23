@@ -30,9 +30,9 @@ heading: The short version
 photo_alt: Matthew Anderson
 bio: Matthew is a learning leader with a decade turning technical and creative subject matter into platforms and content systems that actually teach. His roots are in product management, arts & culture, and direct instruction — which means he approaches the work the way a craftsperson approaches production: with real editorial taste, a bias for measurement, and a refusal to accept engagement as a proxy for learning.
 
-He learned to lead the direct way first: running a Starbucks store with a team that reported to him, then a market-level role teaching Lean Thinking to store leaders who didn't. Over the past decade he's grown and set the content standards for a 145+ team learning platform — none of which report to him, leadership by influence rather than authority. He coached instructional designers away from click-through courseware and toward learning grounded in adult learning theory, and built the feedback systems that prove whether it worked. Alongside that, he's curated international art exhibitions and run a two-year museum partnership teaching creative technology to the public. Now he's experimenting at the intersection of AI and learning with Claude — an adaptive tutor and an interactive portfolio — putting those same standards into systems that scale past what any team could produce by hand.
+He learned to lead the direct way first: running a Starbucks store with a team that reported to him, then a market-level role teaching Lean Thinking to store leaders who didn't. Over the past decade he's grown and set the content standards for a 145+ team learning platform reaching 100,000+ learners worldwide — none of which report to him, leadership by influence rather than authority. He coached instructional designers away from click-through courseware and toward learning grounded in adult learning theory, and built the feedback systems that prove whether it worked. Alongside that, he's curated international art exhibitions and run a two-year museum partnership teaching creative technology to the public. Now he's experimenting at the intersection of AI and learning with Claude — an adaptive tutor and an interactive portfolio — putting those same standards into systems that scale past what any team could produce by hand.
 
-Based in San Francisco. B.A. Integrated Social Sciences from the University of Washington, with a minor in Art History and coursework in Mixed Media Studio Arts.
+Based in San Francisco. B.A. Integrated Social Sciences from the University of Washington, with a minor in Art History and coursework in Communications, Computer Science, and Mixed Media Studio Arts, plus fine art and design studies at Western Washington University. Kirkpatrick Bronze Level certified, 2025.
 
 ## skills
 ### Learning Platforms & Product
@@ -51,8 +51,8 @@ label: Work
 heading: Selected projects
 ### Learn Matthew
 category: experiments
-tags: Experiment
-image: learn-matthew.svg
+tags: Weekend Vibes
+image: learn-matthew.png
 link: https://learn-matthew-ai.vercel.app
 cta: Launch the experience →
 desc: An AI-powered interactive portfolio that personalizes the experience based on who you are. Visitors pick a persona and an AI guide walks them through his work — revealing content modules through conversation, not a fixed page layout.
@@ -60,8 +60,8 @@ more: Built as an argument, not just a demo: that personalization doesn't requir
 stat: React · Vite · Claude API
 ### Adaptive Tutor (research prototype)
 category: experiments
-tags: Experiment
-image: adaptive-tutor.svg
+tags: Weekend Vibes
+image: adaptive-tutor.png
 link: https://adaptive-tutor-ruddy.vercel.app
 cta: Try the prototype →
 desc: A working argument for what an adaptive AI tutor should be. A learner works a lesson with an AI tutor while a live inspector shows the whole pipeline — behavior → xAPI → inferred state → adaptation — with every inference shown honestly, including its confidence (capped below 100% on purpose) and what drove it. The learner can see, contest, and override what the system infers.
@@ -79,8 +79,8 @@ Supporting research runs alongside all three threads: NSF-funded work out of AI-
 stat: React · Claude · xAPI → LRS · behavior-based inference
 ### Plato's Cave
 category: experiments
-tags: Experiment
-image: plato-cave-tutor.jpg
+tags: Weekend Vibes
+image: plato-cave-tutor.png
 link: https://plato-cave-tutor.vercel.app
 cta: Read the story →
 desc: An illustrated retelling of Plato's Allegory of the Cave with a page-aware Claude tutor woven through it — the same behavior → xAPI → inference → adaptation loop as the Adaptive Tutor prototype, applied to an actual philosophy lesson instead of a research demo.
@@ -89,7 +89,7 @@ stat: React · Claude · xAPI-shaped events · server-side prompt construction
 ### How This Site Ships Itself
 category: experiments
 tags: Experiment
-image: site-pipeline.svg
+image: site-pipeline.png
 link: https://github.com/bebaboba/learn-matthew/blob/main/build.js
 cta: Read the build script →
 desc: This page is itself a content pipeline with a quality gate. Every word lives in one markdown file; a small dependency-free Node script builds it into the page and refuses to ship if anything's broken — it lists the exact unfilled tokens and exits, instead of failing silently.
@@ -100,21 +100,21 @@ stat: One markdown file · Zero build dependencies · Fails loud by design
 ### Content Standards for a 145+ Team Platform
 category: product
 tags: Product, Content
-image: learning-platform.svg
+image: learning-platform.png
 desc: Set and defended the quality bar for Apple's internal learning platform — 145+ distinct teams producing their own learning. Defined what "great" meant precisely enough that teams could hit it without him in the room, and coached instructional designers away from click-through, compliance-style courseware toward learning grounded in adult learning theory.
 more: The standard wasn't a style guide — it was a small set of testable questions any team could ask before publishing, like whether the content respects the learner's time and whether anyone could actually measure if it worked. Teams that could answer those honestly got out of his way; teams that couldn't got coaching, not a rejection. That's the difference between governing quality and just gatekeeping it.
 stat: 145+ teams · Quality bar defined, not just enforced
 ### Distributed Authoring & Quality Governance
 category: product
 tags: Product
-image: authoring-model.svg
+image: authoring-model.png
 desc: Designed a distributed authoring system that let teams across the organization own their learning programs — establishing content standards, editorial review, and instructional guardrails so self-service scale didn't come at the cost of learning integrity. Speed without quality isn't adoption; it's clutter.
 more: Self-serve only works if "good enough to publish" means the same thing to everyone doing the publishing. The system paired lightweight editorial review with clear authoring guardrails so teams could move at their own pace without the platform turning into a pile of unreviewed content. The goal was never to slow teams down — it was to make the fast path and the good path the same path.
 stat: Org-wide · Quality-governed self-serve authoring
 ### Learning Measurement System
 category: product
 tags: Product, Measurement
-image: learning-data.svg
+image: learning-data.png
 desc: Built the instrumentation to know whether content was actually teaching — post-engagement feedback on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by feeding results back into what got made next. Measurement that changed the content, not decoration on top of it.
 more: The dashboard itself was never the point — the loop was. Feedback rolled up alongside adoption and support signals on a regular cadence, then went back to the teams that made the content and into what got built next. Content that scored well on completion but poorly on "did this actually help" was a signal to redesign, not a metric to celebrate.
 
@@ -123,7 +123,7 @@ stat: Closed-loop into production · xAPI-based measurement · Live demo on this
 ### New Team Onboarding Framework
 category: ld
 tags: L&D
-image: onboarding-framework.svg
+image: onboarding-framework.png
 desc: Replaced an onboarding process that took hours of live training per team plus a week or more of backend setup with a unified, self-serve experience — driving a 50%+ reduction in time-to-productivity for newly onboarded teams across the platform.
 more: The old process was white-glove by brute force: several hours of live, one-on-one training walking each new provider through the system, while the backend onboarding ran at least a week in parallel. The replacement made the entire path self-service, anchored to weekly office hours, with a single 30-minute one-to-one preserved for each new team — the white-glove touch kept where it earns its keep, not spread across the whole process.
 
@@ -132,21 +132,23 @@ stat: 50%+ reduction in time-to-productivity · Hours of live training → 30 mi
 ### Bellevue Arts Museum Partnership
 category: ld
 tags: L&D, Partnership
-image: market-training.svg
+image: market-training.png
 desc: Built and owned an external cultural partnership from scratch — a two-year monthly Art Walk series (2018–2020) with the Bellevue Arts Museum. Planned each session and led public groups who drew, sketched, and photographed the collection using Apple technology, translating technical skills into creative practice for a general audience. New audiences for the museum, hands-on creative learning for participants, ended only by COVID.
 more: What started as a one-off session turned into two years of monthly programming because the format worked — give people real tools and real art, get out of the way, and let looking closely turn into making something. It's the same instinct behind everything else on this page — the best teaching moments are the ones where the "teacher" mostly sets up the conditions and steps back.
 stat: 2-year external partnership · Public audience · Cross-format teaching
 ### A Philosophy Reading Practice
 category: personal
 tags: L&D, Personal
-image: consolidation.svg
+image: consolidation.png
 desc: A lifelong habit of reading philosophy — the kind of lifelong where he spent a marathon training block with Plato's Republic in his ears. Epistemology, ethics, philosophy of education: not for credential, but because it's the actual root of how he thinks about teaching. Freire's line between education as the practice of freedom and the "banking model" that deposits information into passive recipients isn't classroom theory he picked up for a job; it's what he reaches for on his own time, unassigned.
 more: Epistemology in particular — the question of how we actually know something, versus how we merely feel confident about it — turns out to be the same question underneath most of his measurement work. A completion rate tells you someone finished; it doesn't tell you they understood. The marathon detail is the tell here: nobody assigns the Republic to a training plan. Reading philosophy for its own sake, with no professional agenda, is what keeps that distinction sharp instead of theoretical.
+
+That reading habit showed up at work too: he led Apple's worldwide rollout of training on the philosophical considerations of AI, built to be accessible to every employee rather than gated behind technical teams — the rare case where the unassigned reading turned out to be exactly the preparation the job needed.
 stat: Lifelong habit · Epistemology, ethics, philosophy of education
 ### From Carburetors to Quarks
 category: personal
 tags: L&D, Personal
-image: certification.svg
+image: certification.png
 desc: A standing habit of taking things apart to see how they actually work — car engines, mechanical clocks — that found its steepest test yet in quantum mechanics during the pandemic. Same itch, different scale. Lately it runs the other direction too: 3D-modeling his own prints, and watching home automation start to absorb LLMs.
 more: The pull was never really about physics specifically — it's wanting to know how the thing in front of him works, whether that's a combustion engine, a watch movement, or one of his own 3D prints warping off the bed until he figures out why. Quantum mechanics was just the hardest version of that same question, and the best test case yet for explaining something genuinely hard well.
 

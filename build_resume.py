@@ -25,12 +25,13 @@ CONTACT = "San Francisco, CA · matthewsfo@gmail.com · linkedin.com/in/picocat 
 SUMMARY = (
     "I build content systems, not just content. A decade turning technical and creative subject "
     "matter into experiences that actually teach — and I don't accept engagement metrics as a "
-    "stand-in for whether anyone actually got better. At Apple, owned the learning platform behind "
-    "145+ internal teams — none of which report to me — set the quality bar that let those teams "
-    "author independently without it turning to noise, and coached instructional designers away "
-    "from click-through courseware toward learning that respects the learner's time and "
-    "intelligence. Now I am experimenting at the intersection of AI and learning with Claude — "
-    "an adaptive tutor and an interactive portfolio are my first forays. Check them out on "
+    "stand-in for whether anyone actually got better. At Apple, I own the learning platform "
+    "reaching 100,000+ learners worldwide across 145+ internal teams — none of which report to "
+    "me — set the quality bar that let those teams author independently without it turning to "
+    "noise, and coached instructional designers away from click-through courseware toward "
+    "learning that respects the learner's time and intelligence. Now I am experimenting at the "
+    "intersection of AI and learning with Claude — an adaptive tutor, an illustrated philosophy "
+    "lesson, and an interactive portfolio are my first forays. Check them out on "
     "learnmatthew.com."
 )
 
@@ -64,6 +65,7 @@ EXPERIENCE = [
         "bullets": [
             ("Set and defended the quality bar at scale.", "Built a distributed authoring model that let 145+ teams produce their own learning — but defined content standards and quality governance precise enough that self-serve scale didn't become noise."),
             ("Coached the craft.", "Pushed instructional designers away from click-through, compliance-style courseware toward experiences grounded in adult learning theory that meet learners where they are. The recurring fight: functional enablement that stays substantive instead of going hollow."),
+            ("Led our AI-philosophy training rollout.", "Ensured worldwide training on the philosophical considerations of AI was accessible and open to every employee, not gated behind technical teams."),
             ("Owned learning measurement.", "Built a feedback system — post-engagement surveys on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by reporting back to teams and leadership and feeding it into the product roadmap."),
             ("Held the line on privacy.", "As demand grew for broader access to learner data, built governance that balanced stakeholder needs against data-minimization principles, instead of defaulting to open access."),
             ("Built the function from nothing.", "No precedent, no template — architected the content and platform operation as the work demanded it, in a high-ambiguity environment."),
@@ -119,6 +121,17 @@ PROJECTS = [
             "privacy-preserving personalization via federated learning, and intent-aware learning "
             "design. Built with Claude as production partner. Stack: React, Vite, Tailwind, "
             "Anthropic API, xAPI → LRS."
+        ),
+    },
+    {
+        "title": "Plato's Cave",
+        "url": "plato-cave-tutor.vercel.app",
+        "year": "2026",
+        "desc": (
+            "An illustrated retelling of Plato's Allegory of the Cave with a page-aware Claude "
+            "tutor woven through it — the same behavior → xAPI → inference → adaptation loop as "
+            "Adaptive Tutor, applied to an actual philosophy lesson. Built out of a personal, "
+            "long-running habit of reading philosophy of education."
         ),
     },
     {
@@ -259,6 +272,8 @@ for i, role in enumerate(EXPERIENCE):
     pdf.set_font("Sans", "", 9.2)
     indent = pdf.l_margin + 12
     for lead, rest in role["bullets"]:
+        if pdf.get_y() > pdf.h - pdf.b_margin - 14:
+            pdf.add_page()
         y0 = pdf.get_y()
         pdf.set_fill_color(*ACCENT)
         pdf.ellipse(pdf.l_margin + 2, y0 + 4.5, 3, 3, style="F")

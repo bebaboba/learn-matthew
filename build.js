@@ -68,7 +68,7 @@ function bioParagraphs(text) {
     .join('\n            ');
 }
 
-const TAG_CLASS = { Product: 'product', 'L&D': 'ld', Experiment: 'experiments', Personal: 'personal' };
+const TAG_CLASS = { Product: 'product', 'L&D': 'ld', Experiment: 'experiments', 'Weekend Vibes': 'experiments', Personal: 'personal' };
 
 // Converts markdown-style [label](url) into real links, applied after escaping
 // so plain "&" etc. in prose stays safe while intentional links still render.
