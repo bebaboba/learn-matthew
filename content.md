@@ -171,6 +171,8 @@ label: Live insights
 heading: This page runs on xAPI
 intro: Every interaction here is recorded as anonymous xAPI statements to a Learning Record Store, then read back and shown below — a working demonstration of the measurement discipline he brings to content: instrument it, and let the data change what you build next. No personal data is collected; just anonymous, aggregate signals.
 caption: Powered by xAPI · anonymous, aggregate data only · refreshes live
+course_label: Course feedback
+course_intro: Same discipline, pointed at the AI projects themselves. Adaptive Tutor and Plato's Cave both report anonymous behavioral signals back here — which parts of the lesson people breeze through, and which ones generate the most hints, retries, or questions. Closing the loop on his own content, not just other people's.
 
 ## contact
 label: Contact

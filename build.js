@@ -186,6 +186,8 @@ const replacements = {
   'insights.heading': esc(collapse(field('insights', 'heading'))),
   'insights.intro': esc(collapse(field('insights', 'intro'))),
   'insights.caption': esc(collapse(field('insights', 'caption'))),
+  'insights.course_label': esc(collapse(field('insights', 'course_label'))),
+  'insights.course_intro': esc(collapse(field('insights', 'course_intro'))),
   'contact.label': esc(collapse(field('contact', 'label'))),
   'contact.heading': esc(collapse(field('contact', 'heading'))),
   'contact.sub': esc(collapse(field('contact', 'sub'))),
