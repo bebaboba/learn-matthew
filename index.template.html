@@ -76,12 +76,14 @@
         <h2 id="work-heading" class="section-heading">{{work.heading}}</h2>
 
         <div class="work-filters" role="tablist" aria-label="Filter projects by category">
-          <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="ld">L&amp;D</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="product">Product</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="experiments">Experiments</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="personal">Personal</button>
+          <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all" data-blurb="{{filters.all}}">All</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="ld" data-blurb="{{filters.ld}}">L&amp;D</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="product" data-blurb="{{filters.product}}">Product</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="experiments" data-blurb="{{filters.experiments}}">Weekend Vibes</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="personal" data-blurb="{{filters.personal}}">Personal</button>
         </div>
+
+        <p class="work-filter-blurb" id="work-filter-blurb" aria-live="polite">{{filters.all}}</p>
 
         <div class="work-grid" id="work-grid">
 

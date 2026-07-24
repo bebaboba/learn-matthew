@@ -314,6 +314,13 @@ ul { list-style: none; }
   display: flex;
   gap: var(--space-xs);
   flex-wrap: wrap;
+  margin-bottom: var(--space-sm);
+}
+
+.work-filter-blurb {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  max-width: 46rem;
   margin-bottom: var(--space-lg);
 }
 

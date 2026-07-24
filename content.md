@@ -20,7 +20,7 @@ contact: Contact
 
 ## hero
 eyebrow: Learning Platforms · Content & Curriculum · AI-Native Production
-heading: Twenty years teaching people to *think for themselves* — first in person, now at *platform scale*.
+heading: Twenty years teaching people to *think creatively* — first in person, now at *platform scale*.
 sub: At Apple, Matthew grew an internal learning platform across dozens of teams, holding the line on real substance and measuring whether people actually got better. Now he's exploring the intersection of AI and learning with Claude.
 cta: See his work
 
@@ -45,6 +45,13 @@ desc: Adult learning theory (Freire, ADDIE), Kirkpatrick evaluation, learning me
 desc: Building content with Claude, Anthropic API, prompt engineering, human-vs-AI line-drawing, adaptive/tutoring system design
 ### Leadership & Measurement
 desc: Leading through influence across non-reporting teams, coaching content creators and instructional designers, direct people management, feedback dashboards, adoption analytics, executive communication
+
+## filters
+all: Take a look around — platform strategy, product systems, weekend AI experiments, and the personal curiosity behind all of it.
+ld: Programs built to teach real people — onboarding systems, community partnerships, and hands-on public education.
+product: The systems behind the platform — quality standards, distributed authoring, and the measurement that proves it's working.
+experiments: Vibe coding on the weekend with Claude — an adaptive tutor, an AI-guided portfolio, an illustrated philosophy lesson, and the pipeline that ships this very site.
+personal: Philosophy reading, mechanical curiosity, and the questions Matthew chases on his own time — no professional agenda required.
 
 ## work
 label: Work

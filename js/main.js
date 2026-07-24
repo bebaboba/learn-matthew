@@ -1,6 +1,7 @@
 // ── Work filter ────────────────────────────────────────────────
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
+const filterBlurb = document.getElementById('work-filter-blurb');
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -17,6 +18,8 @@ filterBtns.forEach(btn => {
       const match = filter === 'all' || card.dataset.category === filter;
       card.classList.toggle('hidden', !match);
     });
+
+    if (filterBlurb && btn.dataset.blurb) filterBlurb.textContent = btn.dataset.blurb;
   });
 });
 
