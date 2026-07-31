@@ -19,7 +19,7 @@ work: Work
 contact: Contact
 
 ## hero
-eyebrow: Learning Platforms · Content & Curriculum · AI-Native Production
+eyebrow: Learning Platforms · Content & Curriculum · Product
 heading: Twenty years teaching people to *think creatively* — first in person, now at *platform scale*.
 sub: At Apple, Matthew grew an internal learning platform across dozens of teams, holding the line on real substance and measuring whether people actually got better. Now he's exploring the intersection of AI and learning with Claude.
 cta: See his work
@@ -32,11 +32,13 @@ bio: Matthew is a learning leader with a decade turning technical and creative s
 
 He learned to lead the direct way first: running a Starbucks store with a team that reported to him, then a market-level role teaching Lean Thinking to store leaders who didn't. Over the past decade he's grown and set the content standards for a 145+ team learning platform reaching 100,000+ learners worldwide — none of which report to him, leadership by influence rather than authority. He coached instructional designers away from click-through courseware and toward learning grounded in adult learning theory, and built the feedback systems that prove whether it worked. Alongside that, he's curated international art exhibitions and run a two-year museum partnership teaching creative technology to the public. Now he's experimenting at the intersection of AI and learning with Claude — an adaptive tutor and an interactive portfolio — putting those same standards into systems that scale past what any team could produce by hand.
 
+That platform work carries real product scope, too: he writes acceptance criteria and refines backlog tickets, has run the planning and refinement sessions that came with a distributed org's shift to Agile, and led a third-party content-integration effort end to end — design through legal and privacy review to launch. He's also led the strategy behind a data-layer and LMS migration, aligning stakeholders across teams toward consolidating learning data into a single enterprise data warehouse. That data-and-analytics thread is a genuine throughline, not a new pitch — it's why he's now also targeting Senior/Staff Product Manager roles at learning- and HR-tech platforms, alongside curriculum and platform leadership titles.
+
 Based in San Francisco. B.A. Integrated Social Sciences from the University of Washington, with a minor in Art History and coursework in Communications, Computer Science, and Mixed Media Studio Arts, plus fine art and design studies at Western Washington University. Kirkpatrick Bronze Level certified, 2025.
 
 ## skills
 ### Learning Platforms & Product
-desc: Multi-surface platform strategy (iOS · macOS · web), roadmapping, product discovery, distributed authoring models, self-serve enablement across 145+ teams, adoption metrics
+desc: Multi-surface platform strategy (iOS · macOS · web), roadmapping, product discovery, acceptance criteria & backlog authoring, cross-functional delivery across a distributed org, self-serve enablement across 145+ teams, adoption metrics
 ### Content & Curriculum
 desc: Instructional design, curriculum architecture, quality standards, multi-format production (written, video, interactive), editorial judgment, coaching teams toward substance over engagement
 ### Learning Science
@@ -49,7 +51,7 @@ desc: Leading through influence across non-reporting teams, coaching content cre
 ## filters
 all: Take a look around — platform strategy, product systems, weekend AI experiments, and the personal curiosity behind all of it.
 ld: Programs built to teach real people — onboarding systems, community partnerships, and hands-on public education.
-product: The systems behind the platform — quality standards, distributed authoring, and the measurement that proves it's working.
+product: The systems behind the platform — quality standards, distributed authoring, the data strategy underneath it, and the measurement that proves it's working.
 experiments: Vibe coding on the weekend with Claude — an adaptive tutor, an AI-guided portfolio, an illustrated philosophy lesson, and the pipeline that ships this very site.
 personal: Philosophy reading, mechanical curiosity, and the questions Matthew chases on his own time — no professional agenda required.
 
@@ -110,6 +112,8 @@ tags: Product, Content
 image: learning-platform.png
 desc: Set and defended the quality bar for Apple's internal learning platform — 145+ distinct teams producing their own learning. Defined what "great" meant precisely enough that teams could hit it without him in the room, and coached instructional designers away from click-through, compliance-style courseware toward learning grounded in adult learning theory.
 more: The standard wasn't a style guide — it was a small set of testable questions any team could ask before publishing, like whether the content respects the learner's time and whether anyone could actually measure if it worked. Teams that could answer those honestly got out of his way; teams that couldn't got coaching, not a rejection. That's the difference between governing quality and just gatekeeping it.
+
+Some of that coaching went past editorial notes and into the tools themselves — a multi-session training series he ran taught instructional designers custom CSS and HTML so they could shape content design directly, not just prose. It's the kind of feedback that earned him a reputation for pursuing "product excellence without overcomplicating user flows," and for giving notes — fearlessly, by one colleague's account — that made the work better even when they weren't easy to hear.
 stat: 145+ teams · Quality bar defined, not just enforced
 ### Distributed Authoring & Quality Governance
 category: product
@@ -117,16 +121,20 @@ tags: Product
 image: authoring-model.png
 desc: Designed a distributed authoring system that let teams across the organization own their learning programs — establishing content standards, editorial review, and instructional guardrails so self-service scale didn't come at the cost of learning integrity. Speed without quality isn't adoption; it's clutter.
 more: Self-serve only works if "good enough to publish" means the same thing to everyone doing the publishing. The system paired lightweight editorial review with clear authoring guardrails so teams could move at their own pace without the platform turning into a pile of unreviewed content. The goal was never to slow teams down — it was to make the fast path and the good path the same path.
-stat: Org-wide · Quality-governed self-serve authoring
+
+Some of that governance work meant translating messier real-world process into the standard, too — writing acceptance criteria and refining backlog tickets, and running the refinement and planning sessions that came with the platform team's shift to Agile, including the forming-storming-norming arc that shift brought to a distributed org. He also led a third-party content-integration effort end to end — design through legal and privacy review to launch — proving the governance model held up against an external platform, not just internally authored content.
+stat: Org-wide · Quality-governed self-serve authoring · Agile transition & third-party integration shipped
 ### Learning Measurement System
 category: product
 tags: Product, Measurement
 image: learning-data.png
-desc: Built the instrumentation to know whether content was actually teaching — post-engagement feedback on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by feeding results back into what got made next. Measurement that changed the content, not decoration on top of it.
+desc: Built the instrumentation to know whether content was actually teaching — post-engagement feedback on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by feeding results back into what got made next. Measurement that changed the content, not decoration on top of it. Later led the strategy behind a data-layer and LMS migration toward a single enterprise data warehouse for learning data.
 more: The dashboard itself was never the point — the loop was. Feedback rolled up alongside adoption and support signals on a regular cadence, then went back to the teams that made the content and into what got built next. Content that scored well on completion but poorly on "did this actually help" was a signal to redesign, not a metric to celebrate.
 
+That same instinct scaled up into a bigger initiative: leading the strategy behind a data-layer and LMS migration, aligning stakeholders across teams toward consolidating learning data into a single enterprise data warehouse. A colleague later credited a set of his slides with "effectively communicating the vision of consolidating learning data" org-wide — the same measurement discipline, aimed at the data layer itself rather than just the dashboard on top of it. He's brought that same research-through-delivery approach to a manager-facing dashboard, owning it end to end, and to UX research that directly shaped a shipped platform capability for tracking skills and proficiency levels.
+
 That same measurement discipline is what this site demonstrates in miniature. Every visitor interaction here is logged as anonymous xAPI statements to a live Learning Record Store and read back onto the page in the Live insights section below — the same feedback loop, small enough to watch run in real time.
-stat: Closed-loop into production · xAPI-based measurement · Live demo on this page
+stat: Closed-loop into production · Data-layer & LMS migration strategy · xAPI-based measurement · Live demo on this page
 ### New Team Onboarding Framework
 category: ld
 tags: L&D
@@ -177,7 +185,7 @@ course_intro: Same discipline, pointed at the AI projects themselves. Adaptive T
 ## contact
 label: Contact
 heading: Let's talk
-sub: Matthew is open to conversations about learning platform strategy, content & curriculum leadership, and AI-native production — especially roles at the intersection of teaching craft and AI production systems. Whether you have a role in mind or just want to connect — his inbox is open.
+sub: Matthew is open to conversations about learning platform strategy, content & curriculum leadership, AI-native production, and Senior/Staff Product Manager roles at learning- and HR-tech platforms — especially roles at the intersection of teaching craft, product systems, and AI. Whether you have a role in mind or just want to connect — his inbox is open.
 button: Say hello
 email: matthewsfo@gmail.com
 linkedin: https://linkedin.com/in/picocat
