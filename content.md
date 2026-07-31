@@ -43,8 +43,6 @@ desc: Multi-surface platform strategy (iOS · macOS · web), roadmapping, produc
 desc: Instructional design, curriculum architecture, quality standards, multi-format production (written, video, interactive), editorial judgment, coaching teams toward substance over engagement
 ### Learning Science
 desc: Adult learning theory (Freire, ADDIE), Kirkpatrick evaluation, learning measurement & instrumentation, SCORM · xAPI
-### AI-Native Production
-desc: Building content with Claude, Anthropic API, prompt engineering, human-vs-AI line-drawing, adaptive/tutoring system design
 ### Leadership & Measurement
 desc: Leading through influence across non-reporting teams, coaching content creators and instructional designers, direct people management, feedback dashboards, adoption analytics, executive communication
 
@@ -185,7 +183,7 @@ course_intro: Same discipline, pointed at the AI projects themselves. Adaptive T
 ## contact
 label: Contact
 heading: Let's talk
-sub: Matthew is open to conversations about learning platform strategy, content & curriculum leadership, AI-native production, and Senior/Staff Product Manager roles at learning- and HR-tech platforms — especially roles at the intersection of teaching craft, product systems, and AI. Whether you have a role in mind or just want to connect — his inbox is open.
+sub: Matthew is open to conversations about learning platform strategy, content & curriculum leadership, and Senior/Staff Product Manager roles at learning- and HR-tech platforms — especially roles at the intersection of teaching craft, product systems, and AI. Whether you have a role in mind or just want to connect — his inbox is open.
 button: Say hello
 email: matthewsfo@gmail.com
 linkedin: https://linkedin.com/in/picocat
