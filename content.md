@@ -38,13 +38,13 @@ Based in San Francisco. B.A. Integrated Social Sciences from the University of W
 
 ## skills
 ### Learning Platforms & Product
-desc: Multi-surface platform strategy (iOS · macOS · web), roadmapping, product discovery, acceptance criteria & backlog authoring, cross-functional delivery across a distributed org, self-serve enablement across 145+ teams, adoption metrics
+desc: Multi-surface platform strategy (iOS · macOS · web), roadmapping, product discovery, platform evaluation, acceptance criteria & backlog authoring, cross-functional delivery across a distributed org, self-serve enablement across 145+ teams, adoption metrics
 ### Content & Curriculum
 desc: Instructional design, curriculum architecture, quality standards, multi-format production (written, video, interactive), editorial judgment, coaching teams toward substance over engagement
 ### Learning Science
 desc: Adult learning theory (Freire, ADDIE), Kirkpatrick evaluation, learning measurement & instrumentation, SCORM · xAPI
 ### Leadership & Measurement
-desc: Leading through influence across non-reporting teams, coaching content creators and instructional designers, direct people management, feedback dashboards, adoption analytics, executive communication
+desc: Leading through influence across non-reporting teams, coaching content creators and instructional designers, direct people management, dashboard design & ownership (Tableau), adoption analytics, executive communication
 
 ## filters
 all: Take a look around — platform strategy, product systems, weekend AI experiments, and the personal curiosity behind all of it.
@@ -122,6 +122,13 @@ more: Self-serve only works if "good enough to publish" means the same thing to 
 
 Some of that governance work meant translating messier real-world process into the standard, too — writing acceptance criteria and refining backlog tickets, and running the refinement and planning sessions that came with the platform team's shift to Agile, including the forming-storming-norming arc that shift brought to a distributed org. He also led a third-party content-integration effort end to end — design through legal and privacy review to launch — proving the governance model held up against an external platform, not just internally authored content.
 stat: Org-wide · Quality-governed self-serve authoring · Agile transition & third-party integration shipped
+### Platform Performance & Reliability
+category: product
+tags: Product, Reliability
+image: authoring-model.png
+desc: When platform slowness became a recurring complaint, built a testing process instead of waiting for the next one — assembling a worldwide network of testers and partnering directly with the engineering team to benchmark and prioritize fixes. The result was measurable: load times improved and user-reported slowness dropped.
+more: The instinct here was the same one behind the content standards and measurement work elsewhere on this page — don't just react to a problem, build the system that catches the next one. He recruited testers across regions to capture real-world performance data, then worked directly with engineering to turn that data into a justified case for where to spend fix effort. The process outlived the initial fire drill, too: it became a recurring practice, run again in later cycles to keep pace as the platform kept growing.
+stat: Worldwide testing network · Engineering partnership · Measurable load-time improvement
 ### Learning Measurement System
 category: product
 tags: Product, Measurement
@@ -129,7 +136,7 @@ image: learning-data.png
 desc: Built the instrumentation to know whether content was actually teaching — post-engagement feedback on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by feeding results back into what got made next. Measurement that changed the content, not decoration on top of it. Later led the strategy behind a data-layer and LMS migration toward a single enterprise data warehouse for learning data.
 more: The dashboard itself was never the point — the loop was. Feedback rolled up alongside adoption and support signals on a regular cadence, then went back to the teams that made the content and into what got built next. Content that scored well on completion but poorly on "did this actually help" was a signal to redesign, not a metric to celebrate.
 
-That same instinct scaled up into a bigger initiative: leading the strategy behind a data-layer and LMS migration, aligning stakeholders across teams toward consolidating learning data into a single enterprise data warehouse. A colleague later credited a set of his slides with "effectively communicating the vision of consolidating learning data" org-wide — the same measurement discipline, aimed at the data layer itself rather than just the dashboard on top of it. He's brought that same research-through-delivery approach to a manager-facing dashboard, owning it end to end, and to UX research that directly shaped a shipped platform capability for tracking skills and proficiency levels.
+That same instinct scaled up into a bigger initiative: leading the strategy behind a data-layer and LMS migration, aligning stakeholders across teams toward consolidating learning data into a single enterprise data warehouse. A colleague later credited a set of his slides with "effectively communicating the vision of consolidating learning data" org-wide — the same measurement discipline, aimed at the data layer itself rather than just the dashboard on top of it. That migration also had to hold up under real privacy constraints, not just functional ones — building data handling that stayed compliant across regulated international markets from the start, rather than retrofitting compliance in later. He's brought that same research-through-delivery approach to a manager-facing dashboard, owning it end to end, and to UX research that directly shaped a shipped platform capability for tracking skills and proficiency levels.
 
 That same measurement discipline is what this site demonstrates in miniature. Every visitor interaction here is logged as anonymous xAPI statements to a live Learning Record Store and read back onto the page in the Live insights section below — the same feedback loop, small enough to watch run in real time.
 stat: Closed-loop into production · Data-layer & LMS migration strategy · xAPI-based measurement · Live demo on this page
