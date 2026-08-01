@@ -30,7 +30,7 @@ heading: The short version
 photo_alt: Matthew Anderson
 bio: Matthew is a learning leader with a decade turning technical and creative subject matter into platforms and content systems that actually teach. His roots are in product management, arts & culture, and direct instruction — which means he approaches the work the way a craftsperson approaches production: with real editorial taste, a bias for measurement, and a refusal to accept engagement as a proxy for learning.
 
-He learned to lead the direct way first: running a Starbucks store with a team that reported to him, then a market-level role teaching Lean Thinking to store leaders who didn't. Over the past decade he's grown and set the content standards for a 145+ team learning platform reaching 100,000+ learners worldwide — none of which report to him, leadership by influence rather than authority. He coached instructional designers away from click-through courseware and toward learning grounded in adult learning theory, and built the feedback systems that prove whether it worked. Alongside that, he's curated international art exhibitions and run a two-year museum partnership teaching creative technology to the public. Now he's experimenting at the intersection of AI and learning with Claude — an adaptive tutor and an interactive portfolio — putting those same standards into systems that scale past what any team could produce by hand.
+He learned to lead the direct way first: running a Starbucks store with a team that reported to him, then a market-level role teaching Lean Thinking to store leaders who didn't. Over the past decade he's grown and set the content standards for a learning platform spanning hundreds of teams and reaching 100,000+ learners worldwide — none of which report to him, leadership by influence rather than authority. He coached instructional designers away from click-through courseware and toward learning grounded in adult learning theory, and built the feedback systems that prove whether it worked. Alongside that, he's curated international art exhibitions and run a two-year museum partnership teaching creative technology to the public. Now he's experimenting at the intersection of AI and learning with Claude — an adaptive tutor and an interactive portfolio — putting those same standards into systems that scale past what any team could produce by hand.
 
 That platform work carries real product scope, too: he writes acceptance criteria and refines backlog tickets, has run the planning and refinement sessions that came with a distributed org's shift to Agile, and led a third-party content-integration effort end to end — design through legal and privacy review to launch. He's also led the strategy behind a data-layer and LMS migration, aligning stakeholders across teams toward consolidating learning data into a single enterprise data warehouse. That data-and-analytics thread is a genuine throughline, not a new pitch — it's why he's now also targeting Senior/Staff Product Manager roles at learning- and HR-tech platforms, alongside curriculum and platform leadership titles.
 
@@ -38,7 +38,7 @@ Based in San Francisco. B.A. Integrated Social Sciences from the University of W
 
 ## skills
 ### Learning Platforms & Product
-desc: Multi-surface platform strategy (iOS · macOS · web), roadmapping, product discovery, platform evaluation, acceptance criteria & backlog authoring, cross-functional delivery across a distributed org, self-serve enablement across 145+ teams, adoption metrics
+desc: Multi-surface platform strategy (iOS · macOS · web), roadmapping, product discovery, platform evaluation, acceptance criteria & backlog authoring, cross-functional delivery across a distributed org, self-serve enablement across hundreds of teams, adoption metrics
 ### Content & Curriculum
 desc: Instructional design, curriculum architecture, quality standards, multi-format production (written, video, interactive), editorial judgment, coaching teams toward substance over engagement
 ### Learning Science
@@ -104,15 +104,15 @@ more: All of the copy here lives in a single file, content.md, in a tiny key:val
 
 The design decision that matters most is the failure mode. After the build fills the template, it scans the output for any token it failed to replace — the fingerprint of a typo in the content or the template — and if it finds one, it prints the exact list and refuses to build. That was the deliberate middle path: not a heavyweight CMS, not a "just don't typo it" honor system, but a lightweight pipeline with a loud quality gate. It's the same instinct as the content standards and measurement systems elsewhere on this page, scaled down to a personal site — if content is going to be edited safely, by other people or by future Matthew, the system has to catch mistakes before readers do.
 stat: One markdown file · Zero build dependencies · Fails loud by design
-### Content Standards for a 145+ Team Platform
+### Content Standards for a Platform Spanning Hundreds of Teams
 category: product
 tags: Product, Content
 image: learning-platform.png
-desc: Set and defended the quality bar for Apple's internal learning platform — 145+ distinct teams producing their own learning. Defined what "great" meant precisely enough that teams could hit it without him in the room, and coached instructional designers away from click-through, compliance-style courseware toward learning grounded in adult learning theory.
+desc: Set and defended the quality bar for Apple's internal learning platform — hundreds of distinct teams producing their own learning. Defined what "great" meant precisely enough that teams could hit it without him in the room, and coached instructional designers away from click-through, compliance-style courseware toward learning grounded in adult learning theory.
 more: The standard wasn't a style guide — it was a small set of testable questions any team could ask before publishing, like whether the content respects the learner's time and whether anyone could actually measure if it worked. Teams that could answer those honestly got out of his way; teams that couldn't got coaching, not a rejection. That's the difference between governing quality and just gatekeeping it.
 
 Some of that coaching went past editorial notes and into the tools themselves — a multi-session training series he ran taught instructional designers custom CSS and HTML so they could shape content design directly, not just prose. It's the kind of feedback that earned him a reputation for pursuing "product excellence without overcomplicating user flows," and for giving notes — fearlessly, by one colleague's account — that made the work better even when they weren't easy to hear.
-stat: 145+ teams · Quality bar defined, not just enforced
+stat: Hundreds of teams · Quality bar defined, not just enforced
 ### Distributed Authoring & Quality Governance
 category: product
 tags: Product

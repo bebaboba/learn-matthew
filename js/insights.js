@@ -37,8 +37,20 @@
       stat(c.sessions, 'visitors') +
       stat(c.projectsExplored, 'projects explored') +
       stat(c.conversations, 'AI conversations') +
+      (c.deepDives ? stat(c.deepDives, 'project deep dives') : '') +
+      (c.outbound ? stat(c.outbound, 'outbound clicks') : '') +
+      (c.avgTimeOnPageSeconds ? stat(c.avgTimeOnPageSeconds, 'avg. seconds on page') : '') +
+      (c.avgScrollDepth ? stat(c.avgScrollDepth, 'avg. scroll depth %') : '') +
+      (c.returnVisitPct != null ? stat(c.returnVisitPct, '% returning visitors') : '') +
       (c.unanswered ? stat(c.unanswered, 'questions the AI couldn\'t answer') : '') +
       '</div>';
+
+    if (d.topProject) {
+      html += '<div class="insights-highlight">' +
+        '<span class="insights-sublabel">Most explored project</span>' +
+        '<span class="insights-highlight-value">' + esc(d.topProject.label) +
+        '<em>' + (d.topProject.count || 0) + ' views</em></span></div>';
+    }
 
     if (d.topTopics && d.topTopics.length) {
       html += '<div class="insights-topics">' +

@@ -34,6 +34,7 @@
     try {
       var payload = { event: event, label: label || '', sessionId: sessionId() };
       if (extra && extra.ref) payload.ref = extra.ref;
+      if (extra && extra.duration != null) payload.duration = extra.duration;
       var body = JSON.stringify(payload);
       if (navigator.sendBeacon) {
         navigator.sendBeacon(API, new Blob([body], { type: 'application/json' }));
@@ -49,11 +50,59 @@
   }
   window.lmTrack = track;
 
+  function throttle(fn, wait) {
+    var last = 0, timer = null;
+    return function () {
+      var now = Date.now();
+      if (now - last >= wait) {
+        last = now;
+        fn();
+      } else {
+        clearTimeout(timer);
+        timer = setTimeout(function () { last = Date.now(); fn(); }, wait - (now - last));
+      }
+    };
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    // Checked before sessionId() below creates/reuses the stored id, so this
+    // reflects whether the id already existed from a prior visit.
+    var isReturning = false;
+    try { isReturning = !!localStorage.getItem(SID_KEY); } catch (e) {}
+
     track('session_start', 'Portfolio session', { ref: referrerHost() });
+    if (isReturning) track('return_visit', 'Return visit');
 
     var seen = {};
     function once(key) { if (seen[key]) return false; seen[key] = 1; return true; }
+
+    // Scroll depth milestones — each fires at most once per pageview.
+    var scrollMilestones = [25, 50, 75, 100];
+    function checkScrollDepth() {
+      var doc = document.documentElement;
+      var scrollable = doc.scrollHeight - doc.clientHeight;
+      var pct = scrollable > 0 ? Math.min(100, Math.round((window.pageYOffset / scrollable) * 100)) : 100;
+      scrollMilestones.forEach(function (m) {
+        if (pct >= m && once('scroll:' + m)) track('scroll_depth', String(m));
+      });
+    }
+    window.addEventListener('scroll', throttle(checkScrollDepth, 500), { passive: true });
+    checkScrollDepth();
+
+    // Time on page — fired once, whenever the visitor first leaves or hides the tab.
+    var pageStart = Date.now();
+    var timeSent = false;
+    function sendTimeOnPage() {
+      if (timeSent) return;
+      var seconds = Math.round((Date.now() - pageStart) / 1000);
+      if (seconds < 1) return;
+      timeSent = true;
+      track('time_on_page', '', { duration: seconds });
+    }
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'hidden') sendTimeOnPage();
+    });
+    window.addEventListener('pagehide', sendTimeOnPage);
 
     if ('IntersectionObserver' in window) {
       // Project card views (fire once each, when half-visible)

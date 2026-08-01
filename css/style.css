@@ -733,6 +733,33 @@ body.overlay-open { overflow: hidden; }
   color: var(--color-muted);
 }
 
+.insights-highlight {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.insights-highlight-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.insights-highlight-value em {
+  font-style: normal;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
 .insights-topics {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
