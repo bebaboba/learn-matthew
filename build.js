@@ -170,7 +170,6 @@ const replacements = {
   'hero.sub': esc(collapse(field('hero', 'sub'))),
   'hero.cta': esc(collapse(field('hero', 'cta'))),
   'about.label': esc(collapse(field('about', 'label'))),
-  'about.heading': esc(collapse(field('about', 'heading'))),
   'about.photo_alt': esc(collapse(field('about', 'photo_alt'))),
   'about.bio': bioParagraphs(field('about', 'bio')),
   SKILL_CARDS: skillCards(),
@@ -193,7 +192,6 @@ const replacements = {
   'contact.sub': esc(collapse(field('contact', 'sub'))),
   'contact.button': esc(collapse(field('contact', 'button'))),
   'contact.email': esc(collapse(field('contact', 'email'))),
-  'contact.linkedin': esc(collapse(field('contact', 'linkedin'))),
   'footer.text': esc(collapse(field('footer', 'text'))),
 };
 

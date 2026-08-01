@@ -626,23 +626,6 @@ body.overlay-open { overflow: hidden; }
   margin-bottom: var(--space-md);
 }
 
-.contact-links {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: var(--space-md);
-  font-size: 0.9rem;
-  color: var(--color-muted);
-}
-
-.contact-links a {
-  font-weight: 500;
-  color: var(--color-text);
-  transition: color var(--transition);
-}
-
-.contact-links a:hover { color: var(--color-accent); }
-
 /* ─── Footer ─────────────────────────────────────────────────── */
 .footer {
   padding-block: var(--space-md);

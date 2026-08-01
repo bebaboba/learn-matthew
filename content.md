@@ -26,7 +26,6 @@ cta: See his work
 
 ## about
 label: About
-heading: The short version
 photo_alt: Matthew Anderson
 bio: Matthew is a learning leader with a decade turning technical and creative subject matter into platforms and content systems that actually teach. His roots are in product management, arts & culture, and direct instruction — which means he approaches the work the way a craftsperson approaches production: with real editorial taste, a bias for measurement, and a refusal to accept engagement as a proxy for learning.
 
@@ -193,7 +192,6 @@ heading: Let's talk
 sub: Matthew is open to conversations about learning platform strategy, content & curriculum leadership, and Senior/Staff Product Manager roles at learning- and HR-tech platforms — especially roles at the intersection of teaching craft, product systems, and AI. Whether you have a role in mind or just want to connect — his inbox is open.
 button: Say hello
 email: matthewsfo@gmail.com
-linkedin: https://linkedin.com/in/picocat
 
 ## footer
 text: Matthew Anderson · San Francisco

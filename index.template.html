@@ -57,13 +57,12 @@
     <!-- ABOUT -->
     <section id="about" class="about" aria-labelledby="about-heading">
       <div class="container">
-        <div class="section-label">{{about.label}}</div>
+        <div id="about-heading" class="section-label">{{about.label}}</div>
         <div class="about-grid">
           <div class="about-bio">
             <div class="about-photo-wrap">
               <img src="images/headshot.jpg" alt="{{about.photo_alt}}" class="about-photo" />
             </div>
-            <h2 id="about-heading" class="section-heading">{{about.heading}}</h2>
             {{about.bio}}
           </div>
           <div class="about-skills">
@@ -123,9 +122,6 @@
           {{contact.sub}}
         </p>
         <a href="mailto:{{contact.email}}" class="btn">{{contact.button}}</a>
-        <div class="contact-links">
-          <a href="{{contact.linkedin}}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
       </div>
     </section>
 

@@ -139,8 +139,6 @@
         track('ai_launch', 'Adaptive Tutor');
       } else if (/^mailto:/.test(href)) {
         track('outbound_click', 'Email');
-      } else if (/linkedin\.com/.test(href)) {
-        track('outbound_click', 'LinkedIn');
       }
     }, true);
   });
