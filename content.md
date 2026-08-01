@@ -21,7 +21,7 @@ contact: Contact
 ## hero
 eyebrow: Learning Platforms · Content & Curriculum · Product
 heading: Twenty years teaching people to *think creatively* — first in person, now at *platform scale*.
-sub: At Apple, Matthew grew an internal learning platform across dozens of teams, holding the line on real substance and measuring whether people actually got better. Now he's exploring the intersection of AI and learning with Claude.
+sub: At Apple, Matthew grew an internal learning platform across dozens of teams, holding the line on real substance and measuring whether people actually got better. Now he's exploring the intersection of AI and learning.
 cta: See his work
 
 ## about
