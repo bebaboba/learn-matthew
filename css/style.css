@@ -1,6 +1,8 @@
 /* ─── Custom properties ────────────────────────────────────── */
-/* Confidence Interval: dark is the default (matches the Adaptive Tutor's own
-   visual language — inference shown honestly, confidence never overstated).
+/* Confidence Interval: :root defines the dark palette (matches the Adaptive
+   Tutor's own visual language — inference shown honestly, confidence never
+   overstated); [data-theme="light"] below overrides it. Which one a visitor
+   sees defaults to their system preference, unless they've toggled manually.
    Both modes are WCAG AA-verified, not eyeballed — see design-explorer notes. */
 :root {
   --color-bg:           #000000;

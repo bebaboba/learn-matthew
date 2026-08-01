@@ -11,11 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <script>
-    // Blocking, before first paint — avoids a flash of the wrong theme. Dark is
-    // the default; only switches to light if the visitor has explicitly chosen it before.
+    // Blocking, before first paint — avoids a flash of the wrong theme. Defaults
+    // to the visitor's system preference; an explicit toggle choice (saved to
+    // localStorage) always overrides it on future visits.
     (function () {
       var saved = localStorage.getItem('theme');
-      if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      var wantsLight = saved
+        ? saved === 'light'
+        : window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      if (wantsLight) document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
 </head>

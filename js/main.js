@@ -93,7 +93,7 @@ sections.forEach(s => observer.observe(s));
 // ── Footer year ─────────────────────────────────────────────────
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ── Theme toggle (dark default; light saved to localStorage) ────
+// ── Theme toggle (defaults to system preference; explicit choice saved to localStorage) ────
 const themeToggle = document.getElementById('theme-toggle');
 
 function syncThemeToggle() {
