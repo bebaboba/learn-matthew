@@ -26,7 +26,7 @@ SUMMARY = (
     "I build content systems, not just content. A decade turning technical and creative subject "
     "matter into experiences that actually teach — and I don't accept engagement metrics as a "
     "stand-in for whether anyone actually got better. At Apple, I own the learning platform "
-    "reaching 100,000+ learners worldwide across 145+ internal teams — none of which report to "
+    "reaching 100,000+ learners worldwide across 150 internal teams — none of which report to "
     "me — set the quality bar that let those teams author independently without it turning to "
     "noise, and coached instructional designers away from click-through courseware toward "
     "learning that respects the learner's time and intelligence. Now I am experimenting at the "
@@ -55,15 +55,15 @@ EXPERIENCE = [
     {
         "title": "L&D Producer · Learning Platform Product Owner",
         "org": "Apple University — San Francisco, CA",
-        "dates": "2021 – Present",
+        "dates": "2022 – Present",
         "intro": (
             "Owned the content standards, production model, and platform behind Apple's internal "
-            "learning ecosystem — 145+ distinct teams, each a world unto itself with its own "
+            "learning ecosystem — 150 distinct teams, each a world unto itself with its own "
             "mission, subject matter, and learners, and none of them reporting to me. Leadership "
             "by influence rather than authority."
         ),
         "bullets": [
-            ("Set and defended the quality bar at scale.", "Built a distributed authoring model that let 145+ teams produce their own learning — but defined content standards and quality governance precise enough that self-serve scale didn't become noise."),
+            ("Set and defended the quality bar at scale.", "Built a distributed authoring model that let 150 teams produce their own learning — but defined content standards and quality governance precise enough that self-serve scale didn't become noise."),
             ("Coached the craft.", "Pushed instructional designers away from click-through, compliance-style courseware toward experiences grounded in adult learning theory that meet learners where they are. The recurring fight: functional enablement that stays substantive instead of going hollow."),
             ("Led our AI-philosophy training rollout.", "Ensured worldwide training on the philosophical considerations of AI was accessible and open to every employee, not gated behind technical teams."),
             ("Owned learning measurement.", "Built a feedback system — post-engagement surveys on a structured cadence, aggregated into a dashboard alongside adoption and support signals — and closed the loop by reporting back to teams and leadership and feeding it into the product roadmap."),
@@ -74,7 +74,7 @@ EXPERIENCE = [
     {
         "title": "Creative Pro / Lead Creative",
         "org": "Apple — Retail, San Francisco, CA",
-        "dates": "2012 – 2021",
+        "dates": "2012 – 2022",
         "intro": (
             "Face-of-Apple educator across formats and audiences — the foundation of a conviction "
             "that teaching lands only when it starts with the person, not the product."
@@ -148,7 +148,7 @@ PROJECTS = [
 ]
 
 CRAFT = [
-    ("Leadership", "Leading through influence across 145+ non-reporting teams, cross-functional coaching, org design input"),
+    ("Leadership", "Leading through influence across 150 non-reporting teams, cross-functional coaching, org design input"),
     ("Learning Platforms & Product", "Multi-surface platform strategy (iOS, macOS, web), roadmapping, product discovery, distributed authoring models, self-serve enablement at scale"),
     ("Content & Curriculum", "Instructional design, curriculum architecture, quality standards, multi-format production (written, interactive), editorial judgment"),
     ("Learning Science", "Adult learning theory, ADDIE, Kirkpatrick evaluation, learning measurement & instrumentation, SCORM/xAPI"),
